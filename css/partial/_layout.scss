@@ -1,0 +1,233 @@
+/* 等幅段組レイアウト */
+/*====================================*/
+
+//Setting
+$gutter_width: 3%;//幅を考慮する必要がある 元2%
+$cell_padding: 0px;//box-sizing: border-box;してるので考慮しなくていい 元15px
+
+//Common
+.grid-block,
+.grid-block .cell {
+  // *zoom: 1;
+  @extend .clearfix;
+}
+
+//ul.grid-block {padding-left: 0;}
+.grid-block {
+  .cell {
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding: $cell_padding;
+    .img-area {
+      margin-top: 0;
+      text-align: center;
+    }
+  }
+  li.cell {
+    background: none;
+    padding-left: $cell_padding !important;
+  }
+
+  //以下 h1 と p 大元のSCSSで指定済なら不要
+  h1 {
+    margin: 1em 0 0.5em;
+    &:first-child {margin-top: 0;}
+  }
+  p {
+    &:first-child {margin-top: 0;}
+    &:last-child {margin-bottom: 0;}
+  }
+
+  &.float-img .cell {
+    h1 {
+      word-break: break-all !important;//not working.. :(
+    }
+    img {
+      float: left;
+      margin-right: 10px;
+      margin-bottom: 5px;
+      vertical-align: bottom;
+    }
+  }
+  li.cell {
+    padding-left: 0;
+    list-style: none;
+  }
+
+}
+
+//引数nカラム時の1カラムの幅を計算するミックスイン
+@mixin cellWidth($cellNum) {
+  width: (100% - ($gutter_width * ($cellNum - 1))) / $cellNum;
+}
+@mixin cellx2Width($cellNum) {
+  width: ((100% - ($gutter_width * ($cellNum - 1))) / $cellNum) * 2 + $gutter_width;
+}
+@mixin cellx3Width($cellNum) {
+  width: ((100% - ($gutter_width * ($cellNum - 1))) / $cellNum) * 3 + ($gutter_width * 2);
+}
+
+//Smartphone //修正前：max-width: 480px
+@media #{$mq_sm} {
+  .grid-block .cell {
+    clear: left;
+  }
+  .grid-block.minimize-img .cell {
+    clear: left;
+    .img-area {
+      float: left;
+      max-width: 40% !important;//適宜調整
+      margin-right: 20px;
+    }
+    .text-area {
+      overflow: hidden;
+      _zoom: 1;_height: 1%;//IE6
+    }
+  }
+  .grid-block.mobile-2col .cell,
+  .grid-block.mobile-3col .cell {
+    clear: none;
+    float: left;
+    margin-top: 0;
+    margin-left: $gutter_width;
+    margin-bottom: $gutter_width;
+  }
+  .grid-block.mobile-2col .cell {
+    @include cellWidth(2); width: 48%\9;//後者はIE6-8、適宜調整
+    &:nth-child(2n+1) {margin-left: 0;}
+  }
+  .grid-block.mobile-3col .cell {
+    @include cellWidth(3); width: 31%\9;//後者はIE6-8、適宜調整
+    &:nth-child(3n+1) {margin-left: 0;}
+  }
+}
+
+//Tablet & Desktop //min-width: 481px
+@media #{$mq_l} {
+  .grid-block {
+    .cell {
+      float: left;
+      margin-left: $gutter_width;
+    }
+
+    &.cells2 .cell {@include cellWidth(2); width: 48%\9}//後者はIE6-8、適宜調整
+    &.cells3 .cell {@include cellWidth(3); width: 31%\9}
+    &.cells4 .cell {@include cellWidth(4); width: 21%\9}
+    &.cells5 .cell {@include cellWidth(5); width: 18%\9}
+    //以下、上記のミックスインに入れない方がドライなCSSになる
+    &.cells2 .cell:nth-child(2n+1),
+    &.cells3 .cell:nth-child(3n+1),
+    &.cells4 .cell:nth-child(4n+1),
+    &.cells5 .cell:nth-child(5n+1) {
+      margin-left: 0;
+    }
+    //2つのボックスを融合
+    &.cells3 .cell.cellx2 {@include cellx2Width(3); width: 62%\9}
+    &.cells4 .cell.cellx2 {@include cellx2Width(4); width: 41%\9}
+    &.cells5 .cell.cellx2 {@include cellx2Width(5); width: 36%\9}
+    //3つのボックスを融合
+
+    &.cells4 .cell.cellx3 {@include cellx3Width(4); width: 63%\9}
+    &.cells5 .cell.cellx3 {@include cellx3Width(5); width: 54%\9}
+  }
+}
+
+
+//装飾
+.grid-block {
+  padding: 0px;
+  @include font-size--small;
+}
+  .grid-block.panel .cell {
+    @extend .panel-b;//★★panelに依存しないよう、独自に指定する？
+    padding-top: 20px;
+    padding-bottom: 15px;
+    border-radius: 5px;
+    h1,h2,h3,h4,h5,h6 {
+      &:first-child {
+        @include font-size--normal;
+      }
+    }
+  }
+
+
+
+
+/* テキストが画像の下に回り込まないレイアウト（左右対応） */
+/*-------------------------------------------- */
+// HTML: div.l-img-text>(.img-area+.text-area)
+
+/*---余白設定---*/
+$side_margin_width: 3em;//画像ブロックとテキストブロックの間余白
+$bottom_margin_width: .5em;//画像の下余白
+
+/*---設定---*/
+.l-img-text,
+.l-text-img {
+  margin: 1em 0;
+  _height: 1%;
+  @extend .clearfix;
+  .text-area img,
+  .img-area img {
+    margin-bottom: $bottom_margin_width;
+  }
+  .text-area {
+    overflow: hidden;//これで文字が回り込まなくなる
+    _zoom: 1;_height: 1%;
+    p:first-child {
+      margin-top: 0;
+    }
+  }
+  h2,h3,h4,h5,h6 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    &:first-child {margin-top: 0 !important;}
+  }
+  p:first-child {
+    margin-top: 0;
+  }
+}
+.grid-block .l-img-text {
+  margin-top: 0;
+}
+
+@media #{$mq_ml} {
+  .l-img-text .img-area {
+    float: left;
+    margin-right: $side_margin_width;
+  }
+  .l-text-img .img-area {
+    float: right;
+    margin-left: $side_margin_width;
+  }
+  .img-area {
+    max-width: 50%;
+  }
+  .grid-block .img-area {
+    max-width: 100%;
+  }
+}
+
+@media #{$mq_s} {
+  .l-img-text,
+  .l-text-img {
+    margin-top: 2em;
+    .img-area {
+      display: block !important;
+      margin: 0 auto !important;
+      text-align: center;
+      img {
+        margin: 0 auto !important;
+      }
+    }
+    .img-area.small {//小さいイメージ(目安120px)の時はフロート
+      float: left !important;
+      margin-right: 10px !important;
+    }
+    h3,h4 {
+      &:first-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

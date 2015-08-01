@@ -1,0 +1,6 @@
+/*
+ IE7以下で縮小された画像が粗く見えるのを修正するスクリプト
+ ------------------------------------------------------------
+ 本家：http://unstoppablerobotninja.com/entry/fluid-images/
+ 解説：http://www.keyton-co.jp/demo/demo25/index.htm
+*/function addLoadEvent(e){var t=window.onload;typeof window.onload!="function"?window.onload=e:window.onload=function(){t&&t();e()}}var imgSizer={Config:{imgCache:[],spacer:"spacer.gif"},collate:function(e){var t=document.all&&!window.opera&&!window.XDomainRequest?1:0;if(t&&document.getElementsByTagName){var n=imgSizer,r=n.Config.imgCache,i=e&&e.length?e:document.getElementsByTagName("img");for(var s=0;s<i.length;s++){i.origWidth=i.offsetWidth;i.origHeight=i.offsetHeight;r.push(i);n.ieAlpha(i);i.style.width="100%"}r.length&&n.resize(function(){for(var e=0;e<r.length;e++){var t=r.offsetWidth/r.origWidth;r.style.height=r.origHeight*t+"px"}})}},ieAlpha:function(e){var t=imgSizer;e.oldSrc&&(e.src=e.oldSrc);var n=e.src;e.style.width=e.offsetWidth+"px";e.style.height=e.offsetHeight+"px";e.style.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(src='"+n+"', sizingMethod='scale')";e.oldSrc=n;e.src=t.Config.spacer},resize:function(e){var t=window.onresize;typeof window.onresize!="function"?window.onresize=e:window.onresize=function(){t&&t();e()}}};addLoadEvent(function(){imgSizer.collate()});

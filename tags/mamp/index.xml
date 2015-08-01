@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mamp on My Blog</title>
+    <link>http://localhost:1313/tags/mamp/</link>
+    <description>Recent content in Mamp on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <managingEditor>taky1973@gmail.com (Taku Nagai)</managingEditor>
+    <webMaster>taky1973@gmail.com (Taku Nagai)</webMaster>
+    <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
+    <lastBuildDate>Wed, 15 Oct 2014 00:00:00 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/mamp/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>ローカルサーバーどれ使う？ MAMP(Xampp) と Vagrant の違い・使い分け</title>
+      <link>http://localhost:1313/post/comparison_mamp_vagrant/</link>
+      <pubDate>Wed, 15 Oct 2014 00:00:00 +0900</pubDate>
+      <author>taky1973@gmail.com (Taku Nagai)</author>
+      <guid>http://localhost:1313/post/comparison_mamp_vagrant/</guid>
+      <description>
+
+&lt;h2 id=&#34;mamp-xampp:51dec08c134701154a7d3216b4ccb92f&#34;&gt;MAMP(Xampp)&lt;/h2&gt;
+
+&lt;p&gt;WordPressサイト開発など Webサーバー、PHP、MySQL の構成でこと足りるなら MAMP(WindowsならXampp)で必要十分。操作パネルで簡単操作。容量は700MB程度&lt;/p&gt;
+
+&lt;p&gt;しかし、サーバーを色々とカスタマイズしたいなら、Vagrant上の仮想マシンにログインしてコマンド操作する方が直感的で楽なのでそちらを選ぼう (MAMPでもやってできないことはないがややこしい)&lt;/p&gt;
+
+&lt;h2 id=&#34;vagrant:51dec08c134701154a7d3216b4ccb92f&#34;&gt;Vagrant&lt;/h2&gt;
+
+&lt;p&gt;ローカルPC内に仮想のマシンを構築。つまり、手元のパソコンがあたかも別のパソコンになる感じ&lt;/p&gt;
+
+&lt;p&gt;好きなOS(Linux, Windows 他)をインストールしたり、サーバー設定をいじったり、プログラムやモジュールを追加したり、なんでも自由にできる。バージョン管理ができるプラグインを併用すれば失敗も怖くない&lt;/p&gt;
+
+&lt;p&gt;Linuxサーバーで色々試してみたい程度ならわざわざVPS借りなくても、手元のパソコンにVagrant入れたらいい&lt;/p&gt;
+
+&lt;p&gt;コマンド操作が必要なので敷居が高く感じる人もいるだろうが、&lt;a href=&#34;http://dotinstall.com/lessons/basic_vagrant&#34;&gt;ドットインストール Vagrant入門&lt;/a&gt; をひと通りやってみたら案外いけるもの&lt;/p&gt;
+
+&lt;p&gt;CentOS 6.5 で1.8GBあった。ディスク容量に注意&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

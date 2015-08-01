@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Markdown on My Blog</title>
+    <link>http://localhost:1313/tags/markdown/</link>
+    <description>Recent content in Markdown on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <managingEditor>taky1973@gmail.com (Taku Nagai)</managingEditor>
+    <webMaster>taky1973@gmail.com (Taku Nagai)</webMaster>
+    <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
+    <lastBuildDate>Fri, 24 Jul 2015 09:01:00 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Markdown関連の便利ツール まとめ</title>
+      <link>http://localhost:1313/post/convinient_tools_for_markdown/</link>
+      <pubDate>Fri, 24 Jul 2015 09:01:00 +0900</pubDate>
+      <author>taky1973@gmail.com (Taku Nagai)</author>
+      <guid>http://localhost:1313/post/convinient_tools_for_markdown/</guid>
+      <description>
+
+&lt;h2 id=&#34;htmlからmarkdownに変換:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;HTMLからMarkdownに変換&lt;/h2&gt;
+
+&lt;h3 id=&#34;mark-it-down:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;Mark It Down&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://markitdown.medusis.com/&#34;&gt;Mark It Down: convert rich text to Markdown&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;img-url&#34; alt=&#34;画像&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Webページからコピペした内容を文書構造を保ったままMarkdownに変換してくれるWebサービス&lt;br /&gt;
+HTMLコードならサニタイジングされる。使う目的によってはすごく便利&lt;/p&gt;
+
+&lt;h3 id=&#34;to-markdown:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;to-markdown&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://domchristie.github.io/to-markdown/&#34;&gt;to-markdown - an HTML to Markdown converter written in javascript&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;HTMLをMarkdown化。GitHub Flavored Markdownも対応&lt;/p&gt;
+
+&lt;h3 id=&#34;heck-yes-markdown:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;Heck Yes Markdown&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://heckyesmarkdown.com/&#34;&gt;Heck Yes Markdown&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;URLで指定したページをMarkdown化。ブックマークレットやAPIもあり&lt;/p&gt;
+
+&lt;h3 id=&#34;その他:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;その他&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://pronama.azurewebsites.net/2014/05/16/html-to-markdown-libraries-and-tools/&#34;&gt;HTML を Markdown へ変換するときに知っておきたいライブラリ 11選 + α | プログラミング生放送&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;基本チュートリアル-チートシート:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;基本チュートリアル、チートシート&lt;/h2&gt;
+
+&lt;h2 id=&#34;アプリ:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;アプリ&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Mou(Mac)&lt;/li&gt;
+&lt;li&gt;(Windows)&lt;/li&gt;
+&lt;li&gt;(iOS)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;オンラインmarkdownエディタ:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;オンラインMarkdownエディタ&lt;/h2&gt;
+
+&lt;h3 id=&#34;markable-in:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;Markable.in&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://markable.in/&#34;&gt;Markable.in - A remarkable online markdown editor.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Dropbox、Evernoteに保存可、Tumblr投稿も&lt;/p&gt;
+
+&lt;h3 id=&#34;stackedit:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;StackEdit&lt;/h3&gt;
+
+&lt;h4 id=&#34;googleドライブ-x-stackedit:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;Googleドライブ x StackEdit&lt;/h4&gt;
+
+&lt;p&gt;画像あり、別ページに？&lt;/p&gt;
+
+&lt;h2 id=&#34;実装用markdownパーサー:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;実装用Markdownパーサー&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jonschlinkert/remarkable&#34;&gt;remarkable - GitHub&lt;/a&gt;/&lt;a href=&#34;https://jonschlinkert.github.io/remarkable/demo/&#34;&gt;demo&lt;/a&gt; JavaScript製のクライアント/サーバサイド両方で使えるMarkdownパーサ&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://tibastral.github.io/markdownify/&#34;&gt;Markdownify by tibastral&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/sugarshin/items/3ce64420b0181990480e&#34;&gt;React.jsでMarkdownエディタ - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;静的サイトジェネレーター:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;静的サイトジェネレーター&lt;/h2&gt;
+
+&lt;p&gt;Markdownで記事作成 → 静的サイト生成 → 公開(サーバーにアップ)&lt;br /&gt;
+CMSに付きものの重さ、セキュリティ不安、管理の手間から開放される&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo :: A fast and modern static website engine&lt;/a&gt; (go言語) とにかく早いと評判&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://jekyllrb.com/&#34;&gt;Jekyll • Simple, blog-aware, static sites&lt;/a&gt; (ruby)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://octopress.org/&#34;&gt;Octopress&lt;/a&gt; (ruby)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://nanoc.ws/&#34;&gt;nanoc: a static site generator written in Ruby » home&lt;/a&gt; (ruby)&lt;/li&gt;
+&lt;li&gt;他にも色々ある&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;wordpress-プラグイン:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;WordPress プラグイン&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://wordpress.org/plugins/jetpack-markdown/&#34;&gt;JP Markdown | WordPress Plugins&lt;/a&gt; 自分はMarkdown化したくないページが意図せずサニタイジングされたので使うの辞めた&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;styledocco-x-gulp-markdownでスタイルガイド自動作成:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;StyleDocco x gulp Markdownでスタイルガイド自動作成&lt;/h2&gt;
+
+&lt;h3 id=&#34;styledocco-のインストール-要node-js:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;styledocco のインストール(要node.js)&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;npm install -g styledocco&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://jacobrask.github.io/styledocco/&#34;&gt;StyleDocco&lt;/a&gt;
+&lt;a href=&#34;http://kazu69.net/blog/tec/1411&#34;&gt;StyleDoccoでstyleguideを作成 | 69log&lt;/a&gt;
+そのモジュールのPSD素材の管理場所を記載しておくとよい&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://app.codegrid.net/entry/styledocco-1&#34;&gt;賢く使うStyleDocco導入ガイド - 基本的な使い方 | CodeGrid&lt;/a&gt;
+&lt;a href=&#34;http://toybox-design.net/?p=640&#34;&gt;『StyleDocco』でCSSプリプロセッサのスタイルガイド作成 | toybox-design.net&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;with-gulp-js:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;with gulp.js&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.npmjs.org/package/gulp-styledocco&#34;&gt;gulp-styledocco&lt;/a&gt;
+&lt;a href=&#34;http://blog.photosynthesic.jp/2014/07/html5_boilerplate-sass-gulp-styledocco/&#34;&gt;HTML5 boilerplateをsassでgulpでstyledoccoな感じにしてみた&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

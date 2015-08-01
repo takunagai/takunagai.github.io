@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My Blog</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <managingEditor>taky1973@gmail.com (Taku Nagai)</managingEditor>
+    <webMaster>taky1973@gmail.com (Taku Nagai)</webMaster>
+    <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
+    <lastBuildDate>Fri, 24 Jul 2015 09:01:00 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Markdown関連の便利ツール まとめ</title>
+      <link>http://localhost:1313/post/convinient_tools_for_markdown/</link>
+      <pubDate>Fri, 24 Jul 2015 09:01:00 +0900</pubDate>
+      <author>taky1973@gmail.com (Taku Nagai)</author>
+      <guid>http://localhost:1313/post/convinient_tools_for_markdown/</guid>
+      <description>
+
+&lt;h2 id=&#34;htmlからmarkdownに変換:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;HTMLからMarkdownに変換&lt;/h2&gt;
+
+&lt;h3 id=&#34;mark-it-down:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;Mark It Down&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://markitdown.medusis.com/&#34;&gt;Mark It Down: convert rich text to Markdown&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;img-url&#34; alt=&#34;画像&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Webページからコピペした内容を文書構造を保ったままMarkdownに変換してくれるWebサービス&lt;br /&gt;
+HTMLコードならサニタイジングされる。使う目的によってはすごく便利&lt;/p&gt;
+
+&lt;h3 id=&#34;to-markdown:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;to-markdown&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://domchristie.github.io/to-markdown/&#34;&gt;to-markdown - an HTML to Markdown converter written in javascript&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;HTMLをMarkdown化。GitHub Flavored Markdownも対応&lt;/p&gt;
+
+&lt;h3 id=&#34;heck-yes-markdown:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;Heck Yes Markdown&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://heckyesmarkdown.com/&#34;&gt;Heck Yes Markdown&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;URLで指定したページをMarkdown化。ブックマークレットやAPIもあり&lt;/p&gt;
+
+&lt;h3 id=&#34;その他:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;その他&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://pronama.azurewebsites.net/2014/05/16/html-to-markdown-libraries-and-tools/&#34;&gt;HTML を Markdown へ変換するときに知っておきたいライブラリ 11選 + α | プログラミング生放送&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;基本チュートリアル-チートシート:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;基本チュートリアル、チートシート&lt;/h2&gt;
+
+&lt;h2 id=&#34;アプリ:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;アプリ&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Mou(Mac)&lt;/li&gt;
+&lt;li&gt;(Windows)&lt;/li&gt;
+&lt;li&gt;(iOS)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;オンラインmarkdownエディタ:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;オンラインMarkdownエディタ&lt;/h2&gt;
+
+&lt;h3 id=&#34;markable-in:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;Markable.in&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://markable.in/&#34;&gt;Markable.in - A remarkable online markdown editor.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Dropbox、Evernoteに保存可、Tumblr投稿も&lt;/p&gt;
+
+&lt;h3 id=&#34;stackedit:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;StackEdit&lt;/h3&gt;
+
+&lt;h4 id=&#34;googleドライブ-x-stackedit:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;Googleドライブ x StackEdit&lt;/h4&gt;
+
+&lt;p&gt;画像あり、別ページに？&lt;/p&gt;
+
+&lt;h2 id=&#34;実装用markdownパーサー:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;実装用Markdownパーサー&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jonschlinkert/remarkable&#34;&gt;remarkable - GitHub&lt;/a&gt;/&lt;a href=&#34;https://jonschlinkert.github.io/remarkable/demo/&#34;&gt;demo&lt;/a&gt; JavaScript製のクライアント/サーバサイド両方で使えるMarkdownパーサ&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://tibastral.github.io/markdownify/&#34;&gt;Markdownify by tibastral&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/sugarshin/items/3ce64420b0181990480e&#34;&gt;React.jsでMarkdownエディタ - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;静的サイトジェネレーター:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;静的サイトジェネレーター&lt;/h2&gt;
+
+&lt;p&gt;Markdownで記事作成 → 静的サイト生成 → 公開(サーバーにアップ)&lt;br /&gt;
+CMSに付きものの重さ、セキュリティ不安、管理の手間から開放される&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo :: A fast and modern static website engine&lt;/a&gt; (go言語) とにかく早いと評判&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://jekyllrb.com/&#34;&gt;Jekyll • Simple, blog-aware, static sites&lt;/a&gt; (ruby)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://octopress.org/&#34;&gt;Octopress&lt;/a&gt; (ruby)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://nanoc.ws/&#34;&gt;nanoc: a static site generator written in Ruby » home&lt;/a&gt; (ruby)&lt;/li&gt;
+&lt;li&gt;他にも色々ある&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;wordpress-プラグイン:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;WordPress プラグイン&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://wordpress.org/plugins/jetpack-markdown/&#34;&gt;JP Markdown | WordPress Plugins&lt;/a&gt; 自分はMarkdown化したくないページが意図せずサニタイジングされたので使うの辞めた&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;styledocco-x-gulp-markdownでスタイルガイド自動作成:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;StyleDocco x gulp Markdownでスタイルガイド自動作成&lt;/h2&gt;
+
+&lt;h3 id=&#34;styledocco-のインストール-要node-js:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;styledocco のインストール(要node.js)&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;npm install -g styledocco&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://jacobrask.github.io/styledocco/&#34;&gt;StyleDocco&lt;/a&gt;
+&lt;a href=&#34;http://kazu69.net/blog/tec/1411&#34;&gt;StyleDoccoでstyleguideを作成 | 69log&lt;/a&gt;
+そのモジュールのPSD素材の管理場所を記載しておくとよい&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://app.codegrid.net/entry/styledocco-1&#34;&gt;賢く使うStyleDocco導入ガイド - 基本的な使い方 | CodeGrid&lt;/a&gt;
+&lt;a href=&#34;http://toybox-design.net/?p=640&#34;&gt;『StyleDocco』でCSSプリプロセッサのスタイルガイド作成 | toybox-design.net&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;with-gulp-js:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;with gulp.js&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.npmjs.org/package/gulp-styledocco&#34;&gt;gulp-styledocco&lt;/a&gt;
+&lt;a href=&#34;http://blog.photosynthesic.jp/2014/07/html5_boilerplate-sass-gulp-styledocco/&#34;&gt;HTML5 boilerplateをsassでgulpでstyledoccoな感じにしてみた&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Web系技術のまとめ一覧</title>
+      <link>http://localhost:1313/post/list_of_webdesign_techniques/</link>
+      <pubDate>Fri, 24 Jul 2015 08:53:00 +0900</pubDate>
+      <author>taky1973@gmail.com (Taku Nagai)</author>
+      <guid>http://localhost:1313/post/list_of_webdesign_techniques/</guid>
+      <description>
+
+&lt;h2 id=&#34;全般:8ee210feada63183dee0738f4da3c752&#34;&gt;全般&lt;/h2&gt;
+
+&lt;p&gt;≒ は同等・類似機能を持つもの&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;上流 (設計、フロー etc.)&lt;/li&gt;
+&lt;li&gt;Webデザイン、UI/UX&lt;/li&gt;
+&lt;li&gt;SEO/SEM&lt;/li&gt;
+&lt;li&gt;Webライティング&lt;/li&gt;
+&lt;li&gt;セキュリティ&lt;/li&gt;
+&lt;li&gt;プログラミング基本 (アルゴリズム etc.)&lt;/li&gt;
+&lt;li&gt;開発ツール、開発手法
+
+&lt;ul&gt;
+&lt;li&gt;Vagrant + VirturalBox&lt;/li&gt;
+&lt;li&gt;CoreOS + Docker&lt;/li&gt;
+&lt;li&gt;Yeoman, gulp.js, Bower JavaScript&amp;gt;ビルドツールの項を参照&lt;/li&gt;
+&lt;li&gt;Sublime Text&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;HTML
+
+&lt;ul&gt;
+&lt;li&gt;HTML/CSSコーディング、レスポンシブデザイン&lt;/li&gt;
+&lt;li&gt;HTML5（Drag&amp;amp;Drop API,Web Workers,Canvas,Web Storage,WebSocket 他）&lt;/li&gt;
+&lt;li&gt;Jade ≒ ejs,haml,Slim&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;CSS
+
+&lt;ul&gt;
+&lt;li&gt;CSS3&lt;/li&gt;
+&lt;li&gt;Sass(SCSS) ≒ LESS,Stylus&lt;/li&gt;
+&lt;li&gt;StyleDocco スタイルガイド自動作成、gulpで自動化&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;JavaScript
+
+&lt;ul&gt;
+&lt;li&gt;Pure JavaScript&lt;/li&gt;
+&lt;li&gt;jQuery ライブラリ（DOM操作、クロスブラウザ対応 他） ≒ zept(jQuery互換)&lt;/li&gt;
+&lt;li&gt;Underscore.js JavaScriptユーティリティ・ライブラリ ≒ Lo-Dash(Underscore.js互換版/拡張版)&lt;/li&gt;
+&lt;li&gt;Handlehars JSテンプレートエンジン ≒ Mustache,Hogan.js(Mustache拡張),Underscore.jsの_.templateメソッド&lt;/li&gt;
+&lt;li&gt;D3.js データ可視化ライブラリ&lt;/li&gt;
+&lt;li&gt;node.js
+
+&lt;ul&gt;
+&lt;li&gt;CoffeeScript JavaScriptがより短く簡素に書ける言語。JavaScriptにコンパイルして使用&lt;/li&gt;
+&lt;li&gt;mocha node上で動くJavaScriptテストフレームワーク&lt;/li&gt;
+&lt;li&gt;MEAN Stack
+
+&lt;ul&gt;
+&lt;li&gt;MongoDB →データベースの項を参照&lt;/li&gt;
+&lt;li&gt;express node.jsのMVCフレームワーク&lt;/li&gt;
+&lt;li&gt;Angular.js フロントエンド用MVWフレームワーク。HTMLがテンプレート ≒ backbone.js,Knockout.js,ember.js&lt;/li&gt;
+&lt;li&gt;node.js(nodebrew：バージョン管理,npm：パッケージ管理,forever：永続化,async.js：フロー制御)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;ビルドツール、タスクランナー、自動化、パッケージ管理
+
+&lt;ul&gt;
+&lt;li&gt;Yeoman(yo) 雛形作成ツール。下記2つをセット使用。Webアプリに比重 ≒ Middleman(Ruby製、静的サイト向け)&lt;/li&gt;
+&lt;li&gt;gulp.js タスクランナー ≒ Grunt,Brunch,Codekit&lt;/li&gt;
+&lt;li&gt;Bower フロントエンド(js,css,html)のパッケージマネージャ ≒ Jam&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;React.js(Facebook製UIライブラリ、中規模以上向け、jQuery併用難しい) &lt;a href=&#34;https://html5experts.jp/hokaccha/13301/&#34;&gt;»解説&lt;/a&gt; &lt;a href=&#34;http://wazanova.jp/items/1582&#34;&gt;»解説2&lt;/a&gt; &lt;a href=&#34;http://mizchi.hatenablog.com/entry/2014/09/02/201728&#34;&gt;» 解説3&lt;/a&gt; &lt;a href=&#34;http://qiita.com/advent-calendar/2014/reactjs&#34;&gt;解説4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Browserify JSモジュール管理。Debowerifyプラグイン併用でnpmだけでなくbower管理のライブラリも扱える ≒ require.js (&lt;a href=&#34;http://qiita.com/cognitom/items/4c63969b5085c90639d4&#34;&gt;»解説&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;テスト用
+
+&lt;ul&gt;
+&lt;li&gt;jasmine 2 JSテストフレームワーク ≒ mocha + chai(アサーションライブラリ) + sinon.js(モックライブラリ)&lt;/li&gt;
+&lt;li&gt;PhantomJS（ヘッドレスブラウザ）&lt;/li&gt;
+&lt;li&gt;karma(リモートテストランナー）&lt;/li&gt;
+&lt;li&gt;travis.yml（継続的インテグレーション）&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;tmlib.js ≒ enchant.js ゲーム開発&lt;/li&gt;
+&lt;li&gt;Titanium mobile モバイル向けクロスプラットフォーム開発ツール ≒ cordova(PhoneGap),Sencha Touch&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://webcomponents.org/&#34;&gt;WebComponents&lt;/a&gt; HTMLコンポーネント化(パーツの再利用容易に)。Web標準になる?、Google製 (&lt;a href=&#34;http://www.h2.dion.ne.jp/~defghi/webc/webc.htm&#34;&gt;»解説&lt;/a&gt;) &lt;a href=&#34;http://liginc.co.jp/web/html-css/html/58267&#34;&gt;解説2&lt;/a&gt; &lt;a href=&#34;https://blog.agektmr.com/2014/05/web-components.html&#34;&gt;»解説3&lt;/a&gt; (&lt;a href=&#34;http://ameblo.jp/ca-1pixel/entry-11815188808.html&#34;&gt;»解説4&lt;/a&gt;)
+
+&lt;ul&gt;
+&lt;li&gt;Polymer WebComponentsのラッパーライブラリ。polyfill、データバインディング、アニメーション他含む。Google製 (&lt;a href=&#34;http://www.ibm.com/developerworks/jp/web/library/wa-polymer/&#34;&gt;»解説&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;PHP
+
+&lt;ul&gt;
+&lt;li&gt;ライブラリ、フレームワーク&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;CMS、静的サイトジェネレーター
+
+&lt;ul&gt;
+&lt;li&gt;WordPress&lt;/li&gt;
+&lt;li&gt;Hugo&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;その他サーバーサイドの言語&lt;/li&gt;
+&lt;li&gt;データベース
+
+&lt;ul&gt;
+&lt;li&gt;MongoDB NoSQLドキュメント指向DB（JSと親和性が高くnode.js+Mongooseとの組み合わせでの使用が人気）&lt;/li&gt;
+&lt;li&gt;MySQL/MariaDB オープンソースのRDBMS ≒ PostgreSQL&lt;/li&gt;
+&lt;li&gt;SQLite 軽量RDBMS。Mac,iPhone,Androidに標準搭載&lt;/li&gt;
+&lt;li&gt;lawnchair LocalStorageへ簡単にCRUDできるシンプルなJSONストレージ&lt;/li&gt;
+&lt;li&gt;FileMaker&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Web API
+
+&lt;ul&gt;
+&lt;li&gt;OAuth 2.0 (クライアントサイド/サーバーサイド)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;iOSアプリ開発
+
+&lt;ul&gt;
+&lt;li&gt;Swift ≒ Objective-C&lt;/li&gt;
+&lt;li&gt;XCode&lt;/li&gt;
+&lt;li&gt;Cocos2D-Swift (クロスプラットフォーム ゲームフレームワーク)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;AppleScript&lt;/li&gt;
+&lt;li&gt;バージョン管理
+
+&lt;ul&gt;
+&lt;li&gt;Git、Github、Bitbucket、GitBucket&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;サーバー
+
+&lt;ul&gt;
+&lt;li&gt;コマンド(bash)&lt;/li&gt;
+&lt;li&gt;Vagrant 仮想サーバー管理&lt;/li&gt;
+&lt;li&gt;VirtualBox 仮想化ソフト&lt;/li&gt;
+&lt;li&gt;構成管理ツール Ansible(設定はYAML), Chef, Puppet&lt;/li&gt;
+&lt;li&gt;Heroku&lt;/li&gt;
+&lt;li&gt;VPS(さくらVPS, VULTR, Digital Ocean)&lt;/li&gt;
+&lt;li&gt;Docker コンテナ型仮想化。サーバー環境をエミュレート。Gitライクなバージョン管理も可能（&lt;a href=&#34;http://www.publickey1.jp/blog/14/dockerdockerfiledocker_meetup_tokyo_2.html&#34;&gt;わかりやすい説明&lt;/a&gt;、&lt;a href=&#34;http://qiita.com/hakobera/items/db73c5531d65cfeed7ce&#34;&gt;Mac上で動かす方法&lt;/a&gt;）
+
+&lt;ul&gt;
+&lt;li&gt;Fig マルチコンテナ構成ツール。複数のコンテナを1つのシステムとして定義するための正式な方法となりそう &lt;a href=&#34;http://www.publickey1.jp/blog/14/dockerfig2orchard.html&#34;&gt;Docker社がマルチコンテナ構成ツール「Fig」を採用。開発した社員2名のOrchardを買収 － Publickey&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;AWS Amazon&lt;/li&gt;
+&lt;li&gt;Amazon Cognito モバイルデバイスでローカルのデータストアと認証機能。クラウド上のデータストアとの同期機能（&lt;a href=&#34;http://www.publickey1.jp/blog/14/amazon_cognito.html&#34;&gt;わかりやすい説明&lt;/a&gt;）&lt;/li&gt;
+&lt;li&gt;Amazon Zocalo Dropboxライクなクラウド・ストレージ。Active Directory(Windows Server)と連携可能なするユーザー管理機能を備える。月額5ドルで200GB（&lt;a href=&#34;http://www.publickey1.jp/blog/14/amazon_zocalodropbox5200gb.html&#34;&gt;わかりやすい説明&lt;/a&gt;）&lt;/li&gt;
+&lt;li&gt;Azure&lt;/li&gt;
+&lt;li&gt;Heroku&lt;/li&gt;
+&lt;li&gt;Apache, Nginx&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hugo のテンプレート 基本</title>
+      <link>http://localhost:1313/post/hugo_template/</link>
+      <pubDate>Sat, 11 Jul 2015 13:36:46 +0900</pubDate>
+      <author>taky1973@gmail.com (Taku Nagai)</author>
+      <guid>http://localhost:1313/post/hugo_template/</guid>
+      <description>
+
+&lt;h2 id=&#34;基礎知識:1cfa0a57d825e12f541e7967fd546b1b&#34;&gt;基礎知識&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;HugoのテンプレートエンジンはGo言語標準の Package template(html/template)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;変数:1cfa0a57d825e12f541e7967fd546b1b&#34;&gt;変数&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;:=&lt;/code&gt;で変数に値を代入&lt;br /&gt;
+BaseUrl(設定ファイルで設定)をテンプレート中の複数箇所で使う場合に変数に入れたりする。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ $baseUrl := .Site.BaseUrl }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;記事のフロントマターの値を取得:1cfa0a57d825e12f541e7967fd546b1b&#34;&gt;記事のフロントマターの値を取得&lt;/h3&gt;
+
+&lt;p&gt;フロントマターとは、各記事の冒頭にtoml等で書く記事のメタデータ&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;{{ .Params.Title }}&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;設定ファイル-config-toml-の値を取得:1cfa0a57d825e12f541e7967fd546b1b&#34;&gt;設定ファイル(config.toml)の値を取得&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;{{ .Site.Params.CopyrightHTML }}&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;グローバル変数にアクセス:1cfa0a57d825e12f541e7967fd546b1b&#34;&gt;グローバル変数にアクセス&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;$&lt;/code&gt;を付けると、場所関係なくグローバル変数にアクセスできる&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ $.Site.Title }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;コメント:1cfa0a57d825e12f541e7967fd546b1b&#34;&gt;コメント&lt;/h2&gt;
+
+&lt;p&gt;html生成時に破棄される&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{/* a comment */}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;こんな書き方は不可(エラー)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ .Site.Title /* サイトのタイトル */}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;サニタイジング:1cfa0a57d825e12f541e7967fd546b1b&#34;&gt;サニタイジング&lt;/h2&gt;
+
+&lt;p&gt;UNIXコマンドのPipe処理のような記述で、HTMLをサニタイジング(エスケープ)してくれる。&lt;br /&gt;
+(&lt;code&gt;&amp;lt;&lt;/code&gt; を &lt;code&gt;&amp;amp;lt;&lt;/code&gt; に変換したりとか。)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{. | html}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;urlize:1cfa0a57d825e12f541e7967fd546b1b&#34;&gt;urlize&lt;/h2&gt;
+
+&lt;p&gt;URLに使いたい文字列をサニタイズ。&lt;br /&gt;
+半角スペースを &lt;code&gt;-&lt;/code&gt; に変換したり。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ . | urlize }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;htmlコメントの出力:1cfa0a57d825e12f541e7967fd546b1b&#34;&gt;HTMLコメントの出力&lt;/h2&gt;
+
+&lt;p&gt;素のHTMLコメントは生成時に消えてしまうので処理が必要&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ &amp;quot;&amp;lt;!--[if lt IE 8]&amp;gt;&amp;quot; | safeHTML }}
+    &amp;lt;p class=&amp;quot;browserupgrade&amp;quot;&amp;gt;あなたは旧いWebブラウザを使用されています。
+    安全性を確保し、表示の適正化するために&amp;lt;a href=&amp;quot;http://browserupgrade.com/&amp;quot;&amp;gt;ブラウザをアップデート&amp;lt;/a&amp;gt;してください。&amp;lt;/p&amp;gt;
+{{ &amp;quot;&amp;lt;![endif]--&amp;gt;&amp;quot; | safeHTML }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;インクルード:1cfa0a57d825e12f541e7967fd546b1b&#34;&gt;インクルード&lt;/h2&gt;
+
+&lt;p&gt;パーシャル(layout/partial ディレクトリに入れたコードの断片、スニペット)のインクルード&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ partial &amp;quot;head.html&amp;quot; . }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;同上の処理を &lt;code&gt;template&lt;/code&gt; でも書けるが、上の記述の方が簡潔&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ template &amp;quot;partials/header.html&amp;quot; . }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;生成htmlのインデントを揃えたい場合:1cfa0a57d825e12f541e7967fd546b1b&#34;&gt;生成HTMLのインデントを揃えたい場合&lt;/h3&gt;
+
+&lt;p&gt;パーシャル読み込み行にインデントを入れると、そのインデントがそのままHTMLに反映される&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;      &amp;lt;nav id=&amp;quot;main-menu&amp;quot;&amp;gt;
+        {{ partial &amp;quot;menu.html&amp;quot; .Site.Menus.main }}
+      &amp;lt;/nav&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;左詰めにした方が、生成後のHTMLのインデントを制御しやすい&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;      &amp;lt;nav id=&amp;quot;main-menu&amp;quot;&amp;gt;
+{{ partial &amp;quot;menu.html&amp;quot; .Site.Menus.main }}
+      &amp;lt;/nav&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;条件分岐:1cfa0a57d825e12f541e7967fd546b1b&#34;&gt;条件分岐&lt;/h2&gt;
+
+&lt;p&gt;設定ファイル(config.toml)に値が設定されていれば処理&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{if .Site.Params.Tagline}}&amp;lt;p class=&amp;quot;tagline&amp;quot;&amp;gt;{{ .Site.Params.Tagline }}&amp;lt;/p&amp;gt;{{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;フロントマターに値が設定されていれば処理&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ if isset .Params &amp;quot;title&amp;quot; }}&amp;lt;h4&amp;gt;{{ index .Params &amp;quot;title&amp;quot; }}&amp;lt;/h4&amp;gt;{{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;これでもいける？&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ if isset .Params.Title }}&amp;lt;h4&amp;gt;{{ .ParamsTitle }}&amp;lt;/h4&amp;gt;{{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;if 文、if else 文も使える。if not で否定&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{if .Description}}&amp;lt;p class=&amp;quot;lead&amp;quot;&amp;gt;{{ .Description }}&amp;lt;/p&amp;gt;
+{{else}}値がない場合の処理{{end}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;withで等価の処理。withに続けたものが .(ドット) にセットされる&lt;br /&gt;
+短く書けるのでこの書き方が良いと思う&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ with .Description }}&amp;lt;p class=&amp;quot;lead&amp;quot;&amp;gt;{{ . }}&amp;lt;/p&amp;gt;{{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;データ件数で分岐処理&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ if gt (len .TableOfContents) 2500 }}{{.TableOfContents}}{{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;ループ-配列の出力:1cfa0a57d825e12f541e7967fd546b1b&#34;&gt;ループ・配列の出力&lt;/h2&gt;
+
+&lt;p&gt;ループ処理。配列の要素が順に&lt;code&gt;.&lt;/code&gt;にセットされる&lt;br /&gt;
+例はタグ出力。値がなければ何も出力されない&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ range .Params.tags }}&amp;lt;a href=&amp;quot;/tags/{{ . | urlize }}&amp;quot;&amp;gt;{{ . }}&amp;lt;/a&amp;gt;
+{{ else }}タグ無し{{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;キーと値の出力&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{range $index, $element := array}}
+  {{ $index }} : {{ $element }}
+{{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;指定件数を表示&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ range first 10 .Data.Pages }}
+  &amp;lt;li&amp;gt;{{ .Title }}&amp;lt;/li&amp;gt;
+{{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;他にソートなどもできる&lt;/p&gt;
+
+&lt;h2 id=&#34;参考記事:1cfa0a57d825e12f541e7967fd546b1b&#34;&gt;参考記事&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://gohugo.io/templates/go-templates/&#34;&gt;Go Template Primer(公式)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://golang-jp.org/pkg/text/template/&#34;&gt;template - The Go Programming Language&lt;/a&gt;&lt;br /&gt;
+Actions の項〜 がわかりやすい&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://jan.newmarch.name/go/template/chapter-template.html&#34;&gt;Inserting object values&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://astaxie.gitbooks.io/build-web-application-with-golang/content/ja/07.4.html&#34;&gt;テンプレートの処理 | build-web-application-with-golang&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://golangtutorials.blogspot.jp/2011/06/go-templates.html&#34;&gt;GoLang Tutorials: Go Templates&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://golang.org/pkg/html/template/&#34;&gt;template - The Go Programming Language&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>このサイトについて</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Thu, 09 Jul 2015 17:56:03 +0900</pubDate>
+      <author>taky1973@gmail.com (Taku Nagai)</author>
+      <guid>http://localhost:1313/about/</guid>
+      <description>
+
+&lt;h2 id=&#34;当サイトについて:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;当サイトについて&lt;/h2&gt;
+
+&lt;p&gt;ダミーです私は同年同時にこういう理解通りというはずの末になるだでし。ついに生涯が経過院は同時にこういう理解通りとすこぶるそんな安住なますまでがしてならたからも所有かい摘んうないて、同時にこういう理解通&lt;/p&gt;
+
+&lt;h2 id=&#34;運営者プロフィール:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;運営者プロフィール&lt;/h2&gt;
+
+&lt;p&gt;ダミーです私は同年同時にこういう理解通りというはずの末になるだでし。ついに生涯が経過院は同時にこういう理解通りとすこぶるそんな安住なますまでがしてならたからも所有かい摘んうないて、同時にこういう理解通&lt;/p&gt;
+
+&lt;h3 id=&#34;sns:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;SNS&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://twitter.com/taku_nagai&#34;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/takuya.nagai.12&#34;&gt;Facebook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/takunagai&#34;&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/oreo3@github&#34;&gt;Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>お問合せ</title>
+      <link>http://localhost:1313/contact/</link>
+      <pubDate>Thu, 09 Jul 2015 17:56:03 +0900</pubDate>
+      <author>taky1973@gmail.com (Taku Nagai)</author>
+      <guid>http://localhost:1313/contact/</guid>
+      <description>
+
+&lt;h2 id=&#34;小見出し1:3c4864f00d23f7ea35511ec930ce1d9c&#34;&gt;小見出し1&lt;/h2&gt;
+
+&lt;p&gt;本文です。ダミーです私は同年同時にこういう理解通りというはずの末になるだでし。ついに生涯が経過院は同時にこういう理解通りとすこぶるそんな安住なますまでがしてならたからも所有かい摘んうないて、同時にこういう理解通&lt;/p&gt;
+
+&lt;h3 id=&#34;小見出し2:3c4864f00d23f7ea35511ec930ce1d9c&#34;&gt;小見出し2&lt;/h3&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ローカルサーバーどれ使う？ MAMP(Xampp) と Vagrant の違い・使い分け</title>
+      <link>http://localhost:1313/post/comparison_mamp_vagrant/</link>
+      <pubDate>Wed, 15 Oct 2014 00:00:00 +0900</pubDate>
+      <author>taky1973@gmail.com (Taku Nagai)</author>
+      <guid>http://localhost:1313/post/comparison_mamp_vagrant/</guid>
+      <description>
+
+&lt;h2 id=&#34;mamp-xampp:51dec08c134701154a7d3216b4ccb92f&#34;&gt;MAMP(Xampp)&lt;/h2&gt;
+
+&lt;p&gt;WordPressサイト開発など Webサーバー、PHP、MySQL の構成でこと足りるなら MAMP(WindowsならXampp)で必要十分。操作パネルで簡単操作。容量は700MB程度&lt;/p&gt;
+
+&lt;p&gt;しかし、サーバーを色々とカスタマイズしたいなら、Vagrant上の仮想マシンにログインしてコマンド操作する方が直感的で楽なのでそちらを選ぼう (MAMPでもやってできないことはないがややこしい)&lt;/p&gt;
+
+&lt;h2 id=&#34;vagrant:51dec08c134701154a7d3216b4ccb92f&#34;&gt;Vagrant&lt;/h2&gt;
+
+&lt;p&gt;ローカルPC内に仮想のマシンを構築。つまり、手元のパソコンがあたかも別のパソコンになる感じ&lt;/p&gt;
+
+&lt;p&gt;好きなOS(Linux, Windows 他)をインストールしたり、サーバー設定をいじったり、プログラムやモジュールを追加したり、なんでも自由にできる。バージョン管理ができるプラグインを併用すれば失敗も怖くない&lt;/p&gt;
+
+&lt;p&gt;Linuxサーバーで色々試してみたい程度ならわざわざVPS借りなくても、手元のパソコンにVagrant入れたらいい&lt;/p&gt;
+
+&lt;p&gt;コマンド操作が必要なので敷居が高く感じる人もいるだろうが、&lt;a href=&#34;http://dotinstall.com/lessons/basic_vagrant&#34;&gt;ドットインストール Vagrant入門&lt;/a&gt; をひと通りやってみたら案外いけるもの&lt;/p&gt;
+
+&lt;p&gt;CentOS 6.5 で1.8GBあった。ディスク容量に注意&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>dist と dest の意味・違い</title>
+      <link>http://localhost:1313/post/comparison_dist_dest/</link>
+      <pubDate>Wed, 15 Oct 2014 00:00:00 +0900</pubDate>
+      <author>taky1973@gmail.com (Taku Nagai)</author>
+      <guid>http://localhost:1313/post/comparison_dist_dest/</guid>
+      <description>
+
+&lt;h2 id=&#34;dist:7cc95ff082595fdb0f731d09430bbdaa&#34;&gt;dist&lt;/h2&gt;
+
+&lt;p&gt;dist は district の略。「特定の場所」という意味。 公開ディレクトリ名はこれが多い (src → Grunt/gulpで自動処理 → dist みたいな)&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;(ある特定の機能特徴を持った)地域, 地方, 街&lt;/li&gt;
+&lt;li&gt;(行政司法上などの目的で区分された)地区, 区域, …区, 管区;｟ 英｠(countyを分けた)郡&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;dest:7cc95ff082595fdb0f731d09430bbdaa&#34;&gt;dest&lt;/h2&gt;
+
+&lt;p&gt;dest は destination の略。「目的とする場所」という意味。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;(旅行などの)目的地, 到達地, 行き先; (仕事などの)到達点; (手紙などの)あて先, 届け先&lt;/li&gt;
+&lt;li&gt;最終目標, 目的 .&lt;/li&gt;
+&lt;li&gt;〘商〙 (荷物の)仕向け先&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;結論:7cc95ff082595fdb0f731d09430bbdaa&#34;&gt;結論&lt;/h2&gt;
+
+&lt;p&gt;まぁ、どっちでもいいんじゃないかな&lt;br /&gt;
+gulpなどのビルドシステムの生成先なら、意味的には後者かな&lt;/p&gt;
+
+&lt;h2 id=&#34;参考記事:7cc95ff082595fdb0f731d09430bbdaa&#34;&gt;参考記事&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://ejje.weblio.jp/content/dist&#34;&gt;distの意味 - 英和辞典 Weblio辞書&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://ejje.weblio.jp/content/dest&#34;&gt;destの意味 - 英和辞典 Weblio辞書&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

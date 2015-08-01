@@ -1,0 +1,102 @@
+/* 枠内記事・囲み記事 */
+/*====================================*/
+
+//共通
+.panel-a,
+.panel-b,
+.panel-c,
+.panel-d,
+.panel-e {
+  margin-top:    1.5em;
+  margin-bottom: 1.5em;
+  padding: 20px 20px 1px;
+  h1,h2,h3,h4,h5,h6 {
+    @include font-size--normal;
+    &:first-child {
+      margin-top: 0;
+      margin-bottom: 0;
+      @include font-size--large;
+    }
+  }
+  p:first-child {
+    margin-top: 0;
+  }
+  p:last-child {
+    margin-bottom: 1.5em !important;
+  }
+}
+
+//個別スタイル
+.panel-a {
+  border: 1px solid #CCC;
+  h1,h2,h3,h4,h5,h6 {
+    &:first-child {//枠内大見出し
+      margin-top: 6px;
+      @include font-size--large;
+      font-weight: normal;
+    }
+    &:not(:first-child) {//枠内小見出し
+      border-bottom: 1px solid #CCC;
+      &:before {
+        font-family: FontAwesome;
+        content: "\f0da\00a0";//fa-caret-right(\f0da)とスペース(\00a0)//
+        color: $color_1_pale;
+      }
+    }
+  }
+}
+
+.panel-b {
+  background-color: $color_1_pale;
+  h1,h2,h3,h4,h5,h6 {
+    &:first-child {//枠内大見出し
+      color: $color_1;
+      @include font-size--large;
+      font-weight: normal;
+    }
+    &:not(:first-child) {//枠内小見出し
+      //スタイル指定
+    }
+  }
+}
+
+.panel-c {
+  background-color: #f5f5f5;
+  h1,h2,h3,h4,h5,h6 {
+    &:first-child {//枠内大見出し
+      margin: -20px -20px 5px -20px;//枠のpadding(共通参照) - マージン = 0 になるよう設定
+      padding: 10px;
+      background-color: $color_1;
+      color: #FFF;
+      font-weight: normal;
+      a {color: lightyellow;}
+    }
+    &:not(:first-child) {//枠内小見出し
+      //スタイル指定
+    }
+  }
+  &.related-service {
+    h1,h2,h3,h4,h5,h6 {
+      &:first-child {
+        background-color: $color_2;
+      }
+    }
+  }
+}
+//.grid-block .panel-a h1 {
+//  margin: -5px -5px 5px -5px;
+//}
+
+.panel-d {
+  border: 1px dotted $color_2;
+  background-color: $color_2_pale;
+  h1,h2,h3,h4,h5,h6 {
+    &:first-child {//枠内大見出し
+      //スタイル指定
+      font-weight: normal;
+    }
+    &:not(:first-child) {//枠内小見出し
+      //スタイル指定
+    }
+  }
+}

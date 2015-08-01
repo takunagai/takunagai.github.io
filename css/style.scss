@@ -1,0 +1,1132 @@
+/*
+Theme Name: takunagai.github.io
+Description: kumotori.net (Last Update: 2015-07-12)
+Version: 0.1
+Author: @taku_nagai
+Author URI: http://kumotori.net/
+*/
+
+//------------------------------------------------------------
+// 変数
+//------------------------------------------------------------
+
+$body_margin_s: 10px;
+$body_margin_ml: 100px;
+
+//------------------------------------------------------------
+// インポート
+//------------------------------------------------------------
+
+// ★★公開時、style.css に統合
+@import "../bower_components/normalize.css/normalize.css",
+        "../bower_components/fontawesome/css/font-awesome.min.css";
+
+
+//------------------------------------------------------------
+// カラー・色指定
+//------------------------------------------------------------
+
+//基本：[濃灰]
+$color_base: #333;
+
+//グレー（普通、薄い、濃い）
+$color_gray: #666;
+$color_gray_pale: #E7E7E7;
+$color_gray_deep: #333;
+
+//警告色、強調色（普通、薄い）
+$color_warning: #F00;
+$color_warning_pale: mix($color_warning,#FFF,20%);
+
+//リンク（通常時、訪問済、オーバー、アクティブ）
+$color_link: #1A4399;
+$color_link_visited: #639;
+$color_link_over: #F60;
+$color_link_active: #F00;
+
+//水平線 hr
+$color_hr: #CCC;
+
+//垂直区切り線
+$color_separator: #CCC;
+
+//カラー1[]
+$color_1: navy;
+$color_1_pale: mix($color_1,#FFF,20%);
+$color_1_deep: mix($color_1,#000,50%);
+
+//カラー2[]
+$color_2: orange;
+$color_2_pale: mix($color_2,#FFF,20%);
+$color_2_deep: mix($color_2,#000,50%);
+
+//カラー3[]
+$color_3: green;
+$color_3_pale: mix($color_3,#FFF,20%);
+$color_3_deep: mix($color_3,#000,50%);
+
+// Web Font のカラー
+// ->Web Fontの箇所に記述
+
+//一般テーブルのカラー
+// ->テーブルの箇所に記述
+
+//選択したテキストのカラー指定 ★★効かない
+::-moz-selection,
+::selection {
+  color: gold;
+  background: red;
+}
+
+
+//------------------------------------------------------------
+// Media Queries用変数
+//------------------------------------------------------------
+$mq_s:  "only screen and (max-width:480px)";                       //スマートフォン
+$mq_sm: "only screen and (max-width:768px)";                       //スマートフォン & タブレット縦
+$mq_m:  "only screen and (min-width:481px) and (max-width:768px)"; //タブレット縦
+$mq_ml: "only screen and (min-width:481px)";                       //タブレット縦以上 & デスクトップ
+$mq_l:  "only screen and (min-width:769px)";                       //デスクトップ
+$mq_ll: "only screen and (min-width:1140px)";                      //デスクトップ大
+
+// 使用例
+// @media #{$mq_s} {}  → @media only screen and (max-width:479px) {}
+// @media #{$mq_sm} {} → @media only screen and (max-width:767px) {}
+// @media #{$mq_m} {}  → @media only screen and (min-width:480px) and (max-width:767px) {}
+// @media #{$mq_ml} {} → @media only screen and (min-width:480px) {}
+// @media #{$mq_l} {}  → @media only screen and (min-width:768px) {}
+// @media #{$mq_ll} {} → @media only screen and (min-width:1140px) {}
+
+
+//------------------------------------------------------------
+// ボックスモデル、border と padding を含んだ数値で指定するように
+//------------------------------------------------------------
+// box-sizing: content-box;で指定されたサードパーティーのウィジェットを埋め込む場合は、その要素をbox-sizing: content-box; で戻す
+// IE 8 ignores box-sizing: border-box if min/max-width/height is used.
+// 参考：https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+// 参考：http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  // *behavior: url(js/vendor/boxsizing.htc);//IE6&7対応したい場合 ※CSSからでなくHTMLからのパス
+  //    サーバーによっては.htaccessに'AddType text/x-component .htc'の追記が必要
+}
+
+
+//------------------------------------------------------------
+// 環境別
+//------------------------------------------------------------
+
+// iOS
+a {-webkit-tap-highlight-color: rgba(255,255,0,0.6);} //タップ時にカラー
+
+// ブラウザが旧い場合に表示
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+// // Old IE (classify by modernizr)
+// // サンプル
+// .no-cssgradients {//IE9以下
+//   .hoge {
+//     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#f6ac63',endColorstr='#f07a00');
+//   }
+// }
+// .no-cssgradients.no-boxshadow {
+//   .hoge a {
+//     border-right: 1px solid #da7000;
+//   }
+// }
+
+
+//------------------------------------------------------------
+// フォント
+//------------------------------------------------------------
+
+// フォントサイズ
+// -----------------------------------
+// 標準文字サイズは body に設定
+// font-sizeの2つ目はrem対応していないIE8用
+// rem計算：px数/基本文字サイズ（16px）
+// 使用：
+// @include font-size--x-large;
+// @include font-size--large;
+// @include font-size--normal;
+// @include font-size--small;
+// @include font-size--x-small;
+// @include font-size(64);
+
+@mixin font-size--x-large {
+  font-size/*\**/: 28px\9;
+  font-size: 1.75rem;
+}
+@mixin font-size--large {
+  font-size/*\**/: 24px\9;
+  font-size: 1.5rem;
+}
+@mixin font-size--normal {
+  font-size/*\**/: 16px\9;
+  font-size: 1rem;
+}
+@mixin font-size--small {
+  font-size/*\**/: 14px\9;
+  font-size: .875rem;
+}
+@mixin font-size--x-small {
+  font-size/*\**/: 12px\9;
+  font-size: .75rem;
+}
+//ピクセル指定（デフォルトで2倍文字）
+@mixin font-size($font-size:32,$base-font-size:16){
+  font-size/*\**/: $font-size +px\9;
+  font-size: $font-size / $base-font-size +rem;
+}
+
+// テキストのエンボス効果(明・暗)
+//-----------------------------------
+// 使用：
+//   明度が低い文字に：@include text-shadow--light();
+//   明度が低い文字に：@include text-shadow--dark();
+@mixin text-shadow--light($opacity: .5) {
+  text-shadow: 0 1px rgba(#FFF, $opacity);//text-shadow: 0 1px 0 rgba(#FFF, $opacity);
+}
+@mixin text-shadow--dark($opacity: 0.25) {
+  text-shadow: 0 -1px rgba(#000, $opacity);//text-shadow: 0 1px 0 rgba(#000, $opacity);
+}
+
+
+/**
+ * 継承
+ * ------------------------------------------------------------
+ * Usage: @extend 継承名
+ * 基本プレースホルダー(%selector)。テスト時や投稿時に使えた方が便利ものはクラス(.selector)
+ * 注意) メディアクエリー中では、メディアクエリー外部からの継承は使えない
+ */
+
+@import "./partial/panel.scss",
+        "./partial/layout.scss";
+
+/**
+ * clearfix
+ *   Usage : clearfixしたい要素に @extend .clearfix;
+ *           メディアクエリ内は @include clearfix;
+ *   あえてプレースホルダー継承にはしていない(テスト時に使いやすいから)
+ *   この .clearfix の後に @extend した要素が付加される
+ */
+@mixin clearfix {
+  //*zoom: 1;
+  &:before,
+  &:after {
+    content: ' ';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+.clearfix {
+  @include clearfix;
+}
+
+/**
+ * 選択させない(ボタンなどに適用)
+ */
+%user_select_none {
+  user-select:none;
+}
+
+
+/*リストマーカー（継承用）★★画像 */
+/*====================================*/
+//リスト限定ではない。見出し冒頭にマークを付ける場合などにも使用
+//リストマーカー無しは、"%listmarker-none"
+
+//リストマーカー A（グレーのドット）
+%listmarker-a {
+  padding-left: 12px;
+  background: url(img/common/lm_dot.png) no-repeat left 0.5em;
+}
+//リストマーカー B
+%listmarker-b {
+  padding-left: 14px;
+  background: url(img/common/lm_arrow.png) no-repeat left 0.4em;
+}
+//チェック
+%listmarker-check {
+  padding-left: 14px;
+  background: url(img/common/lm_check.png) no-repeat left 0.4em;
+}
+//PDF
+%listmarker-pdf {
+  padding-left: 16px;
+  background: url(img/common/ico_pdf.gif) no-repeat left 0.3em;
+}
+//よくある質問（FAQ,Q&A）
+%listmarker-faq-question {
+  padding-left: 16px;
+  background: url(img/common/lm_faq_q.png) no-repeat left 0.4em;
+}
+%listmarker-faq-answer {
+  padding-left: 16px;
+  background: url(img/common/lm_faq_a.png) no-repeat left 0.4em;
+}
+/*警告*/
+%listmarker-caution {
+  padding-left: 16px;
+  background: url(img/common/ico_caution.png) no-repeat left 0.4em;
+}
+/*リストマーカー無しリスト*/
+%listmarker-none {
+  background: none;
+  margin-left: 0;
+}
+
+
+//------------------------------------------------------------
+// レイアウト
+//------------------------------------------------------------
+
+// 未
+
+//------------------------------------------------------------
+// HTMLタグ 基本設定
+//------------------------------------------------------------
+
+//全てに適用（モバイル & デスクトップ）
+
+//HTML Tags
+//-----------------------
+html,button,input,select,textarea {
+  color: $color_base;
+  //@include letterpress--light();
+}
+
+html {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+//★★要確認
+@-ms-viewport { width: device-width; }
+    @viewport { width: device-width; }
+
+body {background-image: url(http://subtlepatterns.com/patterns/crossword.png);
+  max-width: 1140px;
+  margin-left : auto;
+  margin-right: auto;
+  @media #{$mq_s} {
+    padding-left : $body_margin_s;
+    padding-right: $body_margin_s;
+  }
+  @media #{$mq_ml} {
+    padding-left : $body_margin_ml;
+    padding-right: $body_margin_ml;
+  }
+  font: 16px/1.5 'Hiragino Kaku Gothic ProN', 'Meiryo', 'MS PGothic', 'Roboto', 'Droid Sans', sans-serif;
+  word-wrap: break-word;//長い半角文字列を途中で折り返す。折り返さない指定は"white-space: nowrap;"
+  -webkit-text-size-adjust: none;//100%を指定?OS側でフォントサイズを自動的に調整するプロパティ。iPhoneランドスケープ表示で拡大を防ぐため、しかしMac Safariにも効いてしまう問題
+}
+
+h1,h2,h3,h4,h5,h6 {
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+h1,h2,h3,h4,h5,h6 {
+  small {//補足付き見出しの補足文字
+    margin-left: 0.2em;
+    line-height: 1.4;
+  }
+}
+h1,h2,h3,h4,h5,h6 {
+  small {
+    display: inline-block;
+  }
+}
+h1 small {
+  @include font-size--small;
+}
+h2,h3,h4,h5,h6 {
+  small {
+    display: inline-block;
+    @include font-size--x-small;
+    font-weight: normal;
+  }
+}
+
+h1,h2 {
+  margin-bottom: 1em;
+}
+h3,h4,h5,h6 {
+  margin-bottom: -.4em;
+}
+
+small, .small {//インライン要素なので line-heightプロパティ効かない
+  @include font-size--small;
+}
+.small {
+  line-height: 1.4em;
+}
+
+a {
+  color: $color_link;
+  &:hover,&:active {outline: 0;}
+  &:hover {
+    text-decoration: underline;
+    color: $color_link_over;
+  }
+  &:active {
+    color: $color_link_active;
+  }
+  &:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+  }
+  &:visited {
+    color: $color_link_visited;
+  }
+}
+
+// //外部リンクのマーカー（記事部のみ、画像は除く）★★画像セット
+// .article-body a[href^="http"],
+// .article-body a[href^="https"] {
+//   &:after {
+//     font-family: FontAwesome;
+//     content: "\00a0\f08e";//スペース(\00a0)とfa-external-link(\f0da)
+//     font-size: x-small;
+//     color: $color_gray;
+//   }
+//   //padding-right: 14px;
+//   //background: url(img/common/ico_external_link.gif) no-repeat right top;
+// }
+// .article-body a[href^="http"] img,
+// .article-body a[href^="https"] img {
+//   &:after {
+//     content: none;
+//   }
+// }
+
+blockquote {
+  margin-left: 0;
+  padding-left: 1em;
+  border-left: 3px solid $color_gray_pale;
+}
+
+pre {//整形済テキスト
+  margin: 1em 0;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+//必要なら指定
+//em {}
+//strong {}
+//b {}
+//i {}
+//mark {}
+//abbr {}
+//time {}
+//cite {}
+//abbr {}
+//sup {}
+//sub {}
+//del {}
+//ins {}
+//s {}
+
+//より強い強調
+em em,
+strong strong,
+em strong,
+strong em {
+  border-bottom: 1px solid red;
+}
+
+figure {
+  margin-right: 0;
+  margin-left: 0;
+  figcaption {
+    margin-top: -.8em;
+    @include font-size--small;
+    line-height: 1.25;
+    font-style: italic;
+    a {
+      color: $color_base;
+      &:hover {color: $color_link_over;}
+    }
+  }
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+pre {}
+// codeはコードの項
+
+address {
+  font-style: normal;
+}
+
+
+//------------------------------------------------------------
+// 文字
+//------------------------------------------------------------
+
+// テキストのエンボス効果(明・暗)
+// 継承の箇所で指定
+//   明度が低い文字に：@include text-shadow--light();
+//   明度が低い文字に：@include text-shadow--dark();
+
+//行揃え
+.align-left   {text-align: left !important;}
+.align-right  {text-align: right !important;}
+.align-center {text-align: center !important;}
+
+//タテ位置（上揃え、中央そろえ、下揃え）
+.valign-top,
+.valign-middle,
+.valign-bottom {
+  display: table-cell;
+  // *display:inline; *zoom:1;//IE6&7
+}
+.valign-top    {vertical-align: top !important;}
+.valign-middle {vertical-align: middle !important;}
+.valign-bottom {vertical-align: bottom !important;}
+
+//細字を強制
+.font-weight-normal {font-weight: normal !important;}
+
+//区切り文字
+.separator {color: $color_separator;}
+
+legend.skip {
+  display: none;
+}
+
+//警告、注意
+.warning {
+  color: $color_warning;
+}
+
+//大きい文字
+.font-size-l {
+  @include font-size--large;
+}
+.font-size-ll {
+  @include font-size--x-large;
+}
+
+//省略
+.ellipsis {
+  width: 100%;
+  display: inline-block;//white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+// Web Font
+//------------------
+
+// Font Awesome
+.fa-exclamation-triangle { color: $color_warning; }
+.fa-facebook-square      { color: #3a5695; }
+.fa-phone-square         { color: #999; }
+
+
+//------------------------------------------------------------
+// 画像
+//------------------------------------------------------------
+//img {vertical-align: text-bottom;}
+
+// 画像と動画の最大幅を画面幅に
+//------------------------------------------------------------
+//動画はiframeやobjectの場合もある。適宜変更
+img,
+video,
+iframe,
+object {
+  max-width: 100% !important;
+  height: auto !important;
+  -ms-interpolation-mode: bicubic;
+  //or width: auto\9;//IE6-8 but and 9.. :(
+}
+
+// 埋込iframeのレスポンシブ対応
+// ------------------------------------------------------------
+// 使用：
+// div.embed-containerで囲む
+// 個別に高さ設定したい時は、その要素のpadding-bottomで調整
+// #foo.embed-container {
+//   padding-bottom: 75%;//16:9（800x600）、100%なら正方形
+// }
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;//ここでデフォルトの高さ調整。この例はハイビジョンの比率16:9
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+}
+  .embed-container iframe,
+  .embed-container object,
+  .embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+//フロート画像
+$float-img_margin: 5px;
+img.float-left {
+  float: left;
+  margin-right: $float-img_margin;
+}
+img.float-right {
+  float: right;
+  margin-left: $float-img_margin;
+}
+
+a:hover img {//ロールオーバー時に明るくなる（背景白の場合）
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+  opacity: 0.8;
+}
+
+a:active img {//クリック時にボタン押したように凹む効果
+  position: relative;
+  top: 1px;
+  left: 1px;
+}
+
+//------------------------------------------------------------
+/* !! テーブル */
+//------------------------------------------------------------
+
+//線幅
+$table_line_width: 1px;
+
+//カラー設定
+$color_table_line:           #999;/*テーブルの線*/
+$color_th_text:              $color_base;/*thのテキスト*/
+$color_th_link_text:         $color_link;/*thのリンクテキスト*/
+$color_th_bg:                #CCC;/*thの背景*/
+$color_td_text:              $color_base;/*tdのテキスト*/
+$color_td_bg_1:              #FFF;/*tdの背景*/
+$color_td_bg_2:              #FFF;/*tdの背景2*/
+$color_row_th-highlight_bg:  #BBD;/*特定行の色付け th*/
+$color_row_td-highlight_bg:  #CCE;/*特定行の色付け td*/
+$color_cell_th-highlight_bg: #BBD;/*特定セルの色付け th or td*/
+$color_cell_td-highlight_bg: #CCE;/*特定セルの色付け th or td*/
+
+table {
+  max-width: 100%;
+  margin: 0 0 1.5em;
+  padding-top: 1px;
+  padding-left: 1px;
+  background-color: #FFF;
+  border: 1px solid $color_table_line;
+}
+table.center {
+  margin-right: auto;
+  margin-left: auto;
+}
+table.equal-row-width {/*中のtd幅均等に*/
+  width: 100%;
+  table-layout: fixed;
+}
+caption {
+  padding-left: 1em;
+  text-indent: -1em;
+  text-align: left;
+  @include font-size--small;
+  font-weight: bold;
+}
+  caption:before {
+    margin-right: .25em;
+    content: '●';
+    color: $color_2;
+  }
+table.td-align-center td {/*tdを横センター揃え*/
+  text-align: center;
+}
+table.td-align-right td {/*tdを横右揃え*/
+  text-align: right;
+}
+table.td-valign-top td {/*td内要素を上揃え*/
+  vertical-align: top;
+}
+caption {}
+thead {}
+tfoot {}
+th, td {
+  border-right: 1px dotted $color_table_line;
+  border-bottom: 1px dotted $color_table_line;
+  padding: 2px 10px;
+  vertical-align: middle;
+}
+th {
+  background-color: $color_th_bg;
+  color: $color_th_text;
+  font-weight: normal;
+  text-align: center;
+  a {
+    color: $color_th_link_text;
+    &:hover {color: $color_link_over;}
+  }
+}
+td {
+  color: $color_td_text;
+  background-color: $color_td_bg_1;
+}
+td.no-padding {
+  margin: 0 !important;
+  padding: 0 !important;
+  img {
+    vertical-align: top;
+  }
+}
+
+//奇数行にスタイリング
+table.stripe tr:nth-child(2n+1) td {
+  background-color: $color_td_bg_2;
+}
+
+//行、セルのハイライト
+tr.row-highlight {
+  th {/*background-color: $color_row_th-highlight_bg;*/}
+  td {
+    /* background-color: $color_row_td-highlight_bg; */
+    color: #F00;
+    font-weight: bold;
+  }
+}
+th.cell-highlight {background-color: $color_cell_th-highlight_bg;}
+td.cell-highlight {background-color: $color_cell_td-highlight_bg;}
+
+//注釈付き
+.table-with-notes {
+  margin-bottom: 1em;
+  table {
+    margin-bottom: 0;
+  }
+  p.note {
+    margin-top: 5px;
+    @include font-size--small;
+  }
+}
+
+
+//------------------------------------------------------------
+// コード
+//------------------------------------------------------------
+
+code {
+  padding: 2px 4px;
+  background-color: $color_gray_pale;
+  font-family: "Courier New", monospace;//http://terkel.jp/archives/2009/11/courier-courier-new-and-consolas/
+}
+pre code {
+  display: block;
+  padding: 10px;
+}
+
+
+//------------------------------------------------------------
+// 未整理
+//------------------------------------------------------------
+
+.global-header, .global-footer {
+  @media #{$mq_s} {
+    margin-left : -($body_margin_s);
+    margin-right: -($body_margin_s);
+  }
+  @media #{$mq_ml} {
+    margin-left : -($body_margin_ml);
+    margin-right: -($body_margin_ml);
+  }
+  text-align: center;
+  background-color: #E7E7E7;
+}
+  .global-header {
+    padding: 10px;
+  }
+
+    .global-header__logo {//p
+      font-weight: bold;
+      margin-bottom: 0;
+      a {
+        color: $color_1;
+        text-decoration: none;
+      }
+    }
+    .global-header__tagline {//p
+      margin-top: 0;
+      @include font-size--x-small;
+    }
+
+    #main-menu {/* nav */
+      ul {
+        padding-left: 0;
+      }
+        li {
+          display: inline-block;
+          margin-right: 1em;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+    }
+
+    // ソーシャルメディア アイコンリンク
+    .social-links { //ul
+      padding-left: 0;
+      text-align: center;
+      li {
+        display: inline-block;
+        margin-right: 10px;
+        vertical-align: baseline;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+  .global-footer {
+    font-size: small;
+  }
+    .global-footer__copyright {
+      margin-bottom: 0;
+    }
+
+// パンくずリスト bread crumbs
+.topic-path {//ul
+  padding-left: 0;
+  display: block;
+  @include font-size--x-small;
+  li {
+    display: inline-block;
+    vertical-align: baseline;
+    // *zoom: 1;//IE6&7
+    // *display: inline;
+    // *vertical-align: auto;
+    &:last-child {
+      margin-right: 0;
+      a {
+        background: none;
+      }
+    }
+  }
+    a {
+      padding-right: 10px;
+      color: $color_base;
+      background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAHCAYAAAAvZezQAAAAK0lEQVQIHWPYsWPHfyBggGEwA1kQLgMTZAQphYGdO3ci9MJUYJoBk4HZAgBwFU7dEbJZDAAAAABJRU5ErkJggg==) no-repeat right center;
+    }
+}
+
+
+//--- 記事 ------------------------------
+main {
+  
+}
+
+//シングルページ、リストページ共通
+.article-header__date,
+.article-header__category,
+.article-header__tags,
+.article-list__article__date,
+.article-list__article__category,
+.article-list__article__tags {
+  font-size: small;
+  margin-bottom: 0;
+}
+.article-header__date,
+.article-list__article__date {
+  margin-top: 0;
+}
+.article-header__category,
+.article-list__article__category {//p
+  margin-top: .5em;
+}
+.article-header__tags,
+.article-list__article__tags {//ul
+  margin-top: 0;
+  padding-left: 0;
+}
+  .article-header__tags li,
+  .article-list__article__tags li {
+    display: inline-block;
+    margin-right: 1em;
+  }
+
+//シングルページ
+.article-header {}
+  .article-header__title {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .article-header__eye-catch {
+    margin-top   : 0;
+    margin-right : -($body_margin_s);
+    margin-bottom: 0;
+    margin-left  : -($body_margin_s);
+  }
+  .article-header__date {}//p
+  .article-header__tags {}//ul
+  .article-header__lead {
+    font-weight: bold;
+  }
+//リストページ
+.article-list {}
+  .article-list__article {
+    margin-bottom: 1em;
+  }
+    .article-list__article__title {
+      
+    }
+    .article-list__article__description {
+      margin-bottom: .25em;
+    }
+    .article-list__article__tags {}//ul, シングルページと共通の指定は上参照
+    .article-list__article__date {}//p, 同上
+
+//目次 (Hugo標準で付いている機能を使用)
+#TableOfContents {//nav
+  margin-bottom: 1.5em;
+  border: 1px solid #E7E7E7;
+  font-size: small;
+  > ul {
+    padding-left: 15px;
+    &:before {
+      content: "このページの目次";
+    }
+  }
+  > ul > li {
+    list-style-type: none;
+  }
+}
+
+//記事本文
+.article-body {/* div */
+  > h2 {
+    margin-top: 2em;
+    border-bottom: 1px solid $color_gray_pale;
+  }
+
+  > h4 {
+    
+  }
+}
+
+//記事フッター
+.article-footer {//footer
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+  //前後記事リンク
+  .previous-next {
+    padding: 5px 10px;
+    border: 1px solid $color_gray_pale;
+  }
+  //コメント (Disqus)
+  #disqus_thread {
+    margin-top: 1em;
+    padding: 10px 20px;
+    background-color: #fff;
+  }
+
+
+/* ==========================================================================
+   トップに戻るボタン
+   ========================================================================== */
+
+#move-to-page-top {// p の上下マージン継承
+  display: none;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+  #move-to-page-top a {
+    display: block;
+    padding: 7px 12px;
+    background-color: $color_1;
+    border-bottom: 3px solid gray;
+    color: #FFF;
+    text-align: center;
+  }
+    #move-to-page-top a:active {
+      position: relative;
+      top: 1px;
+      left: 1px;
+    }
+  @media #{$mq_l} {
+    #move-to-page-top a:hover {
+      opacity: 0.8;
+    }
+  }
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+   // HTML5Boilerplate そのまま(clearfix以外)
+
+/*
+ * Hide visually and from screen readers:
+ */
+.hidden {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+.invisible {
+  visibility: hidden;
+}
+
+
+
+/* ==========================================================================
+   Style adjustments for high resolution devices
+   ========================================================================== */
+   //html5boilerplate そのまま
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+  //styles
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+   //html5boilerplate そのまま
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

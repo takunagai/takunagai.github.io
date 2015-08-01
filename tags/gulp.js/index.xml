@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gulp.Js on My Blog</title>
+    <link>http://localhost:1313/tags/gulp/index.js/</link>
+    <description>Recent content in Gulp.Js on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <managingEditor>taky1973@gmail.com (Taku Nagai)</managingEditor>
+    <webMaster>taky1973@gmail.com (Taku Nagai)</webMaster>
+    <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
+    <lastBuildDate>Wed, 15 Oct 2014 00:00:00 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/gulp.js/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>dist と dest の意味・違い</title>
+      <link>http://localhost:1313/post/comparison_dist_dest/</link>
+      <pubDate>Wed, 15 Oct 2014 00:00:00 +0900</pubDate>
+      <author>taky1973@gmail.com (Taku Nagai)</author>
+      <guid>http://localhost:1313/post/comparison_dist_dest/</guid>
+      <description>
+
+&lt;h2 id=&#34;dist:7cc95ff082595fdb0f731d09430bbdaa&#34;&gt;dist&lt;/h2&gt;
+
+&lt;p&gt;dist は district の略。「特定の場所」という意味。 公開ディレクトリ名はこれが多い (src → Grunt/gulpで自動処理 → dist みたいな)&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;(ある特定の機能特徴を持った)地域, 地方, 街&lt;/li&gt;
+&lt;li&gt;(行政司法上などの目的で区分された)地区, 区域, …区, 管区;｟ 英｠(countyを分けた)郡&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;dest:7cc95ff082595fdb0f731d09430bbdaa&#34;&gt;dest&lt;/h2&gt;
+
+&lt;p&gt;dest は destination の略。「目的とする場所」という意味。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;(旅行などの)目的地, 到達地, 行き先; (仕事などの)到達点; (手紙などの)あて先, 届け先&lt;/li&gt;
+&lt;li&gt;最終目標, 目的 .&lt;/li&gt;
+&lt;li&gt;〘商〙 (荷物の)仕向け先&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;結論:7cc95ff082595fdb0f731d09430bbdaa&#34;&gt;結論&lt;/h2&gt;
+
+&lt;p&gt;まぁ、どっちでもいいんじゃないかな&lt;br /&gt;
+gulpなどのビルドシステムの生成先なら、意味的には後者かな&lt;/p&gt;
+
+&lt;h2 id=&#34;参考記事:7cc95ff082595fdb0f731d09430bbdaa&#34;&gt;参考記事&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://ejje.weblio.jp/content/dist&#34;&gt;distの意味 - 英和辞典 Weblio辞書&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://ejje.weblio.jp/content/dest&#34;&gt;destの意味 - 英和辞典 Weblio辞書&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
