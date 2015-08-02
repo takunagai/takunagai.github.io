@@ -97,9 +97,17 @@
           <h2>タグ別一覧</h2>
           <ul id="all-tags">
             
-              <li><a href="http://localhost:1313/tags/gulp.js">gulp.js</a></li>
+              <li><a href="http://localhost:1313/tags/css">css</a></li>
+            
+              <li><a href="http://localhost:1313/tags/gulp">gulp</a></li>
+            
+              <li><a href="http://localhost:1313/tags/html">html</a></li>
             
               <li><a href="http://localhost:1313/tags/hugo">hugo</a></li>
+            
+              <li><a href="http://localhost:1313/tags/javascript">javascript</a></li>
+            
+              <li><a href="http://localhost:1313/tags/jquery">jquery</a></li>
             
               <li><a href="http://localhost:1313/tags/mamp">mamp</a></li>
             
@@ -109,9 +117,13 @@
             
               <li><a href="http://localhost:1313/tags/web%E5%88%B6%E4%BD%9C">web制作</a></li>
             
+              <li><a href="http://localhost:1313/tags/wordpress">wordpress</a></li>
+            
               <li><a href="http://localhost:1313/tags/%E3%81%BE%E3%81%A8%E3%82%81">まとめ</a></li>
             
               <li><a href="http://localhost:1313/tags/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC">サーバー</a></li>
+            
+              <li><a href="http://localhost:1313/tags/%E3%83%AC%E3%82%B9%E3%83%9D%E3%83%B3%E3%82%B7%E3%83%96">レスポンシブ</a></li>
             
               <li><a href="http://localhost:1313/tags/%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83">開発環境</a></li>
             
@@ -136,10 +148,24 @@
             </li>
             
             <li class="article-list__article">
-              <h3 class="article-list__article__title"><a href="http://localhost:1313/post/hugo_template/">Hugo のテンプレート 基本</a></h3>
+              <h3 class="article-list__article__title"><a href="http://localhost:1313/post/hugo/template/">Hugo のテンプレート 基本</a></h3>
               <p class="article-list__article__description">Hugoのテンプレート記述についてまとめていく。まずは基本編。</p>
               <ul class="article-list__article__tags"><li><a href="tags/hugo">#Hugo</a></li></ul>
               <p class="article-list__article__date"><time datetime="2015-07-11T13:36:46&#43;09:00">Jul 11, 2015</time></p>
+            </li>
+            
+            <li class="article-list__article">
+              <h3 class="article-list__article__title"><a href="http://localhost:1313/post/javascript/base_javascript_jquery/">JavaScript / jQuery 自分の使い方</a></h3>
+              <p class="article-list__article__description">[Web制作勉強会@川西市](http://hokusetsu-webcreators.net/)用資料。JavaScript関連で自分はこんな風にしてるよ、ってのを書き出しました</p>
+              <ul class="article-list__article__tags"><li><a href="tags/javascript">#JavaScript</a></li><li><a href="tags/jquery">#jQuery</a></li></ul>
+              <p class="article-list__article__date"><time datetime="2015-02-21T17:56:56&#43;09:00">Feb 21, 2015</time></p>
+            </li>
+            
+            <li class="article-list__article">
+              <h3 class="article-list__article__title"><a href="http://localhost:1313/post/wordpress/css-styling_immediate-article-links/">レスポンシブな前後の記事リンクのスタイリング</a></h3>
+              <p class="article-list__article__description">WordPressの「次の記事へ」「前の記事へ」のリンクのカスタマイズ例。シンプルな構成を保ちつつ、パソコンでもスマートフォンでもいい感じに</p>
+              <ul class="article-list__article__tags"><li><a href="tags/html">#HTML</a></li><li><a href="tags/css">#CSS</a></li><li><a href="tags/%E3%83%AC%E3%82%B9%E3%83%9D%E3%83%B3%E3%82%B7%E3%83%96">#レスポンシブ</a></li><li><a href="tags/wordpress">#WordPress</a></li></ul>
+              <p class="article-list__article__date"><time datetime="2014-10-17T00:00:00&#43;09:00">Oct 17, 2014</time></p>
             </li>
             
             <li class="article-list__article">
@@ -152,7 +178,7 @@
             <li class="article-list__article">
               <h3 class="article-list__article__title"><a href="http://localhost:1313/post/comparison_dist_dest/">dist と dest の意味・違い</a></h3>
               <p class="article-list__article__description">ディレクトリ名によく使われている &#39;dist&#39; と &#39;dest&#39; の違いがモヤモヤ気になったのでザッと調べた</p>
-              <ul class="article-list__article__tags"><li><a href="tags/web%E5%88%B6%E4%BD%9C">#Web制作</a></li><li><a href="tags/%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83">#開発環境</a></li><li><a href="tags/gulp.js">#gulp.js</a></li></ul>
+              <ul class="article-list__article__tags"><li><a href="tags/web%E5%88%B6%E4%BD%9C">#Web制作</a></li><li><a href="tags/%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83">#開発環境</a></li><li><a href="tags/gulp">#gulp</a></li></ul>
               <p class="article-list__article__date"><time datetime="2014-10-15T00:00:00&#43;09:00">Oct 15, 2014</time></p>
             </li>
             
@@ -221,5 +247,8 @@
     </script>
 
 
-  </body>
+  <script data-no-instant>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
 </html>

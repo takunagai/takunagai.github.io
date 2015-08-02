@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>開発 on My Blog</title>
+    <link>http://localhost:1313/categories/%E9%96%8B%E7%99%BA/</link>
+    <description>Recent content in 開発 on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <managingEditor>taky1973@gmail.com (Taku Nagai)</managingEditor>
+    <webMaster>taky1973@gmail.com (Taku Nagai)</webMaster>
+    <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
+    <lastBuildDate>Sat, 11 Jul 2015 13:36:46 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/%E9%96%8B%E7%99%BA/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>HugoのMarkdown記法</title>
+      <link>http://localhost:1313/post/hugo/markdown/</link>
+      <pubDate>Sat, 11 Jul 2015 13:36:46 +0900</pubDate>
+      <author>taky1973@gmail.com (Taku Nagai)</author>
+      <guid>http://localhost:1313/post/hugo/markdown/</guid>
+      <description>
+
+&lt;h2 id=&#34;blackfriday:5542d551484653c47f2dacb24438d667&#34;&gt;Blackfriday&lt;/h2&gt;
+
+&lt;p&gt;HugoのMarkdownのレンダリンには、Go言語の&amp;rdquo;Blackfriday&amp;rdquo;が行う。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/russross/blackfriday&#34;&gt;russross/blackfriday | github&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Markdown記法を拡張したもので、&lt;a href=&#34;https://help.github.com/articles/github-flavored-markdown/&#34;&gt;GitHub Flavored Markdown&lt;/a&gt; に近い。&lt;br /&gt;
+表組みなど、Markdownで書ける。&lt;/p&gt;
+
+&lt;h3 id=&#34;拡張されたもの:5542d551484653c47f2dacb24438d667&#34;&gt;拡張されたもの&lt;/h3&gt;
+
+&lt;h4 id=&#34;テーブル:5542d551484653c47f2dacb24438d667&#34;&gt;テーブル&lt;/h4&gt;
+
+&lt;p&gt;: の位置で文字揃えの指定が可能。&lt;br /&gt;
+th,td タグ全てに align=&amp;ldquo;left|center|right&amp;rdquo; が付く&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Header&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;right aligned&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Content Cell&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Content Cell&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&#34;コードブロック:5542d551484653c47f2dacb24438d667&#34;&gt;コードブロック&lt;/h4&gt;
+
+&lt;p&gt;言語名を付けると code タグにクラスを付けてくれる。&lt;br /&gt;
+シンタックスハイライトする場合に有用。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;meta name=&amp;quot;keywords&amp;quot; itemprop=&amp;quot;keywords&amp;quot; content=&amp;quot;&amp;quot;&amp;gt;
+&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1&amp;quot;&amp;gt;
+&amp;lt;meta name=&amp;quot;format-detection&amp;quot; content=&amp;quot;telephone=no&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;その他:5542d551484653c47f2dacb24438d667&#34;&gt;その他&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;URLは自動でリンク(&amp;lt; &amp;gt;不要)&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;内容&lt;/del&gt; ←打ち消し線&lt;/li&gt;
+&lt;li&gt;Hard line breaks 改行時、末尾にスペース2つを付けなくても改行。オプションを有効にする必要がある。Hugoでも設定すれば使える(下記参照)&lt;/li&gt;
+&lt;li&gt;その他、Smart quotes、LaTeX-style dash parsing、Smart fractions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;hugo-で-blackfriday-のレンダリングをカスタマイズ:5542d551484653c47f2dacb24438d667&#34;&gt;Hugo で Blackfriday のレンダリングをカスタマイズ&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://gohugo.io/overview/configuration/&#34;&gt;Configuring Hugo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;上記ページを参照に、設定ファイル config.toml に追記することでカスタマイズが可能。&lt;br /&gt;
+下例は、改行時に末尾にスペース2つを付けなくても改行(自分は使わないが)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[blackfriday]
+  extensions = [&amp;quot;hardLineBreak&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

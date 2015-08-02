@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ja" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="keywords" itemprop="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="generator" content="Hugo 0.14" />
+  
+  
+  <title> Hugo のテンプレート 基本 | My Blog </title>
+  <link rel="stylesheet" href="http://localhost:1313/css/style.min.css">
+  <link rel="apple-touch-icon-precomposed" href="http://localhost:1313/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="http://localhost:1313/favicon.ico">
+  <link rel="canonical" href="http://localhost:1313/post/hugo/template/">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script>window.Modernizr || document.write('<script src="http:\/\/localhost:1313\/bower_components/modernizr/modernizr.js"><\/script>')</script>
+</head>
+
+  <body class="single post template">
+    <a class="visuallyhidden focusable" href="#main">メインコンテンツを読む</a>
+    <!--[if lt IE 8]>
+    <p class="browserupgrade">あなたは旧いWebブラウザを使用されています。
+    安全性を確保し、表示の適正化するために<a href="http://browserupgrade.com/">ブラウザをアップデート</a>してください。</p>
+    <![endif]-->
+
+    <header class="global-header" role="banner">
+      <p class="global-header__logo"><a href="http://localhost:1313/">My Blog</a></p>
+      <p class="global-header__tagline">Web系技術ブログ</p>
+
+      <nav id="main-menu">
+      <ul>
+        
+        <li>
+           <a href="http://localhost:1313/about/">About</a>
+          
+        </li>
+        
+        <li>
+           <a href="http://localhost:1313/post/">Blog</a>
+          
+        </li>
+        
+        <li>
+           <a href="http://localhost:1313/work/">Work</a>
+          
+        </li>
+        
+      </ul>
+
+
+    	</nav>
+
+    <ul class="social-links">
+      <li><a href="taky1973@gmail.com"><i class="fa fa-envelope"></i></a></li>
+      <li><a href="https://twitter.com/taku_nagai"><i class="fa fa-twitter"></i></a></li>
+      <li><a href="https://www.facebook.com/takuya.nagai.12"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="https://github.com/takunagai"><i class="fa fa-github-alt"></i></a></li>
+      <li><a href="http://takunagai.github.io.tumblr.com"><i class="fa fa-tumblr"></i></a></li>
+      <li><a href="https://instagram.com/taku_n_/"><i class="fa fa-instagram"></i></a></li>
+      <li><a href="http://localhost:1313/about/#sns:6083a88ee3411b0d17ce02d738f69d47"><i class="fa fa-plus-square"></i></a></li>
+      <li><a href="" type="application/rss+xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+    </ul>
+    
+    </header>
+
+		
+		
+		
+		
+		<ul class="topic-path">
+		  <li><a href="http://localhost:1313/">home</a></li>
+		  
+		    
+		      
+		      <li><a href='http://localhost:1313/post'>post</a></li>
+		      
+		      
+		  
+		    
+		      
+		      <li><a href='http://localhost:1313/post/hugo'>hugo</a></li>
+		      
+		      
+		  
+		    
+		      
+		      <li><a href='http://localhost:1313/post/hugo/template'>template</a></li>
+		      
+		      
+		  
+		    
+		      
+		  
+		</ul>
+
+
+
+    <main id="main" role="main">
+      <article>
+
+        <header class="article-header">
+          <h1 class="article-header__title">Hugo のテンプレート 基本</h1>
+          <p class="article-header__category">category: <a href="http://localhost:1313/categories/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA%E3%83%BCb">カテゴリーB</a></p>
+          <ul class="article-header__tags"><li><a href="http://localhost:1313/tags/hugo">#Hugo</a></li></ul>
+          <p class="article-header__date"><time datetime="2015-07-11T13:36:46&#43;09:00">Jul 11, 2015</time></p>
+          <p class="article-header__lead">Hugoのテンプレート記述についてまとめていく。まずは基本編。</p>
+        </header>
+
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#基礎知識:1cfa0a57d825e12f541e7967fd546b1b">基礎知識</a></li>
+<li><a href="#変数:1cfa0a57d825e12f541e7967fd546b1b">変数</a>
+<ul>
+<li><a href="#記事のフロントマターの値を取得:1cfa0a57d825e12f541e7967fd546b1b">記事のフロントマターの値を取得</a></li>
+<li><a href="#設定ファイル-config-toml-の値を取得:1cfa0a57d825e12f541e7967fd546b1b">設定ファイル(config.toml)の値を取得</a></li>
+<li><a href="#グローバル変数にアクセス:1cfa0a57d825e12f541e7967fd546b1b">グローバル変数にアクセス</a></li>
+</ul></li>
+<li><a href="#コメント:1cfa0a57d825e12f541e7967fd546b1b">コメント</a></li>
+<li><a href="#サニタイジング:1cfa0a57d825e12f541e7967fd546b1b">サニタイジング</a></li>
+<li><a href="#urlize:1cfa0a57d825e12f541e7967fd546b1b">urlize</a></li>
+<li><a href="#htmlコメントの出力:1cfa0a57d825e12f541e7967fd546b1b">HTMLコメントの出力</a></li>
+<li><a href="#インクルード:1cfa0a57d825e12f541e7967fd546b1b">インクルード</a>
+<ul>
+<li><a href="#生成htmlのインデントを揃えたい場合:1cfa0a57d825e12f541e7967fd546b1b">生成HTMLのインデントを揃えたい場合</a></li>
+</ul></li>
+<li><a href="#条件分岐:1cfa0a57d825e12f541e7967fd546b1b">条件分岐</a></li>
+<li><a href="#ループ-配列の出力:1cfa0a57d825e12f541e7967fd546b1b">ループ・配列の出力</a></li>
+<li><a href="#参考記事:1cfa0a57d825e12f541e7967fd546b1b">参考記事</a></li>
+</ul></li>
+</ul>
+</nav>
+
+        <div class="article-body">
+
+
+<h2 id="基礎知識:1cfa0a57d825e12f541e7967fd546b1b">基礎知識</h2>
+
+<ul>
+<li>HugoのテンプレートエンジンはGo言語標準の Package template(html/template)</li>
+</ul>
+
+<h2 id="変数:1cfa0a57d825e12f541e7967fd546b1b">変数</h2>
+
+<p><code>:=</code>で変数に値を代入<br />
+BaseUrl(設定ファイルで設定)をテンプレート中の複数箇所で使う場合に変数に入れたりする。</p>
+
+<pre><code>{{ $baseUrl := .Site.BaseUrl }}
+</code></pre>
+
+<h3 id="記事のフロントマターの値を取得:1cfa0a57d825e12f541e7967fd546b1b">記事のフロントマターの値を取得</h3>
+
+<p>フロントマターとは、各記事の冒頭にtoml等で書く記事のメタデータ</p>
+
+<p><code>{{ .Params.Title }}</code></p>
+
+<h3 id="設定ファイル-config-toml-の値を取得:1cfa0a57d825e12f541e7967fd546b1b">設定ファイル(config.toml)の値を取得</h3>
+
+<p><code>{{ .Site.Params.CopyrightHTML }}</code></p>
+
+<h3 id="グローバル変数にアクセス:1cfa0a57d825e12f541e7967fd546b1b">グローバル変数にアクセス</h3>
+
+<p><code>$</code>を付けると、場所関係なくグローバル変数にアクセスできる</p>
+
+<pre><code>{{ $.Site.Title }}
+</code></pre>
+
+<h2 id="コメント:1cfa0a57d825e12f541e7967fd546b1b">コメント</h2>
+
+<p>html生成時に破棄される</p>
+
+<pre><code>{{/* a comment */}}
+</code></pre>
+
+<p>こんな書き方は不可(エラー)</p>
+
+<pre><code>{{ .Site.Title /* サイトのタイトル */}}
+</code></pre>
+
+<h2 id="サニタイジング:1cfa0a57d825e12f541e7967fd546b1b">サニタイジング</h2>
+
+<p>UNIXコマンドのPipe処理のような記述で、HTMLをサニタイジング(エスケープ)してくれる。<br />
+(<code>&lt;</code> を <code>&amp;lt;</code> に変換したりとか。)</p>
+
+<pre><code>{{. | html}}
+</code></pre>
+
+<h2 id="urlize:1cfa0a57d825e12f541e7967fd546b1b">urlize</h2>
+
+<p>URLに使いたい文字列をサニタイズ。<br />
+半角スペースを <code>-</code> に変換したり。</p>
+
+<pre><code>{{ . | urlize }}
+</code></pre>
+
+<h2 id="htmlコメントの出力:1cfa0a57d825e12f541e7967fd546b1b">HTMLコメントの出力</h2>
+
+<p>素のHTMLコメントは生成時に消えてしまうので処理が必要</p>
+
+<pre><code>{{ &quot;&lt;!--[if lt IE 8]&gt;&quot; | safeHTML }}
+    &lt;p class=&quot;browserupgrade&quot;&gt;あなたは旧いWebブラウザを使用されています。
+    安全性を確保し、表示の適正化するために&lt;a href=&quot;http://browserupgrade.com/&quot;&gt;ブラウザをアップデート&lt;/a&gt;してください。&lt;/p&gt;
+{{ &quot;&lt;![endif]--&gt;&quot; | safeHTML }}
+</code></pre>
+
+<h2 id="インクルード:1cfa0a57d825e12f541e7967fd546b1b">インクルード</h2>
+
+<p>パーシャル(layout/partial ディレクトリに入れたコードの断片、スニペット)のインクルード</p>
+
+<pre><code>{{ partial &quot;head.html&quot; . }}
+</code></pre>
+
+<p>同上の処理を <code>template</code> でも書けるが、上の記述の方が簡潔</p>
+
+<pre><code>{{ template &quot;partials/header.html&quot; . }}
+</code></pre>
+
+<h3 id="生成htmlのインデントを揃えたい場合:1cfa0a57d825e12f541e7967fd546b1b">生成HTMLのインデントを揃えたい場合</h3>
+
+<p>パーシャル読み込み行にインデントを入れると、そのインデントがそのままHTMLに反映される</p>
+
+<pre><code>      &lt;nav id=&quot;main-menu&quot;&gt;
+        {{ partial &quot;menu.html&quot; .Site.Menus.main }}
+      &lt;/nav&gt;
+</code></pre>
+
+<p>左詰めにした方が、生成後のHTMLのインデントを制御しやすい</p>
+
+<pre><code>      &lt;nav id=&quot;main-menu&quot;&gt;
+{{ partial &quot;menu.html&quot; .Site.Menus.main }}
+      &lt;/nav&gt;
+</code></pre>
+
+<h2 id="条件分岐:1cfa0a57d825e12f541e7967fd546b1b">条件分岐</h2>
+
+<p>設定ファイル(config.toml)に値が設定されていれば処理</p>
+
+<pre><code>{{if .Site.Params.Tagline}}&lt;p class=&quot;tagline&quot;&gt;{{ .Site.Params.Tagline }}&lt;/p&gt;{{ end }}
+</code></pre>
+
+<p>フロントマターに値が設定されていれば処理</p>
+
+<pre><code>{{ if isset .Params &quot;title&quot; }}&lt;h4&gt;{{ index .Params &quot;title&quot; }}&lt;/h4&gt;{{ end }}
+</code></pre>
+
+<p>これでもいける？</p>
+
+<pre><code>{{ if isset .Params.Title }}&lt;h4&gt;{{ .ParamsTitle }}&lt;/h4&gt;{{ end }}
+</code></pre>
+
+<p>if 文、if else 文も使える。if not で否定</p>
+
+<pre><code>{{if .Description}}&lt;p class=&quot;lead&quot;&gt;{{ .Description }}&lt;/p&gt;
+{{else}}値がない場合の処理{{end}}
+</code></pre>
+
+<p>withで等価の処理。withに続けたものが .(ドット) にセットされる<br />
+短く書けるのでこの書き方が良いと思う</p>
+
+<pre><code>{{ with .Description }}&lt;p class=&quot;lead&quot;&gt;{{ . }}&lt;/p&gt;{{ end }}
+</code></pre>
+
+<p>データ件数で分岐処理</p>
+
+<pre><code>{{ if gt (len .TableOfContents) 2500 }}{{.TableOfContents}}{{ end }}
+</code></pre>
+
+<h2 id="ループ-配列の出力:1cfa0a57d825e12f541e7967fd546b1b">ループ・配列の出力</h2>
+
+<p>ループ処理。配列の要素が順に<code>.</code>にセットされる<br />
+例はタグ出力。値がなければ何も出力されない</p>
+
+<pre><code>{{ range .Params.tags }}&lt;a href=&quot;/tags/{{ . | urlize }}&quot;&gt;{{ . }}&lt;/a&gt;
+{{ else }}タグ無し{{ end }}
+</code></pre>
+
+<p>キーと値の出力</p>
+
+<pre><code>{{range $index, $element := array}}
+  {{ $index }} : {{ $element }}
+{{ end }}
+</code></pre>
+
+<p>指定件数を表示</p>
+
+<pre><code>{{ range first 10 .Data.Pages }}
+  &lt;li&gt;{{ .Title }}&lt;/li&gt;
+{{ end }}
+</code></pre>
+
+<p>他にソートなどもできる</p>
+
+<h2 id="参考記事:1cfa0a57d825e12f541e7967fd546b1b">参考記事</h2>
+
+<ul>
+<li><a href="http://gohugo.io/templates/go-templates/">Go Template Primer(公式)</a></li>
+<li><a href="http://golang-jp.org/pkg/text/template/">template - The Go Programming Language</a><br />
+Actions の項〜 がわかりやすい</li>
+<li><a href="http://jan.newmarch.name/go/template/chapter-template.html">Inserting object values</a></li>
+<li><a href="http://astaxie.gitbooks.io/build-web-application-with-golang/content/ja/07.4.html">テンプレートの処理 | build-web-application-with-golang</a></li>
+<li><a href="http://golangtutorials.blogspot.jp/2011/06/go-templates.html">GoLang Tutorials: Go Templates</a></li>
+<li><a href="http://golang.org/pkg/html/template/">template - The Go Programming Language</a></li>
+</ul>
+
+        </div>
+
+        <footer class="article-footer">
+          <div class="previous-next">
+            前の記事：<a href="http://localhost:1313/post/list_of_webdesign_techniques/"> Web系技術のまとめ一覧</a><br>
+            次の記事：<a href="http://localhost:1313/contact/"> お問合せ</a>
+          </div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'takunagaigithubio';
+    var disqus_identifier = 'http:\/\/localhost:1313\/post\/hugo\/template\/';
+    var disqus_title = 'Hugo のテンプレート 基本';
+    var disqus_url = 'http:\/\/localhost:1313\/post\/hugo\/template\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </footer>
+
+      </article>
+    </main>
+
+    <p id="move-to-page-top"><a href="#top"><i class="fa fa-chevron-up"></i></a></p>
+
+    <hr>
+
+    <aside class="grid-block cells4 mobile-2col panel">
+      <div class="cell">
+        <h2>見出しです</h2>
+        <p>ダミーです私は同年同時にこういう理解通りというはずの末についに生涯がなるだでし。</p>
+      </div>
+      <div class="cell">
+        <h2>見出しです</h2>
+        <p>ダミーです私は同年同時にこういう理解通りというはずの末についに生涯がなるだでし。</p>
+      </div>
+      <div class="cell">
+        <h2>見出しです</h2>
+        <p>ダミーです私は同年同時にこういう理解通りというはずの末についに生涯がなるだでし。</p>
+      </div>
+      <div class="cell">
+        <h2>見出しです</h2>
+        <p>ダミーです私は同年同時にこういう理解通りというはずの末についに生涯がなるだでし。</p>
+      </div>
+    </aside>
+
+    <footer class="global-footer">
+
+      
+
+      <p class="global-footer__copyright">Copyright © 2015 taku_nagai All rights reserved.<br>
+      Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> 0.14</p>
+    </footer>
+
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('http:\/\/localhost:1313\/bower_components/jQuery/dist/jquery.min.js"><\/script>')</script>
+    <script src="http://localhost:1313//js/plugins.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.min.js"></script>
+    <script>window._ || document.write('http:\/\/localhost:1313\/bower_components/lodash/lodash.min.js"><\/script>')</script>
+    <script src="http://localhost:1313/js/main.js"></script>
+    
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-XXXXXXXX-X', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+
+<aside class="variables" style="border:1px dotted red;">
+  <p>[Template Variables](http://gohugo.io/templates/variables/)</p>
+  <h2>Variables</h2>
+  <ol>
+    <li>TITLE: Hugo のテンプレート 基本</li>
+    <li>CONTENT: 記事のHTML</li>
+    <li>SUMMARY: 基礎知識 HugoのテンプレートエンジンはGo言語標準の Package template(html/template) 変数 :=で変数に値を代入 BaseUrl(設定ファイルで設定)をテンプレート中の複数箇所で使う場合に変数に入れたりする。 {{ $baseUrl := .Site.BaseUrl }} 記事のフロントマターの値を取得 フロントマターとは、各記事の冒頭にtoml等で書く記事のメタデータ {{ .Params.Title }} 設定ファイル(config.toml)の値を取得 {{ .Site.Params.CopyrightHTML }} グローバル変数にアクセス $を付けると、場所関係なくグローバル変数にアクセスできる {{ $.Site.Title }} コメント html生成時に破棄される {{/* a comment */}} こんな書き方は不可(エラー) {{ .Site.Title /* サイトのタイトル */}} サニタイジング UNIXコマンドのPipe処理のような記述で、HTMLをサニタイジング(エスケープ)してくれる。 (&lt; を &amp;lt; に変換したりとか。) {{. | html}} urlize URLに使いたい文字列をサニタイズ。 半角スペースを - に変換したり。 {{ . | urlize }} HTMLコメントの出力 素のHTMLコメントは生成時に消えてしまうので処理が必要 {{ &quot;&lt;!--[if lt IE 8]&gt;&quot; | safeHTML }} &lt;p class=&quot;browserupgrade&quot;&gt;あなたは旧いWebブラウザを使用されています。 安全性を確保し、表示の適正化するために&lt;a href=&quot;http://browserupgrade.com/&quot;&gt;ブラウザをアップデート&lt;/a&gt;してください。&lt;/p&gt; {{ &quot;&lt;![endif]--&gt;&quot; | safeHTML }} インクルード パーシャル(layout/partial ディレクトリに入れたコードの断片、スニペット)のインクルード {{ partial &quot;head.html&quot; .</li>
+    <li>TRUNCATED: true</li>
+    <li>DESCRIPTION: Hugoのテンプレート記述についてまとめていく。まずは基本編。</li>
+    <li>KEYWORDS: []</li>
+    <li>DATE: 2015-07-11 13:36:46 &#43;0900 JST</li>
+    <li>PUBLISHDATE: 0001-01-01 00:00:00 &#43;0000 UTC</li>
+    <li>TYPE: post</li>
+    <li>SECTION: post</li>
+    <li>PERMALINK: http://localhost:1313/post/hugo/template/</li>
+    <li>RELPERMALINK: /post/hugo/template</li>
+    <li>LINKTITLE: Hugo のテンプレート 基本</li>
+    <li>RSSLINK: </li>
+    <li>TABLEOFCONTENTS: <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#基礎知識:1cfa0a57d825e12f541e7967fd546b1b">基礎知識</a></li>
+<li><a href="#変数:1cfa0a57d825e12f541e7967fd546b1b">変数</a>
+<ul>
+<li><a href="#記事のフロントマターの値を取得:1cfa0a57d825e12f541e7967fd546b1b">記事のフロントマターの値を取得</a></li>
+<li><a href="#設定ファイル-config-toml-の値を取得:1cfa0a57d825e12f541e7967fd546b1b">設定ファイル(config.toml)の値を取得</a></li>
+<li><a href="#グローバル変数にアクセス:1cfa0a57d825e12f541e7967fd546b1b">グローバル変数にアクセス</a></li>
+</ul></li>
+<li><a href="#コメント:1cfa0a57d825e12f541e7967fd546b1b">コメント</a></li>
+<li><a href="#サニタイジング:1cfa0a57d825e12f541e7967fd546b1b">サニタイジング</a></li>
+<li><a href="#urlize:1cfa0a57d825e12f541e7967fd546b1b">urlize</a></li>
+<li><a href="#htmlコメントの出力:1cfa0a57d825e12f541e7967fd546b1b">HTMLコメントの出力</a></li>
+<li><a href="#インクルード:1cfa0a57d825e12f541e7967fd546b1b">インクルード</a>
+<ul>
+<li><a href="#生成htmlのインデントを揃えたい場合:1cfa0a57d825e12f541e7967fd546b1b">生成HTMLのインデントを揃えたい場合</a></li>
+</ul></li>
+<li><a href="#条件分岐:1cfa0a57d825e12f541e7967fd546b1b">条件分岐</a></li>
+<li><a href="#ループ-配列の出力:1cfa0a57d825e12f541e7967fd546b1b">ループ・配列の出力</a></li>
+<li><a href="#参考記事:1cfa0a57d825e12f541e7967fd546b1b">参考記事</a></li>
+</ul></li>
+</ul>
+</nav></li>
+    <li>PREV: </li>
+    <li>NEXT: </li>
+    <li>PREVINSECTION: </li>
+    <li>NEXTINSECTION: </li>
+    <li>FUZZYWORDCOUNT: 300</li>
+    <li>WORDCOUNT: 256</li>
+    <li>READINGTIME: 2</li>
+    <li>WEIGHT: 0</li>
+    <li>ISNODE: false</li>
+    <li>ISPAGE: true</li>
+    <li>TAXONOMIES: .Taxonomies に不具合あるので無効化した</li>
+  </ol>
+
+  <h3>Page Params</h3>
+  <ol>
+    <li>.Params.tags: [Hugo]</li>
+    <li>.Params.categories: [カテゴリーB]</li>
+  </ol>
+
+  <h3>Taxonomy Term Variables</h3>
+  <ol>
+    <li>.Data.Singular: </li>
+    <li>.Data.Plural: </li>
+    <li>.Data.Terms: </li>
+    <li>.Data.Terms.Alphabetical </li>
+    <li>.Data.Terms.ByCount </li>
+  </ol>
+
+  <h3>Site Variables (config.toml)</h3>
+  <ol>
+    <li>.Site.BaseURL: http://localhost:1313/</li>
+    <li>.Site.Taxonomies: map[tags:map[html:[{0 }] mamp:[{0 }] まとめ:[{0 }] javascript:[{0 }] jquery:[{0 }] レスポンシブ:[{0 }] 開発環境:[{0 } {0 } {0 }] markdown:[{0 }] web制作:[{0 } {0 } {0 }] サーバー:[{0 }] gulp:[{0 }] hugo:[{0 } {0 }] css:[{0 }] wordpress:[{0 }] vagrant:[{0 }]] categories:map[開発環境:[{0 } {0 } {0 } {0 }] カテゴリーb:[{0 }] カテゴリーa:[{0 }] wordpress:[{0 }]]]</li>
+    <li>.Site.LastChange: 2015-07-24 09:01:00 &#43;0900 JST</li>
+    <li>.Site.Pages: [        ]</li>
+    <li>.Site.Params: map[tagline:Web系技術ブログ copyright:Copyright © 2015 taku_nagai All rights reserved. analytics:UA-XXXXXXXX-X contact:map[title:Contact form:map[name:map[text:Name error:Please enter your name.] email:map[text:Email Adress error:Please enter your email address.] phone:map[text:Phone Number error:Please enter your phone number.] message:map[error:Please enter a message. text:Message] button:map[text:Send]]]] 設定ファイルに記述した[params]下</li>
+    <li>.Site.Sections: map[:[{0 } {0 }] post:[{0 } {0 } {0 } {0 } {0 } {0 } {0 }]]</li>
+    <li>.Site.Pages: [        ]</li>
+    <li>.Site.Files: []</li>
+    <li>.Site.Menus: map[main:0xc20822dc80]</li>
+    <li>.Site.Title: My Blog</li>
+    <li>.Site.Author: map[email:taky1973@gmail.com facebook:https://www.facebook.com/takuya.nagai.12 twitter:https://twitter.com/taku_nagai github:https://github.com/takunagai tumblr:http://takunagai.github.io.tumblr.com instagram:https://instagram.com/taku_n_/ avatar:/img/avatar.png name:Taku Nagai]</li>
+    <li>.Site.LanguageCode: ja</li>
+    <li>.Site.DisqusShortname: takunagaigithubio</li>
+    <li>.Site.Copyright: This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</li>
+    <li>.Site.LastChange: 2015-07-24 09:01:00 &#43;0900 JST</li>
+    <li>.Site.Permalinks: map[]</li>
+    <li>.Site.BuildDrafts: false</li>
+    <li>.Site.Data.パス: map[discography:[1974 – Modern American Music … Period! The Criteria Sessions 1974 – Jaco 1976 - Jaco Pastorius 1981 - Word of Mouth 1981 - The Birthday Concert (released in 1995) 1982 - Twins I &amp; II (released in 1999) 1983 - Invitation 1986 - Broadway Blues (released in 1998) 1986 - Honestly Solo Live (released in 1990) 1986 - Live In Italy (released in 1991) 1986 - Heavy&#39;n Jazz (released in 1992) 1991 - Live In New York City, Volumes 1-7. 1999 - Rare Collection (compilation) 2003 - Punk Jazz: The Jaco Pastorius Anthology (compilation) 2007 - The Essential Jaco Pastorius (compilation)]] カスタムデータ。以下ループ出力</li>
+  </ol>
+
+  <h3>Data</h3>
+  
+  <ul>
+  
+    <li>1974 – Modern American Music … Period! The Criteria Sessions</li>
+  
+    <li>1974 – Jaco</li>
+  
+    <li>1976 - Jaco Pastorius</li>
+  
+    <li>1981 - Word of Mouth</li>
+  
+    <li>1981 - The Birthday Concert (released in 1995)</li>
+  
+    <li>1982 - Twins I &amp; II (released in 1999)</li>
+  
+    <li>1983 - Invitation</li>
+  
+    <li>1986 - Broadway Blues (released in 1998)</li>
+  
+    <li>1986 - Honestly Solo Live (released in 1990)</li>
+  
+    <li>1986 - Live In Italy (released in 1991)</li>
+  
+    <li>1986 - Heavy&#39;n Jazz (released in 1992)</li>
+  
+    <li>1991 - Live In New York City, Volumes 1-7.</li>
+  
+    <li>1999 - Rare Collection (compilation)</li>
+  
+    <li>2003 - Punk Jazz: The Jaco Pastorius Anthology (compilation)</li>
+  
+    <li>2007 - The Essential Jaco Pastorius (compilation)</li>
+  
+  </ul>
+  
+
+  <ol>
+    <li>.Hugo.Generator: <meta name="generator" content="Hugo 0.14" /> ←metaタグ &lt;meta name="generator" content="Hugo 0.13" &gt;></li>
+    <li>.Hugo.Version: 0.14</li>
+    <li>.Hugo.CommitHash:  git commit hash</li>
+    <li>.Hugo.BuildDate: </li>
+  </ol>
+</aside>
+
+
+
+  <script data-no-instant>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>

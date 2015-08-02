@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mac on My Blog</title>
+    <link>http://localhost:1313/tags/mac/</link>
+    <description>Recent content in Mac on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <managingEditor>taky1973@gmail.com (Taku Nagai)</managingEditor>
+    <webMaster>taky1973@gmail.com (Taku Nagai)</webMaster>
+    <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
+    <lastBuildDate>Wed, 15 Oct 2014 00:00:00 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>【Mac】マウスの速度/加速度をカスタマイズする無料アプリ</title>
+      <link>http://localhost:1313/post/customize_mouse_movement/</link>
+      <pubDate>Wed, 15 Oct 2014 00:00:00 +0900</pubDate>
+      <author>taky1973@gmail.com (Taku Nagai)</author>
+      <guid>http://localhost:1313/post/customize_mouse_movement/</guid>
+      <description>
+
+&lt;h2 id=&#34;遅延解消-加速度調整は-smoothmouse:81bde0832bbc93c3c08cf902def2aa05&#34;&gt;遅延解消、加速度調整は「SmoothMouse」&lt;/h2&gt;
+
+&lt;p&gt;確認した環境は、Mac OSX 10.9 (Marvericks)、10.10 (Yosemite)&lt;br /&gt;
+以下2つの機能を追加してくれる&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Mac OS X に存在する32ミリ秒のマウスカーソル遅延を解消&lt;/li&gt;
+&lt;li&gt;加速パターンを &amp;ldquo;Windows&amp;rdquo;,&amp;ldquo;Mac OSX&amp;rdquo;,&amp;ldquo;なし&amp;rdquo; から選べる。加速度も設定可&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ダウンロードは公式サイトから&lt;br /&gt;
+&lt;a href=&#34;http://smoothmouse.com/&#34;&gt;SmoothMouse for OS X&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ダウンロードしてインストールすると、システム環境設定のパネルに SmoothMouseが追加される。&lt;/p&gt;
+
+&lt;p&gt;Macに慣れた人は&amp;rdquo;Mac&amp;rdquo;、Windowsに慣れた人は&amp;rdquo;Windows&amp;rdquo;でいいんじゃないかな&lt;br /&gt;
+設定にある &amp;ldquo;Enable for mice(複数マウスに対応？)&amp;rdquo; はわからん&lt;br /&gt;
+自分は次の画像の設定にした&lt;/p&gt;
+
+&lt;p&gt;[画像]&lt;/p&gt;
+
+&lt;p&gt;アンインストールも設定パネルから簡単にできるので、興味あれば気軽に試せます&lt;/p&gt;
+
+&lt;h2 id=&#34;マウスの速度を変更する-mousezoom:81bde0832bbc93c3c08cf902def2aa05&#34;&gt;マウスの速度を変更する「MouseZoom」&lt;/h2&gt;
+
+&lt;p&gt;「マウスの動きを早くしたい」という人向けの機能拡張&lt;br /&gt;
+自分は加速感がしっくりこず、逆にストレスが溜まったので外した&lt;/p&gt;
+
+&lt;p&gt;ダウンロードは公式サイトから&lt;br /&gt;
+&lt;a href=&#34;http://benh57.com/mousezoom.html&#34;&gt;Ben Net - MouseZoom OS X Official Site&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[画像]&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://kumotori.net/wpd/wp-content/themes/kumotori/img/common/no-image.png&#34; alt=&#34;画像が見つかりません&#34; /&gt;&lt;br /&gt;
+設定画面&lt;/p&gt;
+
+&lt;h3 id=&#34;インストール方法:81bde0832bbc93c3c08cf902def2aa05&#34;&gt;インストール方法&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;ダウンロードして解凍&lt;/li&gt;
+&lt;li&gt;Intel Macs (64 bit/10.6)フォルダ内の MouseZoom.prefPaneを&lt;br /&gt;
+ユーザー名 &amp;gt; ライブラリ &amp;gt; PreferencePanes 内にコピー&lt;/li&gt;
+&lt;li&gt;システム環境設定パネルに「MouseZoom」が表示されるようになるので設定&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;参考記事:81bde0832bbc93c3c08cf902def2aa05&#34;&gt;参考記事&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://applech2.com/archives/30495560.html&#34;&gt;Mac OS Xに存在する32ミリ秒のマウスカーソル遅延を解消するアプリ SmoothMouse&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.teradas.net/archives/11823/&#34;&gt;マウス遅延対策アプリ「SmoothMouse」でMac OS Xの32ミリ秒遅延が改善 - TeraDas&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

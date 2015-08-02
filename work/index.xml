@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Works on My Blog</title>
+    <link>http://localhost:1313/work/</link>
+    <description>Recent content in Works on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <managingEditor>taky1973@gmail.com (Taku Nagai)</managingEditor>
+    <webMaster>taky1973@gmail.com (Taku Nagai)</webMaster>
+    <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
+    <lastBuildDate>Thu, 09 Jul 2015 17:56:56 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/work/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>workタイトルです</title>
+      <link>http://localhost:1313/work/first/</link>
+      <pubDate>Thu, 09 Jul 2015 17:56:56 +0900</pubDate>
+      <author>taky1973@gmail.com (Taku Nagai)</author>
+      <guid>http://localhost:1313/work/first/</guid>
+      <description>
+
+&lt;h2 id=&#34;小見出し:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;小見出し&lt;/h2&gt;
+
+&lt;p&gt;ダミーです私は同年同時にこういう理解通りというはずの末になるだでし。ついに生涯が経過院は同時にこういう理解通りとすこぶるそんな安住なますまでがしてならたからも所有かい摘んうないて、同時にこういう理解通&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;table class=&amp;quot;equal-row-width&amp;quot;&amp;gt;
+  &amp;lt;tr&amp;gt;
+    &amp;lt;th&amp;gt;SS&amp;lt;/th&amp;gt;
+    &amp;lt;td&amp;gt;¥3,500&amp;lt;/td&amp;gt;
+  &amp;lt;/tr&amp;gt;
+  &amp;lt;tr&amp;gt;
+    &amp;lt;th&amp;gt;S&amp;lt;/th&amp;gt;
+    &amp;lt;td&amp;gt;¥4,000&amp;lt;/td&amp;gt;
+  &amp;lt;/tr&amp;gt;
+&amp;lt;/table&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>workタイトルです</title>
+      <link>http://localhost:1313/work/second/</link>
+      <pubDate>Thu, 09 Jul 2015 17:56:56 +0900</pubDate>
+      <author>taky1973@gmail.com (Taku Nagai)</author>
+      <guid>http://localhost:1313/work/second/</guid>
+      <description>
+
+&lt;h2 id=&#34;小見出し:9f7936f9b5c071ae81db818b80a44a0d&#34;&gt;小見出し&lt;/h2&gt;
+
+&lt;p&gt;ダミーです私は同年同時にこういう理解通りというはずの末になるだでし。ついに生涯が経過院は同時にこういう理解通りとすこぶるそんな安住なますまでがしてならたからも所有かい摘んうないて、同時にこういう理解通&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;table class=&amp;quot;equal-row-width&amp;quot;&amp;gt;
+  &amp;lt;tr&amp;gt;
+    &amp;lt;th&amp;gt;SS&amp;lt;/th&amp;gt;
+    &amp;lt;td&amp;gt;¥3,500&amp;lt;/td&amp;gt;
+  &amp;lt;/tr&amp;gt;
+  &amp;lt;tr&amp;gt;
+    &amp;lt;th&amp;gt;S&amp;lt;/th&amp;gt;
+    &amp;lt;td&amp;gt;¥4,000&amp;lt;/td&amp;gt;
+  &amp;lt;/tr&amp;gt;
+&amp;lt;/table&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

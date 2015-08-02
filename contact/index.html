@@ -123,12 +123,12 @@
 
         <footer class="article-footer">
           <div class="previous-next">
-            前の記事：<a href="http://localhost:1313/about/"> このサイトについて</a><br>
-            次の記事：<a href="http://localhost:1313/post/comparison_mamp_vagrant/"> ローカルサーバーどれ使う？ MAMP(Xampp) と Vagrant の違い・使い分け</a>
+            前の記事：<a href="http://localhost:1313/post/hugo/template/"> Hugo のテンプレート 基本</a><br>
+            次の記事：<a href="http://localhost:1313/about/"> このサイトについて</a>
           </div>
 <div id="disqus_thread"></div>
 <script type="text/javascript">
-    var disqus_shortname = 'takunagai.github.io';
+    var disqus_shortname = 'takunagaigithubio';
     var disqus_identifier = 'http:\/\/localhost:1313\/contact\/';
     var disqus_title = 'お問合せ';
     var disqus_url = 'http:\/\/localhost:1313\/contact\/';
@@ -257,18 +257,18 @@
   <h3>Site Variables (config.toml)</h3>
   <ol>
     <li>.Site.BaseURL: http://localhost:1313/</li>
-    <li>.Site.Taxonomies: map[tags:map[gulp.js:[{0 }] 開発環境:[{0 } {0 } {0 }] markdown:[{0 }] web制作:[{0 } {0 } {0 }] まとめ:[{0 }] mamp:[{0 }] hugo:[{0 } {0 }] サーバー:[{0 }] vagrant:[{0 }]] categories:map[開発環境:[{0 } {0 } {0 } {0 }] カテゴリーb:[{0 }]]]</li>
+    <li>.Site.Taxonomies: map[tags:map[mamp:[{0 }] html:[{0 }] javascript:[{0 }] jquery:[{0 }] レスポンシブ:[{0 }] まとめ:[{0 }] markdown:[{0 }] web制作:[{0 } {0 } {0 }] サーバー:[{0 }] gulp:[{0 }] 開発環境:[{0 } {0 } {0 }] css:[{0 }] wordpress:[{0 }] vagrant:[{0 }] hugo:[{0 } {0 }]] categories:map[開発環境:[{0 } {0 } {0 } {0 }] カテゴリーb:[{0 }] カテゴリーa:[{0 }] wordpress:[{0 }]]]</li>
     <li>.Site.LastChange: 2015-07-24 09:01:00 &#43;0900 JST</li>
-    <li>.Site.Pages: [      ]</li>
-    <li>.Site.Params: map[analytics:UA-XXXXXXXX-X contact:map[title:Contact form:map[name:map[text:Name error:Please enter your name.] email:map[text:Email Adress error:Please enter your email address.] phone:map[text:Phone Number error:Please enter your phone number.] message:map[text:Message error:Please enter a message.] button:map[text:Send]]] tagline:Web系技術ブログ copyright:Copyright © 2015 taku_nagai All rights reserved.] 設定ファイルに記述した[params]下</li>
-    <li>.Site.Sections: map[post:[{0 } {0 } {0 } {0 } {0 }] :[{0 } {0 }]]</li>
-    <li>.Site.Pages: [      ]</li>
+    <li>.Site.Pages: [        ]</li>
+    <li>.Site.Params: map[tagline:Web系技術ブログ copyright:Copyright © 2015 taku_nagai All rights reserved. analytics:UA-XXXXXXXX-X contact:map[form:map[name:map[text:Name error:Please enter your name.] email:map[text:Email Adress error:Please enter your email address.] phone:map[text:Phone Number error:Please enter your phone number.] message:map[text:Message error:Please enter a message.] button:map[text:Send]] title:Contact]] 設定ファイルに記述した[params]下</li>
+    <li>.Site.Sections: map[post:[{0 } {0 } {0 } {0 } {0 } {0 } {0 }] :[{0 } {0 }]]</li>
+    <li>.Site.Pages: [        ]</li>
     <li>.Site.Files: []</li>
-    <li>.Site.Menus: map[main:0xc2081d51c0]</li>
+    <li>.Site.Menus: map[main:0xc20822dc80]</li>
     <li>.Site.Title: My Blog</li>
-    <li>.Site.Author: map[instagram:https://instagram.com/taku_n_/ avatar:/img/avatar.png name:Taku Nagai email:taky1973@gmail.com facebook:https://www.facebook.com/takuya.nagai.12 twitter:https://twitter.com/taku_nagai github:https://github.com/takunagai tumblr:http://takunagai.github.io.tumblr.com]</li>
+    <li>.Site.Author: map[email:taky1973@gmail.com facebook:https://www.facebook.com/takuya.nagai.12 twitter:https://twitter.com/taku_nagai github:https://github.com/takunagai tumblr:http://takunagai.github.io.tumblr.com instagram:https://instagram.com/taku_n_/ avatar:/img/avatar.png name:Taku Nagai]</li>
     <li>.Site.LanguageCode: ja</li>
-    <li>.Site.DisqusShortname: takunagai.github.io</li>
+    <li>.Site.DisqusShortname: takunagaigithubio</li>
     <li>.Site.Copyright: This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</li>
     <li>.Site.LastChange: 2015-07-24 09:01:00 &#43;0900 JST</li>
     <li>.Site.Permalinks: map[]</li>
@@ -323,5 +323,8 @@
 
 
 
-  </body>
+  <script data-no-instant>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
 </html>

@@ -272,10 +272,10 @@ CMSに付きものの重さ、セキュリティ不安、管理の手間から�
     
     <item>
       <title>Hugo のテンプレート 基本</title>
-      <link>http://localhost:1313/post/hugo_template/</link>
+      <link>http://localhost:1313/post/hugo/template/</link>
       <pubDate>Sat, 11 Jul 2015 13:36:46 +0900</pubDate>
       <author>taky1973@gmail.com (Taku Nagai)</author>
-      <guid>http://localhost:1313/post/hugo_template/</guid>
+      <guid>http://localhost:1313/post/hugo/template/</guid>
       <description>
 
 &lt;h2 id=&#34;基礎知識:1cfa0a57d825e12f541e7967fd546b1b&#34;&gt;基礎知識&lt;/h2&gt;
@@ -445,6 +445,339 @@ Actions の項〜 がわかりやすい&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://golangtutorials.blogspot.jp/2011/06/go-templates.html&#34;&gt;GoLang Tutorials: Go Templates&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://golang.org/pkg/html/template/&#34;&gt;template - The Go Programming Language&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>JavaScript / jQuery 自分の使い方</title>
+      <link>http://localhost:1313/post/javascript/base_javascript_jquery/</link>
+      <pubDate>Sat, 21 Feb 2015 17:56:56 +0900</pubDate>
+      <author>taky1973@gmail.com (Taku Nagai)</author>
+      <guid>http://localhost:1313/post/javascript/base_javascript_jquery/</guid>
+      <description>
+
+&lt;h2 id=&#34;jquery-基本:2763c954d56445700fdcab66b8eafc7c&#34;&gt;jQuery 基本&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;IE8以前を切り捨て軽量化した jQuery 2.x が出ているが、IE8はまだ切れないので現状1の最新版(1.11.x)を使用&lt;/li&gt;
+&lt;li&gt;次バージョン：&lt;a href=&#34;http://www.publickey1.jp/blog/14/jquery_2xjquery_30jquery_1xjquery_compat_30jquery.html&#34;&gt;「jQuery 2.x→jQuery 3.0」「jQuery 1.x→jQuery Compat 3.0」に - Publickey&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;キャッシュによる高速化が見込めるCDN(Google API or jQuery公式)のものを使用。読み込めない時のフォールバックを用意&lt;/li&gt;
+&lt;li&gt;jQuery本体の読み込みタグは静的サイトならbody閉じタグ直前に配置。WordPressはプラグインとの兼ね合いで冒頭に置いた方が無難か？&lt;/li&gt;
+&lt;li&gt;最新版の方が軽くて早いのでなるべく最新版を使いたい (でも古いバージョンのまま放置しているサイトもあるのが現状)&lt;/li&gt;
+&lt;li&gt;古いサイトのメンテで1.9以降切り捨てられたAPIが使われている場合は &lt;a href=&#34;http://jquery.com/download/#jquery-migrate-plugin&#34;&gt;jQuery Migrate プラグイン&lt;/a&gt;を入れると良い&lt;/li&gt;
+&lt;li&gt;jQuery互換で早くて軽いという&lt;a href=&#34;http://zeptojs.com/&#34;&gt;Zepto&lt;/a&gt;があるが、リスク(なんか不安、jQueryプラグインが動かない場合があるらしい)を避け使っていない。CSSフレームワークのFoundationやクックパッドスマホ版など実用例はある&lt;/li&gt;
+&lt;li&gt;jQueryプラグインは、plugins.js に統合することでHTMLをスッキリさせHTTPリクエストを減らせる。圧縮するとなお良い(plugins.min.js。gulpなどの自動化ツールを使う)&lt;/li&gt;
+&lt;li&gt;WordPressで最新版jQueryを読み込む場合。WordPressに元から組み込んであるものは外すこと&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;  wp_deregister_script( &#39;jquery&#39; );
+  wp_enqueue_script( &#39;jquery&#39;, &#39;//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js&#39;, array(), &#39;20130115&#39;, true );
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;modernizr:2763c954d56445700fdcab66b8eafc7c&#34;&gt;modernizr&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ブラウザの機能サポート状況(HTML5、CSS3)を判定し分岐処理ができる&lt;/li&gt;
+&lt;li&gt;HTML5未対応ブラウザにHTML5タグを認識させる HTML5-Shiv を含む&lt;/li&gt;
+&lt;li&gt;リサイズ時にドキュメントの幅を取得する機能 (= window.matchMedia()) が付いてる&lt;/li&gt;
+&lt;li&gt;設置場所は headタグ内&lt;/li&gt;
+&lt;li&gt;本家サイトで機能を付け加えたりのカスタマイズができるが、メンテナンスを考えるとデフォルトのものを使うのが良いと思う&lt;/li&gt;
+&lt;li&gt;基本的な使い方：&lt;a href=&#34;http://liginc.co.jp/web/js/other-js/128673&#34;&gt;modernizr.js の機能と利用方法 - LIG&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;判定可能な機能(※ハイフン等書き方に注意)：&lt;a href=&#34;http://modernizr.com/docs/#s2&#34;&gt;Modernizr Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;これも読み込めない時のフォールバックを用意&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;例1-ブラウザに実装されている機能を判定しクラスを付加:2763c954d56445700fdcab66b8eafc7c&#34;&gt;例1：ブラウザに実装されている機能を判定しクラスを付加&lt;/h3&gt;
+
+&lt;p&gt;modernizer適用前&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;&amp;lt;html class=&amp;quot;no-js&amp;quot;&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;modernizer適用後。これでCSS等で分岐処理可能&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;html class=&amp;quot;js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths&amp;quot; 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;例2-javascript中で現在のブラウザが指定の機能を持つか判定して分岐処理:2763c954d56445700fdcab66b8eafc7c&#34;&gt;例2：JavaScript中で現在のブラウザが指定の機能を持つか判定して分岐処理&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;if (Modernizr.geolocation) { //Geolocation API に対応しているかチェック
+  //対応してる時の処理
+}
+else {  
+  //対応してない時の処理
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;throttle-と-debounce:2763c954d56445700fdcab66b8eafc7c&#34;&gt;throttle と debounce&lt;/h2&gt;
+
+&lt;p&gt;ともに必要以上のイベント発生を抑えるのに使用。scrollやresize時のイベントによく使う。 throttleは、実行間隔をnミリ秒に抑える。例えば、scroll時のイベント発生を◎ミリ秒ごとに抑えるなど debounceは、nミリ秒、繰り返しの呼び出しをさせない(= 入力がストップしてnミリ秒経ったらイベント発生)。例えば、resize操作完了後◎ミリ秒たったらイベント発生させるなど。 Underscore.js の関数か、jquery.ba-throttle-debounce.min.js を使うとシンプルに書ける&lt;br /&gt;
+自分は便利なメソッドてんこ盛りのUnderscore.jsを標準で入れるようにしたので、Underscore.jsのものを使う&lt;/p&gt;
+
+&lt;h3 id=&#34;underscore-js-のメソッドを使用:2763c954d56445700fdcab66b8eafc7c&#34;&gt;Underscore.js のメソッドを使用&lt;/h3&gt;
+
+&lt;p&gt;underscore-min.js は 16KB&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://underscorejs.org/#throttle&#34;&gt;Underscore.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://d.hatena.ne.jp/ninoseki/20110414/1302786001&#34;&gt;便利機能満載のライブラリUnderscore.js - にのせき日記&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;構文&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;_.throttle(function, 500);//引数：関数, ミリ秒
+_.debounce(function, 500);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;実装:2763c954d56445700fdcab66b8eafc7c&#34;&gt;実装&lt;/h4&gt;
+
+&lt;p&gt;適用前&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$(window).scroll(function(){
+  //処理
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;適用後) 例：スクロールイベントで使用時&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$(window).scroll(_.throttle(function(){
+  //処理
+}, 500));
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;jquery-throttle-debounce-を使用:2763c954d56445700fdcab66b8eafc7c&#34;&gt;jquery-throttle-debounce を使用&lt;/h3&gt;
+
+&lt;p&gt;jquery.ba-throttle-debounce.min.js は731バイト&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://benalman.com/projects/jquery-throttle-debounce-plugin/&#34;&gt;jQuery throttle / debounce&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;処理回数を見るサンプル：&lt;a href=&#34;http://benalman.com/code/projects/jquery-throttle-debounce/examples/throttle/&#34;&gt;jQuery throttle / debounce » Examples » Throttle&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Pure JavaScript で実装するには：&lt;a href=&#34;http://blog.tsumikiinc.com/article/20141125_javascript-event-throttle.html&#34;&gt;JavaScriptでの多発するイベントの間引き処理 - つみきブログ&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://underscorejs.org/&#34;&gt;Underscore.js&lt;/a&gt; (JavaScriptのユーティリティライブラリ) に同等メソッド throttle()/debounce() がある&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;実装-1:2763c954d56445700fdcab66b8eafc7c&#34;&gt;実装&lt;/h4&gt;
+
+&lt;p&gt;適用前&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$(window).scroll(function(){
+  //処理
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;適用後 (500ミリ秒ごに処理)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$(window).scroll($.throttle(500, function() {
+  //処理
+}));
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;現在のページtopに戻る-ページ内スムーススクロール:2763c954d56445700fdcab66b8eafc7c&#34;&gt;現在のページTopに戻る &amp;amp; ページ内スムーススクロール&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gist.github.com/takunagai/457302aaa44421bbc958&#34;&gt;ページ内スムーススクロール &amp;amp; ページ上部へ戻るボタン（要jQuery）&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;上記のthrottleを使用&lt;/p&gt;
+
+&lt;h2 id=&#34;横に並んだブロック要素の高さを揃える:2763c954d56445700fdcab66b8eafc7c&#34;&gt;横に並んだブロック要素の高さを揃える&lt;/h2&gt;
+
+&lt;p&gt;自分は &lt;a href=&#34;http://css-tricks.com/equal-height-blocks-in-rows/&#34;&gt;Equal Height Blocks in Rows - CSS-Tricks&lt;/a&gt; をウインドウリサイズ時にも対応するよう改良したPure JavaScriptのものを使用&lt;/p&gt;
+
+&lt;h3 id=&#34;jquery-プラグイン:2763c954d56445700fdcab66b8eafc7c&#34;&gt;jQuery プラグイン&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://file.urin.take-uma.net/jquery.tile.js-Demo.html&#34;&gt;jquery.tile.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.webcreativepark.net/2013/10/21-112000.html&#34;&gt;jquery.heightLine.js&lt;/a&gt; (to-R)、Equal Height&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;ポリフィル-polyfill-色々:2763c954d56445700fdcab66b8eafc7c&#34;&gt;ポリフィル (polyfill) 色々&lt;/h2&gt;
+
+&lt;p&gt;古いブラウザにモダンブラウザのみで動く機能を追加させる ただし処理が重くなるので極力使用しないことが望ましい&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;iscroll, iscroll-lite スマホで position: fixed&lt;/li&gt;
+&lt;li&gt;picturefill picture要素やimgのsrcset/sizes属性指定などを使えるように(Chrome, Opera以外)&lt;/li&gt;
+&lt;li&gt;PIE_IE9.js, PIE_IE678.js border-radius, box-shadow(insetは非対応), 複数の背景 ,border-image, 背景グラデーション ※IE9は後者2つのみ&lt;/li&gt;
+&lt;li&gt;rem.min.js IE8 以下でもフォント単位 rem が使えるように&lt;/li&gt;
+&lt;li&gt;respond.min.js IE8以下でレスポンシブ対応させる&lt;/li&gt;
+&lt;li&gt;selectivizr (IE8以下でCSS3セレクタ使用できるように)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;以下、IE8以下非対応なら不要&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;minmax IE6以下でmin-width,max-width, min-height , max-heightを利用可能に。IE6切り捨てるなら不要&lt;/li&gt;
+&lt;li&gt;boxsizing.htc IE7以下でbox-sizingを使えるように&lt;/li&gt;
+&lt;li&gt;imgSizer (IE7以下で画像の荒れを防ぐ)&lt;/li&gt;
+&lt;li&gt;jquery.exfixed IE6で position:fixed&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;備考-画像遅延ロードの-lazy-load-は使わない:2763c954d56445700fdcab66b8eafc7c&#34;&gt;備考：画像遅延ロードの Lazy Load は使わない&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;見えない位置の画像を非表示にしておき、見える位置までスクロールすると表示させる。アクセス時のリクエスト数、読込容量を減らすことができる&lt;/li&gt;
+&lt;li&gt;Lazy Load は画像が画像検索にインデックスされないので SEO的に不利と思い自分は不採用 (noscriptタグを使う方法は完全な解決策にならないらしいし、hijax links なる解決法もあるらしいが面倒なので却下)&lt;/li&gt;
+&lt;li&gt;同様のスクリプトに Unveil.js (Lazy Load をエフェクトなどを省き軽くしたもの)、showByScroll、Echo.js (これはPure JavaScript) 等色々&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://web-tan.forum.impressrd.jp/e/2014/05/30/17567/page/1&#34;&gt;グーグルのJavaScript理解はまだ発展途上。画像の遅延読み込みは注意 - Web担当者Forum&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.idea-r.it/blog/110/en/lazy-loading-seo-problem&#34;&gt;Lazy loading and the SEO problem, solved! - Idea R Blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;サンプル-html中でのjavascriptファイル読込み:2763c954d56445700fdcab66b8eafc7c&#34;&gt;サンプル：HTML中でのJavaScriptファイル読込み&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!-- * * * * * * * * * * head タグ内に設置 * * * * * * * * * * * * --&amp;gt;
+
+  &amp;lt;script src=&amp;quot;../js/vendor/modernizr-2.8.3.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+
+  &amp;lt;!-- * * * * * * * * * * body閉じタグ直前に設置 * * * * * * * * * * * * --&amp;gt;
+
+
+  &amp;lt;script src=&amp;quot;//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+  &amp;lt;script&amp;gt;window.jQuery || document.write(&#39;&amp;lt;script src=&amp;quot;../js/vendor/jquery-1.11.2.min.js&amp;quot;&amp;gt;&amp;lt;\/script&amp;gt;&#39;)&amp;lt;/script&amp;gt;
+  &amp;lt;script src=&amp;quot;../js/plugins.minjs&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;!-- jQueryプラグイン等を統合したもの --&amp;gt;
+  &amp;lt;script src=&amp;quot;../js/main.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;!-- Google Analytics のトラッキングコードも入れること --&amp;gt;
+
+
+  &amp;lt;!-- * * * Polyfils * * * --&amp;gt;
+
+  &amp;lt;script&amp;gt;
+    //Androidの場合のみ iscroll-lite.js を読みこませる
+    if(/Android/.test(navigator.userAgent)){
+      $(&#39;script&#39;).attr(&#39;src&#39;,&#39;../bower_components/iscroll/build/iscroll-lite.js&#39;).appendTo(&#39;head&#39;);
+      //alert(&#39;テスト：iscroll-lite.jsを読み込みました。&#39;);
+    }
+  &amp;lt;/script&amp;gt;
+
+
+  &amp;lt;!--[if IE 9]&amp;gt;
+  &amp;lt;script src=&amp;quot;../js/vendor/PIE_IE9.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+  &amp;lt;script&amp;gt;
+    /**
+     * サポート：border-image, 背景グラデーション
+     */
+    $(function() {
+      if (window.PIE) {
+        //$(&#39;.class_name&#39;).each(function() { PIE.attach(this); }); //★★適用させたい要素を指定
+      }
+    });
+  &amp;lt;/script&amp;gt;
+  &amp;lt;![endif]--&amp;gt;
+
+
+  &amp;lt;!--[if IE 8]&amp;gt;
+  &amp;lt;script src=&amp;quot;../js/vendor/selectivizr-min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+  &amp;lt;script src=&amp;quot;../js/vendor/respond.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+  &amp;lt;script src=&amp;quot;../js/vendor/PIE_IE678.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+  &amp;lt;script&amp;gt;
+    /**
+     * サポート：border-image, 背景グラデーション, 複数の背景, border-radius, box-shadow(insetには非対応)
+     */
+    $(function() {
+      if (window.PIE) {
+        $(&#39;.button, .label, article h2, .pagetop a&#39;).each(function() { //★★適用させたい要素を指定
+          PIE.attach(this);
+        });
+      }
+    });
+  &amp;lt;/script&amp;gt;
+  &amp;lt;![endif]--&amp;gt;
+
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>レスポンシブな前後の記事リンクのスタイリング</title>
+      <link>http://localhost:1313/post/wordpress/css-styling_immediate-article-links/</link>
+      <pubDate>Fri, 17 Oct 2014 00:00:00 +0900</pubDate>
+      <author>taky1973@gmail.com (Taku Nagai)</author>
+      <guid>http://localhost:1313/post/wordpress/css-styling_immediate-article-links/</guid>
+      <description>
+
+&lt;h3 id=&#34;レイアウト:74c0d7f6cf949ac4bd8efcecad170fbc&#34;&gt;レイアウト&lt;/h3&gt;
+
+&lt;p&gt;以下の条件で決める&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;一番直感的な「左は過去、右は未来」の構成&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;次の記事 »&amp;rdquo; などとはせず、記事タイトルを表示。親切だし、クリック率の上昇が見込めるから&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;img-url&#34; alt=&#34;前後リンク デスクトップ表示&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;img-url&#34; alt=&#34;前後リンク タブレット表示&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;img-url&#34; alt=&#34;前後リンク スマートフォン表示&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;wordpress-テンプレート:74c0d7f6cf949ac4bd8efcecad170fbc&#34;&gt;WordPress テンプレート&lt;/h3&gt;
+
+&lt;p&gt;例は矢印(指差し)マークに &lt;a href=&#34;http://fortawesome.github.io/Font-Awesome/&#34;&gt;Font Awesome&lt;/a&gt; を使用&lt;br /&gt;
+背景画像で上下センター揃えにしたらさらに良い&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;next-previous&amp;quot;&amp;gt;
+  &amp;lt;p&amp;gt;&amp;lt;?php previous_post_link(&#39;%link&#39;,&#39;&amp;lt;i class=&amp;quot;fa fa-hand-o-left&amp;quot;&amp;gt;&amp;lt;/i&amp;gt; %title&#39;); ?&amp;gt;&amp;lt;/p&amp;gt;
+  &amp;lt;p&amp;gt;&amp;lt;?php next_post_link(&#39;%link&#39;,&#39;%title &amp;lt;i class=&amp;quot;fa fa-hand-o-right&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&#39;); ?&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;出力されるhtml:74c0d7f6cf949ac4bd8efcecad170fbc&#34;&gt;出力されるHTML&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;next-previous&amp;quot;&amp;gt;
+  &amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;前記事へのリンク&amp;quot; rel=&amp;quot;prev&amp;quot;&amp;gt;&amp;lt;i class=&amp;quot;fa fa-hand-o-left&amp;quot;&amp;gt;&amp;lt;/i&amp;gt; 前記事のタイトル&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+  &amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;次記事へのリンク&amp;quot; rel=&amp;quot;next&amp;quot;&amp;gt;次の記事のタイトル &amp;lt;i class=&amp;quot;fa fa-hand-o-right&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+ &amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;scss-css:74c0d7f6cf949ac4bd8efcecad170fbc&#34;&gt;SCSS/CSS&lt;/h3&gt;
+
+&lt;p&gt;モバイルファースト。デスクトップ用の左右半々表示は &lt;code&gt;display: table;&lt;/code&gt; を使用&lt;br /&gt;
+例はレイアウトに必要な記述のみなので、これをベースにスタイリング&lt;/p&gt;
+
+&lt;p&gt;CSSへの変換はコードをコピペしてこちらへ → &lt;a href=&#34;http://sassmeister.com/&#34;&gt;SassMeister&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/* ボックスモデル、border/padding含む数値で指定する設定 */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/* 前後記事へのリンク */
+.next-previous {
+  border-top: 1px solid silver;
+  border-bottom: 1px solid silver;
+  p {
+    margin: 0;
+    &amp;amp;:last-child {
+      text-align: right;
+      border-top: 1px dotted silver;
+    }
+  }
+}
+@media only screen and (min-width:480px) {
+  .next-previous {
+    display: table;
+    width: 100%;
+    p {
+      display: table-cell;
+      width: 45%;
+      vertical-align: middle;
+      &amp;amp;:first-child {
+        padding-right: 5%;
+        border-right: 1px solid silver;
+      }
+      &amp;amp;:last-child {
+        padding-left: 5%;
+        border-top: none;
+      }
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     

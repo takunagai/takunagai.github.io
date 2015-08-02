@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Html on My Blog</title>
+    <link>http://localhost:1313/tags/html/</link>
+    <description>Recent content in Html on My Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <managingEditor>taky1973@gmail.com (Taku Nagai)</managingEditor>
+    <webMaster>taky1973@gmail.com (Taku Nagai)</webMaster>
+    <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
+    <lastBuildDate>Fri, 17 Oct 2014 00:00:00 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>レスポンシブな前後の記事リンクのスタイリング</title>
+      <link>http://localhost:1313/post/wordpress/css-styling_immediate-article-links/</link>
+      <pubDate>Fri, 17 Oct 2014 00:00:00 +0900</pubDate>
+      <author>taky1973@gmail.com (Taku Nagai)</author>
+      <guid>http://localhost:1313/post/wordpress/css-styling_immediate-article-links/</guid>
+      <description>
+
+&lt;h3 id=&#34;レイアウト:74c0d7f6cf949ac4bd8efcecad170fbc&#34;&gt;レイアウト&lt;/h3&gt;
+
+&lt;p&gt;以下の条件で決める&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;一番直感的な「左は過去、右は未来」の構成&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;次の記事 »&amp;rdquo; などとはせず、記事タイトルを表示。親切だし、クリック率の上昇が見込めるから&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;img-url&#34; alt=&#34;前後リンク デスクトップ表示&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;img-url&#34; alt=&#34;前後リンク タブレット表示&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;img-url&#34; alt=&#34;前後リンク スマートフォン表示&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;wordpress-テンプレート:74c0d7f6cf949ac4bd8efcecad170fbc&#34;&gt;WordPress テンプレート&lt;/h3&gt;
+
+&lt;p&gt;例は矢印(指差し)マークに &lt;a href=&#34;http://fortawesome.github.io/Font-Awesome/&#34;&gt;Font Awesome&lt;/a&gt; を使用&lt;br /&gt;
+背景画像で上下センター揃えにしたらさらに良い&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;next-previous&amp;quot;&amp;gt;
+  &amp;lt;p&amp;gt;&amp;lt;?php previous_post_link(&#39;%link&#39;,&#39;&amp;lt;i class=&amp;quot;fa fa-hand-o-left&amp;quot;&amp;gt;&amp;lt;/i&amp;gt; %title&#39;); ?&amp;gt;&amp;lt;/p&amp;gt;
+  &amp;lt;p&amp;gt;&amp;lt;?php next_post_link(&#39;%link&#39;,&#39;%title &amp;lt;i class=&amp;quot;fa fa-hand-o-right&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&#39;); ?&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;出力されるhtml:74c0d7f6cf949ac4bd8efcecad170fbc&#34;&gt;出力されるHTML&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;next-previous&amp;quot;&amp;gt;
+  &amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;前記事へのリンク&amp;quot; rel=&amp;quot;prev&amp;quot;&amp;gt;&amp;lt;i class=&amp;quot;fa fa-hand-o-left&amp;quot;&amp;gt;&amp;lt;/i&amp;gt; 前記事のタイトル&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+  &amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;次記事へのリンク&amp;quot; rel=&amp;quot;next&amp;quot;&amp;gt;次の記事のタイトル &amp;lt;i class=&amp;quot;fa fa-hand-o-right&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+ &amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;scss-css:74c0d7f6cf949ac4bd8efcecad170fbc&#34;&gt;SCSS/CSS&lt;/h3&gt;
+
+&lt;p&gt;モバイルファースト。デスクトップ用の左右半々表示は &lt;code&gt;display: table;&lt;/code&gt; を使用&lt;br /&gt;
+例はレイアウトに必要な記述のみなので、これをベースにスタイリング&lt;/p&gt;
+
+&lt;p&gt;CSSへの変換はコードをコピペしてこちらへ → &lt;a href=&#34;http://sassmeister.com/&#34;&gt;SassMeister&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/* ボックスモデル、border/padding含む数値で指定する設定 */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/* 前後記事へのリンク */
+.next-previous {
+  border-top: 1px solid silver;
+  border-bottom: 1px solid silver;
+  p {
+    margin: 0;
+    &amp;amp;:last-child {
+      text-align: right;
+      border-top: 1px dotted silver;
+    }
+  }
+}
+@media only screen and (min-width:480px) {
+  .next-previous {
+    display: table;
+    width: 100%;
+    p {
+      display: table-cell;
+      width: 45%;
+      vertical-align: middle;
+      &amp;amp;:first-child {
+        padding-right: 5%;
+        border-right: 1px solid silver;
+      }
+      &amp;amp;:last-child {
+        padding-left: 5%;
+        border-top: none;
+      }
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
