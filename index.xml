@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My Blog</title>
-    <link>http://localhost:1313/</link>
+    <link>http://takunagai.github.io/</link>
     <description>Recent content on My Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
@@ -10,14 +10,14 @@
     <webMaster>taky1973@gmail.com (Taku Nagai)</webMaster>
     <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
     <lastBuildDate>Fri, 24 Jul 2015 09:01:00 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://takunagai.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Markdown関連の便利ツール まとめ</title>
-      <link>http://localhost:1313/post/convinient_tools_for_markdown/</link>
+      <link>http://takunagai.github.io/post/convinient_tools_for_markdown/</link>
       <pubDate>Fri, 24 Jul 2015 09:01:00 +0900</pubDate>
       <author>taky1973@gmail.com (Taku Nagai)</author>
-      <guid>http://localhost:1313/post/convinient_tools_for_markdown/</guid>
+      <guid>http://takunagai.github.io/post/convinient_tools_for_markdown/</guid>
       <description>
 
 &lt;h2 id=&#34;htmlからmarkdownに変換:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;HTMLからMarkdownに変換&lt;/h2&gt;
@@ -120,10 +120,10 @@ CMSに付きものの重さ、セキュリティ不安、管理の手間から�
     
     <item>
       <title>Web系技術のまとめ一覧</title>
-      <link>http://localhost:1313/post/list_of_webdesign_techniques/</link>
+      <link>http://takunagai.github.io/post/list_of_webdesign_techniques/</link>
       <pubDate>Fri, 24 Jul 2015 08:53:00 +0900</pubDate>
       <author>taky1973@gmail.com (Taku Nagai)</author>
-      <guid>http://localhost:1313/post/list_of_webdesign_techniques/</guid>
+      <guid>http://takunagai.github.io/post/list_of_webdesign_techniques/</guid>
       <description>
 
 &lt;h2 id=&#34;全般:8ee210feada63183dee0738f4da3c752&#34;&gt;全般&lt;/h2&gt;
@@ -272,10 +272,10 @@ CMSに付きものの重さ、セキュリティ不安、管理の手間から�
     
     <item>
       <title>Hugo のテンプレート 基本</title>
-      <link>http://localhost:1313/post/hugo/template/</link>
+      <link>http://takunagai.github.io/post/hugo/template/</link>
       <pubDate>Sat, 11 Jul 2015 13:36:46 +0900</pubDate>
       <author>taky1973@gmail.com (Taku Nagai)</author>
-      <guid>http://localhost:1313/post/hugo/template/</guid>
+      <guid>http://takunagai.github.io/post/hugo/template/</guid>
       <description>
 
 &lt;h2 id=&#34;基礎知識:1cfa0a57d825e12f541e7967fd546b1b&#34;&gt;基礎知識&lt;/h2&gt;
@@ -450,10 +450,10 @@ Actions の項〜 がわかりやすい&lt;/li&gt;
     
     <item>
       <title>お問合せ</title>
-      <link>http://localhost:1313/contact/</link>
+      <link>http://takunagai.github.io/contact/</link>
       <pubDate>Thu, 09 Jul 2015 17:56:03 +0900</pubDate>
       <author>taky1973@gmail.com (Taku Nagai)</author>
-      <guid>http://localhost:1313/contact/</guid>
+      <guid>http://takunagai.github.io/contact/</guid>
       <description>
 
 &lt;h2 id=&#34;小見出し1:3c4864f00d23f7ea35511ec930ce1d9c&#34;&gt;小見出し1&lt;/h2&gt;
@@ -466,10 +466,10 @@ Actions の項〜 がわかりやすい&lt;/li&gt;
     
     <item>
       <title>このサイトについて</title>
-      <link>http://localhost:1313/about/</link>
+      <link>http://takunagai.github.io/about/</link>
       <pubDate>Thu, 09 Jul 2015 17:56:03 +0900</pubDate>
       <author>taky1973@gmail.com (Taku Nagai)</author>
-      <guid>http://localhost:1313/about/</guid>
+      <guid>http://takunagai.github.io/about/</guid>
       <description>
 
 &lt;h2 id=&#34;当サイトについて:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;当サイトについて&lt;/h2&gt;
@@ -493,10 +493,10 @@ Actions の項〜 がわかりやすい&lt;/li&gt;
     
     <item>
       <title>JavaScript / jQuery 自分の使い方</title>
-      <link>http://localhost:1313/post/javascript/base_javascript_jquery/</link>
+      <link>http://takunagai.github.io/post/javascript/base_javascript_jquery/</link>
       <pubDate>Sat, 21 Feb 2015 17:56:56 +0900</pubDate>
       <author>taky1973@gmail.com (Taku Nagai)</author>
-      <guid>http://localhost:1313/post/javascript/base_javascript_jquery/</guid>
+      <guid>http://takunagai.github.io/post/javascript/base_javascript_jquery/</guid>
       <description>
 
 &lt;h2 id=&#34;jquery-基本:2763c954d56445700fdcab66b8eafc7c&#34;&gt;jQuery 基本&lt;/h2&gt;
@@ -737,10 +737,10 @@ _.debounce(function, 500);
     
     <item>
       <title>レスポンシブな前後の記事リンクのスタイリング</title>
-      <link>http://localhost:1313/post/wordpress/css-styling_immediate-article-links/</link>
+      <link>http://takunagai.github.io/post/wordpress/css-styling_immediate-article-links/</link>
       <pubDate>Fri, 17 Oct 2014 00:00:00 +0900</pubDate>
       <author>taky1973@gmail.com (Taku Nagai)</author>
-      <guid>http://localhost:1313/post/wordpress/css-styling_immediate-article-links/</guid>
+      <guid>http://takunagai.github.io/post/wordpress/css-styling_immediate-article-links/</guid>
       <description>
 
 &lt;h3 id=&#34;レイアウト:74c0d7f6cf949ac4bd8efcecad170fbc&#34;&gt;レイアウト&lt;/h3&gt;
@@ -826,10 +826,10 @@ _.debounce(function, 500);
     
     <item>
       <title>ローカルサーバーどれ使う？ MAMP(Xampp) と Vagrant の違い・使い分け</title>
-      <link>http://localhost:1313/post/comparison_mamp_vagrant/</link>
+      <link>http://takunagai.github.io/post/comparison_mamp_vagrant/</link>
       <pubDate>Wed, 15 Oct 2014 00:00:00 +0900</pubDate>
       <author>taky1973@gmail.com (Taku Nagai)</author>
-      <guid>http://localhost:1313/post/comparison_mamp_vagrant/</guid>
+      <guid>http://takunagai.github.io/post/comparison_mamp_vagrant/</guid>
       <description>
 
 &lt;h2 id=&#34;mamp-xampp:51dec08c134701154a7d3216b4ccb92f&#34;&gt;MAMP(Xampp)&lt;/h2&gt;
@@ -854,10 +854,10 @@ _.debounce(function, 500);
     
     <item>
       <title>dist と dest の意味・違い</title>
-      <link>http://localhost:1313/post/comparison_dist_dest/</link>
+      <link>http://takunagai.github.io/post/comparison_dist_dest/</link>
       <pubDate>Wed, 15 Oct 2014 00:00:00 +0900</pubDate>
       <author>taky1973@gmail.com (Taku Nagai)</author>
-      <guid>http://localhost:1313/post/comparison_dist_dest/</guid>
+      <guid>http://takunagai.github.io/post/comparison_dist_dest/</guid>
       <description>
 
 &lt;h2 id=&#34;dist:7cc95ff082595fdb0f731d09430bbdaa&#34;&gt;dist&lt;/h2&gt;

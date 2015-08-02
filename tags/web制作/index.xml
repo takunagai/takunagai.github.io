@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web制作 on My Blog</title>
-    <link>http://localhost:1313/tags/web%E5%88%B6%E4%BD%9C/</link>
+    <link>http://takunagai.github.io/tags/web%E5%88%B6%E4%BD%9C/</link>
     <description>Recent content in Web制作 on My Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
@@ -10,14 +10,14 @@
     <webMaster>taky1973@gmail.com (Taku Nagai)</webMaster>
     <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
     <lastBuildDate>Fri, 24 Jul 2015 08:53:00 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/web%E5%88%B6%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://takunagai.github.io/tags/web%E5%88%B6%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Web系技術のまとめ一覧</title>
-      <link>http://localhost:1313/post/list_of_webdesign_techniques/</link>
+      <link>http://takunagai.github.io/post/list_of_webdesign_techniques/</link>
       <pubDate>Fri, 24 Jul 2015 08:53:00 +0900</pubDate>
       <author>taky1973@gmail.com (Taku Nagai)</author>
-      <guid>http://localhost:1313/post/list_of_webdesign_techniques/</guid>
+      <guid>http://takunagai.github.io/post/list_of_webdesign_techniques/</guid>
       <description>
 
 &lt;h2 id=&#34;全般:8ee210feada63183dee0738f4da3c752&#34;&gt;全般&lt;/h2&gt;
@@ -166,10 +166,10 @@
     
     <item>
       <title>dist と dest の意味・違い</title>
-      <link>http://localhost:1313/post/comparison_dist_dest/</link>
+      <link>http://takunagai.github.io/post/comparison_dist_dest/</link>
       <pubDate>Wed, 15 Oct 2014 00:00:00 +0900</pubDate>
       <author>taky1973@gmail.com (Taku Nagai)</author>
-      <guid>http://localhost:1313/post/comparison_dist_dest/</guid>
+      <guid>http://takunagai.github.io/post/comparison_dist_dest/</guid>
       <description>
 
 &lt;h2 id=&#34;dist:7cc95ff082595fdb0f731d09430bbdaa&#34;&gt;dist&lt;/h2&gt;
@@ -211,10 +211,10 @@ gulpなどのビルドシステムの生成先なら、意味的には後者か�
     
     <item>
       <title>ローカルサーバーどれ使う？ MAMP(Xampp) と Vagrant の違い・使い分け</title>
-      <link>http://localhost:1313/post/comparison_mamp_vagrant/</link>
+      <link>http://takunagai.github.io/post/comparison_mamp_vagrant/</link>
       <pubDate>Wed, 15 Oct 2014 00:00:00 +0900</pubDate>
       <author>taky1973@gmail.com (Taku Nagai)</author>
-      <guid>http://localhost:1313/post/comparison_mamp_vagrant/</guid>
+      <guid>http://takunagai.github.io/post/comparison_mamp_vagrant/</guid>
       <description>
 
 &lt;h2 id=&#34;mamp-xampp:51dec08c134701154a7d3216b4ccb92f&#34;&gt;MAMP(Xampp)&lt;/h2&gt;

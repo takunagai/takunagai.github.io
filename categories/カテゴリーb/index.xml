@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>カテゴリーb on My Blog</title>
-    <link>http://localhost:1313/categories/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA%E3%83%BCb/</link>
+    <link>http://takunagai.github.io/categories/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA%E3%83%BCb/</link>
     <description>Recent content in カテゴリーb on My Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
@@ -10,14 +10,14 @@
     <webMaster>taky1973@gmail.com (Taku Nagai)</webMaster>
     <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
     <lastBuildDate>Sat, 11 Jul 2015 13:36:46 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA%E3%83%BCb/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://takunagai.github.io/categories/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA%E3%83%BCb/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Hugo のテンプレート 基本</title>
-      <link>http://localhost:1313/post/hugo/template/</link>
+      <link>http://takunagai.github.io/post/hugo/template/</link>
       <pubDate>Sat, 11 Jul 2015 13:36:46 +0900</pubDate>
       <author>taky1973@gmail.com (Taku Nagai)</author>
-      <guid>http://localhost:1313/post/hugo/template/</guid>
+      <guid>http://takunagai.github.io/post/hugo/template/</guid>
       <description>
 
 &lt;h2 id=&#34;基礎知識:1cfa0a57d825e12f541e7967fd546b1b&#34;&gt;基礎知識&lt;/h2&gt;

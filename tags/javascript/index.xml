@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Javascript on My Blog</title>
-    <link>http://localhost:1313/tags/javascript/</link>
+    <link>http://takunagai.github.io/tags/javascript/</link>
     <description>Recent content in Javascript on My Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
@@ -10,14 +10,14 @@
     <webMaster>taky1973@gmail.com (Taku Nagai)</webMaster>
     <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
     <lastBuildDate>Sat, 21 Feb 2015 17:56:56 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://takunagai.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>JavaScript / jQuery 自分の使い方</title>
-      <link>http://localhost:1313/post/javascript/base_javascript_jquery/</link>
+      <link>http://takunagai.github.io/post/javascript/base_javascript_jquery/</link>
       <pubDate>Sat, 21 Feb 2015 17:56:56 +0900</pubDate>
       <author>taky1973@gmail.com (Taku Nagai)</author>
-      <guid>http://localhost:1313/post/javascript/base_javascript_jquery/</guid>
+      <guid>http://takunagai.github.io/post/javascript/base_javascript_jquery/</guid>
       <description>
 
 &lt;h2 id=&#34;jquery-基本:2763c954d56445700fdcab66b8eafc7c&#34;&gt;jQuery 基本&lt;/h2&gt;
