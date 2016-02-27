@@ -292,13 +292,13 @@ th,td タグ全てに align=&amp;ldquo;left|center|right&amp;rdquo; が付く&lt
     
     <item>
       <title>workタイトルです</title>
-      <link>http://localhost:1313/work/first/</link>
+      <link>http://localhost:1313/work/second/</link>
       <pubDate>Thu, 09 Jul 2015 17:56:56 +0900</pubDate>
       <author>taky1973@gmail.com (Taku Nagai)</author>
-      <guid>http://localhost:1313/work/first/</guid>
+      <guid>http://localhost:1313/work/second/</guid>
       <description>
 
-&lt;h2 id=&#34;小見出し:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;小見出し&lt;/h2&gt;
+&lt;h2 id=&#34;小見出し:9f7936f9b5c071ae81db818b80a44a0d&#34;&gt;小見出し&lt;/h2&gt;
 
 &lt;p&gt;ダミーです私は同年同時にこういう理解通りというはずの末になるだでし。ついに生涯が経過院は同時にこういう理解通りとすこぶるそんな安住なますまでがしてならたからも所有かい摘んうないて、同時にこういう理解通&lt;/p&gt;
 
@@ -318,13 +318,13 @@ th,td タグ全てに align=&amp;ldquo;left|center|right&amp;rdquo; が付く&lt
     
     <item>
       <title>workタイトルです</title>
-      <link>http://localhost:1313/work/second/</link>
+      <link>http://localhost:1313/work/first/</link>
       <pubDate>Thu, 09 Jul 2015 17:56:56 +0900</pubDate>
       <author>taky1973@gmail.com (Taku Nagai)</author>
-      <guid>http://localhost:1313/work/second/</guid>
+      <guid>http://localhost:1313/work/first/</guid>
       <description>
 
-&lt;h2 id=&#34;小見出し:9f7936f9b5c071ae81db818b80a44a0d&#34;&gt;小見出し&lt;/h2&gt;
+&lt;h2 id=&#34;小見出し:e8fb9c67eba912c72729806db31eaa1b&#34;&gt;小見出し&lt;/h2&gt;
 
 &lt;p&gt;ダミーです私は同年同時にこういう理解通りというはずの末になるだでし。ついに生涯が経過院は同時にこういう理解通りとすこぶるそんな安住なますまでがしてならたからも所有かい摘んうないて、同時にこういう理解通&lt;/p&gt;
 

@@ -71,31 +71,33 @@
 		
 		
 		
-		<ul class="topic-path">
-		  <li><a href="http://localhost:1313/">home</a></li>
-		  
-		    
-		      
-		      <li><a href='http://localhost:1313/post'>post</a></li>
-		      
-		      
-		  
-		    
-		      
-		      <li><a href='http://localhost:1313/post/hugo'>hugo</a></li>
-		      
-		      
-		  
-		    
-		      
-		      <li><a href='http://localhost:1313/post/hugo/links'>links</a></li>
-		      
-		      
-		  
-		    
-		      
-		  
-		</ul>
+		<div class="wrapper">
+			<ul class="topic-path">
+			  <li><a href="http://localhost:1313/">home</a></li>
+			  
+			    
+			      
+			      <li><a href='http://localhost:1313/post'>post</a></li>
+			      
+			      
+			  
+			    
+			      
+			      <li><a href='http://localhost:1313/post/hugo'>hugo</a></li>
+			      
+			      
+			  
+			    
+			      
+			      <li><a href='http://localhost:1313/post/hugo/links'>links</a></li>
+			      
+			      
+			  
+			    
+			      
+			  
+			</ul>
+		</div>
 
 
 
@@ -172,6 +174,7 @@ hugo new hoge.md で生成される内容変更は、archetypes/default.mdとい
 ``で分割</li>
 <li><a href="http://gohugo.io/extras/highlighting/">Syntax Highlighting</a><br />
 サーバーサイドで処理する場合は、Pythonのシンタックスハイライター「Pygments」を使う。クライアントサイドで処理させる場合は、highligh&rdquo;.js などのJavaScriptライブラリを使う。</li>
+<li><a href="http://blog.yucchiy.com/2015/04/29/hugo-shortcode/">Hugoのshortcodesを用いてサイトにスライドなどを埋め込む | Yucchiy&rsquo;s blog</a></li>
 </ul>
 
 <h3 id="hugo-x-wercher-x-github-page-で自動デプロイ:8beb8cb9d8552633930bb72ac411a21c">Hugo x Wercher x github-page で自動デプロイ</h3>
@@ -206,12 +209,12 @@ GitHubへのコードのPushをフックしてアプリケーションのテス�
 
         <footer class="article-footer">
           <div class="previous-next">
-            前の記事：<a href="http://localhost:1313/post/wordpress_to_hugo/"> WordPress から Hugo に乗り換えた</a><br>
-            次の記事：<a href="http://localhost:1313/work/first/"> workタイトルです</a>
+            前の記事：<a href="http://localhost:1313/post/first/"> Markdown記法のサンプル(表示確認用)</a><br>
+            次の記事：<a href="http://localhost:1313/post/javascript/errors_jQuery-compat-3/"> jQuery 1.11.x を Compat 3.0(alpha) に差替えた時に発生したエラー まとめ</a>
           </div>
 <div id="disqus_thread"></div>
 <script type="text/javascript">
-    var disqus_shortname = 'takunagai.github.io';
+    var disqus_shortname = 'takunagaigithubio';
     var disqus_identifier = 'http:\/\/localhost:1313\/post\/hugo\/links\/';
     var disqus_title = 'Hugo リンク集';
     var disqus_url = 'http:\/\/localhost:1313\/post\/hugo\/links\/';
@@ -231,8 +234,8 @@ GitHubへのコードのPushをフックしてアプリケーションのテス�
 
     <p id="move-to-page-top"><a href="#top"><i class="fa fa-chevron-up"></i></a></p>
 
-    <hr>
 
+    <div class="wrapper">
     <aside class="grid-block cells4 mobile-2col panel">
       <div class="cell">
         <h2>見出しです</h2>
@@ -251,6 +254,7 @@ GitHubへのコードのPushをフックしてアプリケーションのテス�
         <p>ダミーです私は同年同時にこういう理解通りというはずの末についに生涯がなるだでし。</p>
       </div>
     </aside>
+    </div>
 
     <footer class="global-footer">
 
@@ -360,7 +364,7 @@ hugo new hoge.md で生成される内容変更は、archetypes/default.mdとい
     <li>PREVINSECTION: </li>
     <li>NEXTINSECTION: </li>
     <li>FUZZYWORDCOUNT: 200</li>
-    <li>WORDCOUNT: 148</li>
+    <li>WORDCOUNT: 152</li>
     <li>READINGTIME: 1</li>
     <li>WEIGHT: 0</li>
     <li>ISNODE: false</li>
@@ -386,18 +390,18 @@ hugo new hoge.md で生成される内容変更は、archetypes/default.mdとい
   <h3>Site Variables (config.toml)</h3>
   <ol>
     <li>.Site.BaseURL: http://localhost:1313/</li>
-    <li>.Site.Taxonomies: map[tags:map[hugo:[{0 } {0 } {0 } {0 } {0 }] vagrant:[{0 }] まとめ:[{0 }] タグ2:[{0 } {0 } {0 } {0 }] タグ1:[{0 } {0 } {0 }] 開発環境:[{0 } {0 } {0 } {0 }] markdown:[{0 }] web制作:[{0 } {0 } {0 }] javascript:[{0 }] jquery:[{0 }] gulp:[{0 }] mac:[{0 }] tag1:[{0 }] wordpress:[{0 }] エラー:[{0 }] サーバー:[{0 }] mamp:[{0 }]] categories:map[開発環境:[{0 } {0 } {0 } {0 } {0 }] カテゴリーb:[{0 }] 開発:[{0 }] カテゴリーa:[{0 } {0 } {0 } {0 } {0 } {0 }]]]</li>
+    <li>.Site.Taxonomies: map[tags:map[サーバー:[{0 }] gulp:[{0 }] hugo:[{0 } {0 } {0 } {0 } {0 }] まとめ:[{0 }] wordpress:[{0 } {0 }] レスポンシブ:[{0 }] html:[{0 }] mamp:[{0 }] mac:[{0 }] 開発環境:[{0 } {0 } {0 } {0 }] タグ1:[{0 } {0 } {0 }] tag1:[{0 }] javascript:[{0 } {0 }] markdown:[{0 }] web制作:[{0 } {0 } {0 }] タグ2:[{0 } {0 } {0 } {0 }] エラー:[{0 }] jquery:[{0 } {0 }] css:[{0 }] vagrant:[{0 }]] categories:map[開発:[{0 }] カテゴリーa:[{0 } {0 } {0 } {0 } {0 } {0 } {0 }] wordpress:[{0 }] 開発環境:[{0 } {0 } {0 } {0 } {0 }] カテゴリーb:[{0 }]]]</li>
     <li>.Site.LastChange: 2015-07-24 09:01:00 &#43;0900 JST</li>
-    <li>.Site.Pages: [              ]</li>
-    <li>.Site.Params: map[tagline:Web系技術ブログ copyright:Copyright © 2015 taku_nagai All rights reserved. analytics:UA-XXXXXXXX-X contact:map[title:Contact form:map[email:map[text:Email Adress error:Please enter your email address.] phone:map[text:Phone Number error:Please enter your phone number.] message:map[text:Message error:Please enter a message.] button:map[text:Send] name:map[text:Name error:Please enter your name.]]]] 設定ファイルに記述した[params]下</li>
-    <li>.Site.Sections: map[post:[{0 } {0 } {0 } {0 } {0 } {0 } {0 } {0 } {0 } {0 } {0 }] work:[{0 } {0 }] :[{0 } {0 }]]</li>
-    <li>.Site.Pages: [              ]</li>
+    <li>.Site.Pages: [                ]</li>
+    <li>.Site.Params: map[tagline:Web系技術ブログ copyright:Copyright © 2015 taku_nagai All rights reserved. analytics:UA-XXXXXXXX-X contact:map[form:map[name:map[text:Name error:Please enter your name.] email:map[text:Email Adress error:Please enter your email address.] phone:map[text:Phone Number error:Please enter your phone number.] message:map[error:Please enter a message. text:Message] button:map[text:Send]] title:Contact]] 設定ファイルに記述した[params]下</li>
+    <li>.Site.Sections: map[:[{0 } {0 }] post:[{0 } {0 } {0 } {0 } {0 } {0 } {0 } {0 } {0 } {0 } {0 } {0 } {0 }] work:[{0 } {0 }]]</li>
+    <li>.Site.Pages: [                ]</li>
     <li>.Site.Files: []</li>
-    <li>.Site.Menus: map[main:0xc2082a1900]</li>
+    <li>.Site.Menus: map[main:0xc20811f320]</li>
     <li>.Site.Title: My Blog</li>
-    <li>.Site.Author: map[name:Taku Nagai email:taky1973@gmail.com facebook:https://www.facebook.com/takuya.nagai.12 twitter:https://twitter.com/taku_nagai github:https://github.com/takunagai tumblr:http://takunagai.github.io.tumblr.com instagram:https://instagram.com/taku_n_/ avatar:/img/avatar.png]</li>
+    <li>.Site.Author: map[email:taky1973@gmail.com facebook:https://www.facebook.com/takuya.nagai.12 twitter:https://twitter.com/taku_nagai github:https://github.com/takunagai tumblr:http://takunagai.github.io.tumblr.com instagram:https://instagram.com/taku_n_/ avatar:/img/avatar.png name:Taku Nagai]</li>
     <li>.Site.LanguageCode: ja</li>
-    <li>.Site.DisqusShortname: takunagai.github.io</li>
+    <li>.Site.DisqusShortname: takunagaigithubio</li>
     <li>.Site.Copyright: This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</li>
     <li>.Site.LastChange: 2015-07-24 09:01:00 &#43;0900 JST</li>
     <li>.Site.Permalinks: map[]</li>

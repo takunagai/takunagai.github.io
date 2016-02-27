@@ -2,22 +2,74 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Javascript on My Blog</title>
-    <link>http://takunagai.github.io/tags/javascript/</link>
+    <link>http://localhost:1313/tags/javascript/</link>
     <description>Recent content in Javascript on My Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <managingEditor>taky1973@gmail.com (Taku Nagai)</managingEditor>
     <webMaster>taky1973@gmail.com (Taku Nagai)</webMaster>
     <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
-    <lastBuildDate>Sat, 21 Feb 2015 17:56:56 +0900</lastBuildDate>
-    <atom:link href="http://takunagai.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Jul 2015 17:56:56 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>jQuery 1.11.x を Compat 3.0(alpha) に差替えた時に発生したエラー まとめ</title>
+      <link>http://localhost:1313/post/javascript/errors_jQuery-compat-3/</link>
+      <pubDate>Thu, 09 Jul 2015 17:56:56 +0900</pubDate>
+      <author>taky1973@gmail.com (Taku Nagai)</author>
+      <guid>http://localhost:1313/post/javascript/errors_jQuery-compat-3/</guid>
+      <description>
+
+&lt;h2 id=&#34;error-syntax-error-unrecognized-expression-a-href:8dcfd3a029cea5e293ea657f3b37f024&#34;&gt;Error: Syntax error, unrecognized expression: a[href^=#]&amp;hellip;&lt;/h2&gt;
+
+&lt;p&gt;CSSセレクタの擬似要素の値にはクォーテーションが必要&lt;/p&gt;
+
+&lt;p&gt;修正前(エラー)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$(&#39;a[href^=#]&#39;).on(&#39;click&#39;, function(e) { 処理 }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;修正後&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$(&#39;a[href^=&amp;quot;#&amp;quot;]&#39;).on(&#39;click&#39;, function(e) { 処理 }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;typeerror-undefined-is-not-a-function-evaluating-headers-size:8dcfd3a029cea5e293ea657f3b37f024&#34;&gt;TypeError: undefined is not a function (evaluating &amp;lsquo;headers.size()&amp;rsquo;)&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;.size()&lt;/code&gt;はjQuery1.3ですでに非推奨。代わりに&lt;code&gt;.length()&lt;/code&gt;を使う&lt;/p&gt;
+
+&lt;p&gt;修正前(エラー)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;if(headers.size() &amp;gt;= 2) { 処理 }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;修正後&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;if(headers.length() &amp;gt;= 2) { 処理 }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;各ブラウザでの検証が必要:8dcfd3a029cea5e293ea657f3b37f024&#34;&gt;各ブラウザでの検証が必要&lt;/h2&gt;
+
+&lt;p&gt;確認したのは現時点の Safari 最新版(8.0.7)のみ。他の各ブラウザで問題が出ないか確認する必要がある&lt;/p&gt;
+
+&lt;h2 id=&#34;参考記事:8dcfd3a029cea5e293ea657f3b37f024&#34;&gt;参考記事&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://mgzl.jp/2011/05/31/jquery-error-syntax-error-unrecognized-expression/&#34;&gt;jQueryエラー：Syntax error, unrecognized expression | jQuery | mgzl.jp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/5818555/uncaught-exception-syntax-error-unrecognized-expression-href-example-html&#34;&gt;javascript - uncaught exception: Syntax error, unrecognized expression: [href=example.html] - Stack Overflow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.koikikukan.com/archives/2014/08/08-005555.php&#34;&gt;jQueryで要素数を取得する方法のまとめ: 小粋空間&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://myjquery.blog.fc2.com/blog-entry-15.html&#34;&gt;jQuery Migrate plugin の使い方と警告文の自分なりのまとめ | 私的なjQuery&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://codezine.jp/article/detail/8846&#34;&gt;「jQuery 3.0」と「jQuery Compat 3.0」の最初のアルファ版がリリース：CodeZine（コードジン）&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>JavaScript / jQuery 自分の使い方</title>
-      <link>http://takunagai.github.io/post/javascript/base_javascript_jquery/</link>
+      <link>http://localhost:1313/post/javascript/base_javascript_jquery/</link>
       <pubDate>Sat, 21 Feb 2015 17:56:56 +0900</pubDate>
       <author>taky1973@gmail.com (Taku Nagai)</author>
-      <guid>http://takunagai.github.io/post/javascript/base_javascript_jquery/</guid>
+      <guid>http://localhost:1313/post/javascript/base_javascript_jquery/</guid>
       <description>
 
 &lt;h2 id=&#34;jquery-基本:2763c954d56445700fdcab66b8eafc7c&#34;&gt;jQuery 基本&lt;/h2&gt;

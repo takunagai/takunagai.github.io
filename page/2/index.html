@@ -74,16 +74,19 @@
 		
 		
 		
-		<ul class="topic-path">
-		  <li><a href="http://localhost:1313/">home</a></li>
-		  
-		    
-		      
-		  
-		</ul>
+		<div class="wrapper">
+			<ul class="topic-path">
+			  <li><a href="http://localhost:1313/">home</a></li>
+			  
+			    
+			      
+			  
+			</ul>
+		</div>
 
 
 
+    <div class="main-wrapper">
     <main id="main" role="main">
       <article>
 
@@ -95,9 +98,13 @@
         <div class="article-body">
 
           <h2>タグ別一覧</h2>
-          <ul id="all-tags">
+          <ul class="all-tags">
+            
+              <li><a href="http://localhost:1313/tags/css">css</a></li>
             
               <li><a href="http://localhost:1313/tags/gulp">gulp</a></li>
+            
+              <li><a href="http://localhost:1313/tags/html">html</a></li>
             
               <li><a href="http://localhost:1313/tags/hugo">hugo</a></li>
             
@@ -129,6 +136,8 @@
             
               <li><a href="http://localhost:1313/tags/%E3%82%BF%E3%82%B02">タグ2</a></li>
             
+              <li><a href="http://localhost:1313/tags/%E3%83%AC%E3%82%B9%E3%83%9D%E3%83%B3%E3%82%B7%E3%83%96">レスポンシブ</a></li>
+            
               <li><a href="http://localhost:1313/tags/%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83">開発環境</a></li>
             
           </ul>
@@ -136,6 +145,20 @@
           <h2>ブログ最新記事</h2>
           <ul class="article-list">
           
+            
+            <li class="article-list__article">
+              <h3 class="article-list__article__title"><a href="http://localhost:1313/post/comparison_mamp_vagrant/">ローカルサーバーどれ使う？ MAMP(Xampp) と Vagrant の違い・使い分け</a></h3>
+              <p class="article-list__article__description">WordPressサイトの開発程度ならお手軽な MAMP。サーバーをいじる必要があるなら Vagrant</p>
+              <ul class="article-list__article__tags"><li><a href="tags/web%E5%88%B6%E4%BD%9C">#Web制作</a></li><li><a href="tags/%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83">#開発環境</a></li><li><a href="tags/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC">#サーバー</a></li><li><a href="tags/mamp">#Mamp</a></li><li><a href="tags/vagrant">#Vagrant</a></li></ul>
+              <p class="article-list__article__date"><time datetime="2014-10-15T00:00:00&#43;09:00">Oct 15, 2014</time></p>
+            </li>
+            
+            <li class="article-list__article">
+              <h3 class="article-list__article__title"><a href="http://localhost:1313/post/comparison_dist_dest/">dist と dest の意味・違い</a></h3>
+              <p class="article-list__article__description">ディレクトリ名によく使われている &#39;dist&#39; と &#39;dest&#39; の違いがモヤモヤ気になったのでザッと調べた</p>
+              <ul class="article-list__article__tags"><li><a href="tags/web%E5%88%B6%E4%BD%9C">#Web制作</a></li><li><a href="tags/%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83">#開発環境</a></li><li><a href="tags/gulp">#gulp</a></li></ul>
+              <p class="article-list__article__date"><time datetime="2014-10-15T00:00:00&#43;09:00">Oct 15, 2014</time></p>
+            </li>
             
             <li class="article-list__article">
               <h3 class="article-list__article__title"><a href="http://localhost:1313/post/customize_mouse_movement/">【Mac】マウスの速度/加速度をカスタマイズする無料アプリ</a> <small><i class="fa fa-pencil-square"></i>下書き</small></h3>
@@ -157,11 +180,13 @@
 
       </article>
     </main>
+    
+    </div>
 
     <p id="move-to-page-top"><a href="#top"><i class="fa fa-chevron-up"></i></a></p>
 
-    <hr>
 
+    <div class="wrapper">
     <aside class="grid-block cells4 mobile-2col panel">
       <div class="cell">
         <h2>見出しです</h2>
@@ -180,6 +205,7 @@
         <p>ダミーです私は同年同時にこういう理解通りというはずの末についに生涯がなるだでし。</p>
       </div>
     </aside>
+    </div>
 
     <footer class="global-footer">
 

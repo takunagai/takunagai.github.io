@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on My Blog</title>
-    <link>http://takunagai.github.io/tags/hugo/</link>
+    <link>http://localhost:1313/tags/hugo/</link>
     <description>Recent content in Hugo on My Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
@@ -10,14 +10,14 @@
     <webMaster>taky1973@gmail.com (Taku Nagai)</webMaster>
     <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
     <lastBuildDate>Fri, 24 Jul 2015 09:01:00 +0900</lastBuildDate>
-    <atom:link href="http://takunagai.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Markdown関連の便利ツール まとめ</title>
-      <link>http://takunagai.github.io/post/convinient_tools_for_markdown/</link>
+      <link>http://localhost:1313/post/convinient_tools_for_markdown/</link>
       <pubDate>Fri, 24 Jul 2015 09:01:00 +0900</pubDate>
       <author>taky1973@gmail.com (Taku Nagai)</author>
-      <guid>http://takunagai.github.io/post/convinient_tools_for_markdown/</guid>
+      <guid>http://localhost:1313/post/convinient_tools_for_markdown/</guid>
       <description>
 
 &lt;h2 id=&#34;htmlからmarkdownに変換:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;HTMLからMarkdownに変換&lt;/h2&gt;
@@ -120,10 +120,10 @@ CMSに付きものの重さ、セキュリティ不安、管理の手間から�
     
     <item>
       <title>Hugo のテンプレート 基本</title>
-      <link>http://takunagai.github.io/post/hugo/template/</link>
+      <link>http://localhost:1313/post/hugo/template/</link>
       <pubDate>Sat, 11 Jul 2015 13:36:46 +0900</pubDate>
       <author>taky1973@gmail.com (Taku Nagai)</author>
-      <guid>http://takunagai.github.io/post/hugo/template/</guid>
+      <guid>http://localhost:1313/post/hugo/template/</guid>
       <description>
 
 &lt;h2 id=&#34;基礎知識:1cfa0a57d825e12f541e7967fd546b1b&#34;&gt;基礎知識&lt;/h2&gt;
@@ -293,6 +293,187 @@ Actions の項〜 がわかりやすい&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://golangtutorials.blogspot.jp/2011/06/go-templates.html&#34;&gt;GoLang Tutorials: Go Templates&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://golang.org/pkg/html/template/&#34;&gt;template - The Go Programming Language&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>HugoのMarkdown記法</title>
+      <link>http://localhost:1313/post/hugo/markdown/</link>
+      <pubDate>Sat, 11 Jul 2015 13:36:46 +0900</pubDate>
+      <author>taky1973@gmail.com (Taku Nagai)</author>
+      <guid>http://localhost:1313/post/hugo/markdown/</guid>
+      <description>
+
+&lt;h2 id=&#34;blackfriday:5542d551484653c47f2dacb24438d667&#34;&gt;Blackfriday&lt;/h2&gt;
+
+&lt;p&gt;HugoのMarkdownのレンダリンには、Go言語の&amp;rdquo;Blackfriday&amp;rdquo;が行う。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/russross/blackfriday&#34;&gt;russross/blackfriday | github&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Markdown記法を拡張したもので、&lt;a href=&#34;https://help.github.com/articles/github-flavored-markdown/&#34;&gt;GitHub Flavored Markdown&lt;/a&gt; に近い。&lt;br /&gt;
+表組みなど、Markdownで書ける。&lt;/p&gt;
+
+&lt;h3 id=&#34;拡張されたもの:5542d551484653c47f2dacb24438d667&#34;&gt;拡張されたもの&lt;/h3&gt;
+
+&lt;h4 id=&#34;テーブル:5542d551484653c47f2dacb24438d667&#34;&gt;テーブル&lt;/h4&gt;
+
+&lt;p&gt;: の位置で文字揃えの指定が可能。&lt;br /&gt;
+th,td タグ全てに align=&amp;ldquo;left|center|right&amp;rdquo; が付く&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Header&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;right aligned&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Content Cell&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Content Cell&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&#34;コードブロック:5542d551484653c47f2dacb24438d667&#34;&gt;コードブロック&lt;/h4&gt;
+
+&lt;p&gt;言語名を付けると code タグにクラスを付けてくれる。&lt;br /&gt;
+シンタックスハイライトする場合に有用。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;meta name=&amp;quot;keywords&amp;quot; itemprop=&amp;quot;keywords&amp;quot; content=&amp;quot;&amp;quot;&amp;gt;
+&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1&amp;quot;&amp;gt;
+&amp;lt;meta name=&amp;quot;format-detection&amp;quot; content=&amp;quot;telephone=no&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;その他:5542d551484653c47f2dacb24438d667&#34;&gt;その他&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;URLは自動でリンク(&amp;lt; &amp;gt;不要)&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;内容&lt;/del&gt; ←打ち消し線&lt;/li&gt;
+&lt;li&gt;Hard line breaks 改行時、末尾にスペース2つを付けなくても改行。オプションを有効にする必要がある。Hugoでも設定すれば使える(下記参照)&lt;/li&gt;
+&lt;li&gt;その他、Smart quotes、LaTeX-style dash parsing、Smart fractions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;hugo-で-blackfriday-のレンダリングをカスタマイズ:5542d551484653c47f2dacb24438d667&#34;&gt;Hugo で Blackfriday のレンダリングをカスタマイズ&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://gohugo.io/overview/configuration/&#34;&gt;Configuring Hugo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;上記ページを参照に、設定ファイル config.toml に追記することでカスタマイズが可能。&lt;br /&gt;
+下例は、改行時に末尾にスペース2つを付けなくても改行(自分は使わないが)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[blackfriday]
+  extensions = [&amp;quot;hardLineBreak&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hugo リンク集</title>
+      <link>http://localhost:1313/post/hugo/links/</link>
+      <pubDate>Thu, 09 Jul 2015 17:56:56 +0900</pubDate>
+      <author>taky1973@gmail.com (Taku Nagai)</author>
+      <guid>http://localhost:1313/post/hugo/links/</guid>
+      <description>
+
+&lt;h2 id=&#34;このサイト:8beb8cb9d8552633930bb72ac411a21c&#34;&gt;このサイト&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[hugoのMarkdown]()&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;外部サイト:8beb8cb9d8552633930bb72ac411a21c&#34;&gt;外部サイト&lt;/h2&gt;
+
+&lt;p&gt;すごく参考にさせてもらいました。&lt;/p&gt;
+
+&lt;h3 id=&#34;q-aサイト:8beb8cb9d8552633930bb72ac411a21c&#34;&gt;Q&amp;amp;Aサイト&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/tags/hugo&#34;&gt;Hugoに関する投稿 - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/tagged/hugo&#34;&gt;Newest &amp;lsquo;hugo&amp;rsquo; Questions - Stack Overflow&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;cmsや他の静的ジェネレーターからhugoへ移行:8beb8cb9d8552633930bb72ac411a21c&#34;&gt;CMSや他の静的ジェネレーターからHugoへ移行&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://keichi.net/post/first/&#34;&gt;Hugoにブログを移行した · Keichi Takahashi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://dqn.sakusakutto.jp/2015/06/movabletype2hugo.html&#34;&gt;MovableType(1000記事)からHugoへの乗り換えまとめ · DQNEO起業日記&lt;/a&gt;&lt;br /&gt;
+MT→Hugoへのコンバートツールを公開。MTで8分の再構築が、Hugoだと1秒&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://nobu666.com/2015/06/21/1015.html&#34;&gt;WordPressからGitHub Pages + hugoに移行した · Real Beat&lt;/a&gt;&lt;br /&gt;
+独自ドメインでGitHub Pagesを使う方法(サブドメインあり無し両方)。Wercker(自動継続化)で自動デプロイ&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://rakuishi.com/archives/wordpress-to-hugo/&#34;&gt;WordPress から Hugo に乗り換えました - rakuishi.com&lt;/a&gt;&lt;br /&gt;
+WPからの以降手順など&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://yet.unresolved.xyz/blog/2015/01/04/migrate-blog-to-hugo-from-octopress/&#34;&gt;ブログをOctopressからHugoに移行した | Unresolved&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;hugoのカスタマイズ:8beb8cb9d8552633930bb72ac411a21c&#34;&gt;Hugoのカスタマイズ&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/suin/items/88b4445c55a44384e6bf&#34;&gt;hugoでMarkdownのincludeを実現する方法 - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://dqn.sakusakutto.jp/2015/07/configure_hugo_new.html&#34;&gt;hugo newで作られる記事ファイルのfront matterをカスタマイズする · DQNEO起業日記&lt;/a&gt;&lt;br /&gt;
+hugo new hoge.md で生成される内容変更は、archetypes/default.mdというファイルを作成してそこにfront matterを書く。&lt;code&gt;draft = true&lt;/code&gt;は記述すること&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/DQNEO/items/4cc651aa1c2d0ced9fae&#34;&gt;Hugoにおける記事要約の仕組み - Qiita&lt;/a&gt;&lt;br /&gt;
+``で分割&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://gohugo.io/extras/highlighting/&#34;&gt;Syntax Highlighting&lt;/a&gt;&lt;br /&gt;
+サーバーサイドで処理する場合は、Pythonのシンタックスハイライター「Pygments」を使う。クライアントサイドで処理させる場合は、highligh&amp;rdquo;.js などのJavaScriptライブラリを使う。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.yucchiy.com/2015/04/29/hugo-shortcode/&#34;&gt;Hugoのshortcodesを用いてサイトにスライドなどを埋め込む | Yucchiy&amp;rsquo;s blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;hugo-x-wercher-x-github-page-で自動デプロイ:8beb8cb9d8552633930bb72ac411a21c&#34;&gt;Hugo x Wercher x github-page で自動デプロイ&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://gohugo.io/tutorials/automated-deployments&#34;&gt;Automated deployments with Wercker | Wercker公式&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://motomizuki.github.io/blog/2015/02/28/hugodeploy/&#34;&gt;◎Hugoのインストールから自動デプロイまで · motomizuki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/yoheimuta/items/8a619cac356bed89a4c9&#34;&gt;◎Hugo + Github Pages + Wercker CI、分析・収益化 - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.negimic.com/post/wercker-success/&#34;&gt;werckerでhugoビルド→githubにデプロイ · negimic blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/syui/items/d0a58dcf74ede4376062&#34;&gt;HugoをWerckerでビルドし、GitHub Pagesで公開するまでの手順 - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://m0t0k1ch1st0ry.com/blog/2015/05/16/hugo/&#34;&gt;Hugo ＋ wercker ＋ GitHub Pages でブログ管理 · m0t0k1ch1st0ry&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/m0t0k1ch1/m0t0k1ch1st0ry&#34;&gt;ソース(wercker.yml参照)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/30631446/command-timed-out-after-no-response-trying-to-deploy-hugo-blog-to-github-page-wi&#34;&gt;Command timed out after no response trying to deploy hugo blog to github page with wercker - Stack Overflow&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;werckerとは:8beb8cb9d8552633930bb72ac411a21c&#34;&gt;Werckerとは&lt;/h4&gt;
+
+&lt;p&gt;Wercker(Github無料/bitbucketにpush → ビルド(=デプロイ、テスト)を自動化してくれるCI(継続的インテグレーション))。Github pagesにpushするとそのままWeb公開できる&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://wercker.com/&#34;&gt;Wercker公式 - automation driven development&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://gohugo.io/tutorials/automated-deployments&#34;&gt;Automated deployments with Wercker&lt;/a&gt;&lt;br /&gt;
+GitHubへのコードのPushをフックしてアプリケーションのテスト，ビルド，デプロイを自動化。S3でも可能&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://deeeet.com/writing/2014/10/16/wercker/&#34;&gt;Werckerの仕組み，独自のboxとstepのつくりかた | SOTA&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://memo.laughk.org/2015/04/05/blog-build-ci-by-wercker.html&#34;&gt;ブログのデプロイにWerckerを使って楽に投稿できる環境にした - 続・ラフなラボ&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>WordPress から Hugo に乗り換えた</title>
+      <link>http://localhost:1313/post/wordpress_to_hugo/</link>
+      <pubDate>Thu, 09 Jul 2015 17:56:56 +0900</pubDate>
+      <author>taky1973@gmail.com (Taku Nagai)</author>
+      <guid>http://localhost:1313/post/wordpress_to_hugo/</guid>
+      <description>
+
+&lt;h2 id=&#34;hugo-の-メリット:e802d7bc3c0c3d0ca992f6cb9f6e62d6&#34;&gt;Hugo の メリット&lt;/h2&gt;
+
+&lt;h3 id=&#34;記事はmarkdownファイルを直に編集:e802d7bc3c0c3d0ca992f6cb9f6e62d6&#34;&gt;記事はMarkdownファイルを直に編集&lt;/h3&gt;
+
+&lt;p&gt;最高のMarkdownエディタ「Mou」でサクサク編集できる
+WordPressも記事をMarkdownで書けるプラグインがあるが、WordPressのダッシュボードから行う必要がある&lt;/p&gt;
+
+&lt;h3 id=&#34;シンプル:e802d7bc3c0c3d0ca992f6cb9f6e62d6&#34;&gt;シンプル&lt;/h3&gt;
+
+&lt;p&gt;良くも悪くもシンプル。&lt;/p&gt;
+
+&lt;h2 id=&#34;hugo-の-wordpress-より:e802d7bc3c0c3d0ca992f6cb9f6e62d6&#34;&gt;Hugo の WordPress より&lt;/h2&gt;
 </description>
     </item>
     

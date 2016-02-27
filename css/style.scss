@@ -7,6 +7,25 @@ Author URI: http://kumotori.net/
 */
 
 //------------------------------------------------------------
+// 未整理
+//------------------------------------------------------------
+//タグ
+.all-tags {
+  background-color: #E7E7E7; //ul
+  padding: 4px 12px;
+  font-size: .8em;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  li {
+    display: inline-block;
+    margin-right: 1em;
+  }
+  a {
+    color: #666;
+  }
+}
+
+//------------------------------------------------------------
 // 変数
 //------------------------------------------------------------
 
@@ -318,7 +337,9 @@ html {
 @-ms-viewport { width: device-width; }
     @viewport { width: device-width; }
 
-body {background-image: url(http://subtlepatterns.com/patterns/crossword.png);
+body {
+  //background-image: url(http://subtlepatterns.com/patterns/crossword.png);
+  background-image: url(http://www.transparenttextures.com/patterns/3px-tile.png);
   max-width: 1140px;
   margin-left : auto;
   margin-right: auto;
@@ -762,8 +783,7 @@ pre code {
 //------------------------------------------------------------
 // 未整理
 //------------------------------------------------------------
-
-.global-header, .global-footer {
+.global-header, .global-footer, .main-wrapper, .wrapper {
   @media #{$mq_s} {
     margin-left : -($body_margin_s);
     margin-right: -($body_margin_s);
@@ -772,6 +792,8 @@ pre code {
     margin-left : -($body_margin_ml);
     margin-right: -($body_margin_ml);
   }
+}
+.global-header, .global-footer {
   text-align: center;
   background-color: #E7E7E7;
 }
@@ -820,14 +842,27 @@ pre code {
     }
 
   .global-footer {
+    p:first-child {
+      margin-top: 0;
+    }
     font-size: small;
   }
     .global-footer__copyright {
       margin-bottom: 0;
     }
 
+  .main-wrapper {
+    padding: 30px;
+    background-color: #FFF;
+  }
+  .wrapper {
+    background-color: gray;
+  }
+
 // パンくずリスト bread crumbs
 .topic-path {//ul
+  margin-top: 0;
+  margin-bottom: 0;
   padding-left: 0;
   display: block;
   @include font-size--x-small;
@@ -854,7 +889,7 @@ pre code {
 
 //--- 記事 ------------------------------
 main {
-  
+  outline: 1px dotted silver;
 }
 
 //シングルページ、リストページ共通

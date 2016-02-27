@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on My Blog</title>
-    <link>http://takunagai.github.io/post/</link>
+    <link>http://localhost:1313/post/</link>
     <description>Recent content in Posts on My Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
@@ -10,14 +10,14 @@
     <webMaster>taky1973@gmail.com (Taku Nagai)</webMaster>
     <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
     <lastBuildDate>Fri, 24 Jul 2015 09:01:00 +0900</lastBuildDate>
-    <atom:link href="http://takunagai.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Markdown関連の便利ツール まとめ</title>
-      <link>http://takunagai.github.io/post/convinient_tools_for_markdown/</link>
+      <link>http://localhost:1313/post/convinient_tools_for_markdown/</link>
       <pubDate>Fri, 24 Jul 2015 09:01:00 +0900</pubDate>
       <author>taky1973@gmail.com (Taku Nagai)</author>
-      <guid>http://takunagai.github.io/post/convinient_tools_for_markdown/</guid>
+      <guid>http://localhost:1313/post/convinient_tools_for_markdown/</guid>
       <description>
 
 &lt;h2 id=&#34;htmlからmarkdownに変換:f1e589fa9c98f42e42de9634ffdea3c5&#34;&gt;HTMLからMarkdownに変換&lt;/h2&gt;
@@ -120,10 +120,10 @@ CMSに付きものの重さ、セキュリティ不安、管理の手間から�
     
     <item>
       <title>Web系技術のまとめ一覧</title>
-      <link>http://takunagai.github.io/post/list_of_webdesign_techniques/</link>
+      <link>http://localhost:1313/post/list_of_webdesign_techniques/</link>
       <pubDate>Fri, 24 Jul 2015 08:53:00 +0900</pubDate>
       <author>taky1973@gmail.com (Taku Nagai)</author>
-      <guid>http://takunagai.github.io/post/list_of_webdesign_techniques/</guid>
+      <guid>http://localhost:1313/post/list_of_webdesign_techniques/</guid>
       <description>
 
 &lt;h2 id=&#34;全般:8ee210feada63183dee0738f4da3c752&#34;&gt;全般&lt;/h2&gt;
@@ -272,10 +272,10 @@ CMSに付きものの重さ、セキュリティ不安、管理の手間から�
     
     <item>
       <title>Hugo のテンプレート 基本</title>
-      <link>http://takunagai.github.io/post/hugo/template/</link>
+      <link>http://localhost:1313/post/hugo/template/</link>
       <pubDate>Sat, 11 Jul 2015 13:36:46 +0900</pubDate>
       <author>taky1973@gmail.com (Taku Nagai)</author>
-      <guid>http://takunagai.github.io/post/hugo/template/</guid>
+      <guid>http://localhost:1313/post/hugo/template/</guid>
       <description>
 
 &lt;h2 id=&#34;基礎知識:1cfa0a57d825e12f541e7967fd546b1b&#34;&gt;基礎知識&lt;/h2&gt;
@@ -449,11 +449,445 @@ Actions の項〜 がわかりやすい&lt;/li&gt;
     </item>
     
     <item>
+      <title>HugoのMarkdown記法</title>
+      <link>http://localhost:1313/post/hugo/markdown/</link>
+      <pubDate>Sat, 11 Jul 2015 13:36:46 +0900</pubDate>
+      <author>taky1973@gmail.com (Taku Nagai)</author>
+      <guid>http://localhost:1313/post/hugo/markdown/</guid>
+      <description>
+
+&lt;h2 id=&#34;blackfriday:5542d551484653c47f2dacb24438d667&#34;&gt;Blackfriday&lt;/h2&gt;
+
+&lt;p&gt;HugoのMarkdownのレンダリンには、Go言語の&amp;rdquo;Blackfriday&amp;rdquo;が行う。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/russross/blackfriday&#34;&gt;russross/blackfriday | github&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Markdown記法を拡張したもので、&lt;a href=&#34;https://help.github.com/articles/github-flavored-markdown/&#34;&gt;GitHub Flavored Markdown&lt;/a&gt; に近い。&lt;br /&gt;
+表組みなど、Markdownで書ける。&lt;/p&gt;
+
+&lt;h3 id=&#34;拡張されたもの:5542d551484653c47f2dacb24438d667&#34;&gt;拡張されたもの&lt;/h3&gt;
+
+&lt;h4 id=&#34;テーブル:5542d551484653c47f2dacb24438d667&#34;&gt;テーブル&lt;/h4&gt;
+
+&lt;p&gt;: の位置で文字揃えの指定が可能。&lt;br /&gt;
+th,td タグ全てに align=&amp;ldquo;left|center|right&amp;rdquo; が付く&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Header&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;right aligned&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Content Cell&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Content Cell&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&#34;コードブロック:5542d551484653c47f2dacb24438d667&#34;&gt;コードブロック&lt;/h4&gt;
+
+&lt;p&gt;言語名を付けると code タグにクラスを付けてくれる。&lt;br /&gt;
+シンタックスハイライトする場合に有用。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;meta name=&amp;quot;keywords&amp;quot; itemprop=&amp;quot;keywords&amp;quot; content=&amp;quot;&amp;quot;&amp;gt;
+&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1&amp;quot;&amp;gt;
+&amp;lt;meta name=&amp;quot;format-detection&amp;quot; content=&amp;quot;telephone=no&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;その他:5542d551484653c47f2dacb24438d667&#34;&gt;その他&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;URLは自動でリンク(&amp;lt; &amp;gt;不要)&lt;/li&gt;
+&lt;li&gt;&lt;del&gt;内容&lt;/del&gt; ←打ち消し線&lt;/li&gt;
+&lt;li&gt;Hard line breaks 改行時、末尾にスペース2つを付けなくても改行。オプションを有効にする必要がある。Hugoでも設定すれば使える(下記参照)&lt;/li&gt;
+&lt;li&gt;その他、Smart quotes、LaTeX-style dash parsing、Smart fractions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;hugo-で-blackfriday-のレンダリングをカスタマイズ:5542d551484653c47f2dacb24438d667&#34;&gt;Hugo で Blackfriday のレンダリングをカスタマイズ&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://gohugo.io/overview/configuration/&#34;&gt;Configuring Hugo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;上記ページを参照に、設定ファイル config.toml に追記することでカスタマイズが可能。&lt;br /&gt;
+下例は、改行時に末尾にスペース2つを付けなくても改行(自分は使わないが)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[blackfriday]
+  extensions = [&amp;quot;hardLineBreak&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hugo リンク集</title>
+      <link>http://localhost:1313/post/hugo/links/</link>
+      <pubDate>Thu, 09 Jul 2015 17:56:56 +0900</pubDate>
+      <author>taky1973@gmail.com (Taku Nagai)</author>
+      <guid>http://localhost:1313/post/hugo/links/</guid>
+      <description>
+
+&lt;h2 id=&#34;このサイト:8beb8cb9d8552633930bb72ac411a21c&#34;&gt;このサイト&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[hugoのMarkdown]()&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;外部サイト:8beb8cb9d8552633930bb72ac411a21c&#34;&gt;外部サイト&lt;/h2&gt;
+
+&lt;p&gt;すごく参考にさせてもらいました。&lt;/p&gt;
+
+&lt;h3 id=&#34;q-aサイト:8beb8cb9d8552633930bb72ac411a21c&#34;&gt;Q&amp;amp;Aサイト&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/tags/hugo&#34;&gt;Hugoに関する投稿 - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/tagged/hugo&#34;&gt;Newest &amp;lsquo;hugo&amp;rsquo; Questions - Stack Overflow&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;cmsや他の静的ジェネレーターからhugoへ移行:8beb8cb9d8552633930bb72ac411a21c&#34;&gt;CMSや他の静的ジェネレーターからHugoへ移行&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://keichi.net/post/first/&#34;&gt;Hugoにブログを移行した · Keichi Takahashi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://dqn.sakusakutto.jp/2015/06/movabletype2hugo.html&#34;&gt;MovableType(1000記事)からHugoへの乗り換えまとめ · DQNEO起業日記&lt;/a&gt;&lt;br /&gt;
+MT→Hugoへのコンバートツールを公開。MTで8分の再構築が、Hugoだと1秒&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://nobu666.com/2015/06/21/1015.html&#34;&gt;WordPressからGitHub Pages + hugoに移行した · Real Beat&lt;/a&gt;&lt;br /&gt;
+独自ドメインでGitHub Pagesを使う方法(サブドメインあり無し両方)。Wercker(自動継続化)で自動デプロイ&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://rakuishi.com/archives/wordpress-to-hugo/&#34;&gt;WordPress から Hugo に乗り換えました - rakuishi.com&lt;/a&gt;&lt;br /&gt;
+WPからの以降手順など&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://yet.unresolved.xyz/blog/2015/01/04/migrate-blog-to-hugo-from-octopress/&#34;&gt;ブログをOctopressからHugoに移行した | Unresolved&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;hugoのカスタマイズ:8beb8cb9d8552633930bb72ac411a21c&#34;&gt;Hugoのカスタマイズ&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/suin/items/88b4445c55a44384e6bf&#34;&gt;hugoでMarkdownのincludeを実現する方法 - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://dqn.sakusakutto.jp/2015/07/configure_hugo_new.html&#34;&gt;hugo newで作られる記事ファイルのfront matterをカスタマイズする · DQNEO起業日記&lt;/a&gt;&lt;br /&gt;
+hugo new hoge.md で生成される内容変更は、archetypes/default.mdというファイルを作成してそこにfront matterを書く。&lt;code&gt;draft = true&lt;/code&gt;は記述すること&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/DQNEO/items/4cc651aa1c2d0ced9fae&#34;&gt;Hugoにおける記事要約の仕組み - Qiita&lt;/a&gt;&lt;br /&gt;
+``で分割&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://gohugo.io/extras/highlighting/&#34;&gt;Syntax Highlighting&lt;/a&gt;&lt;br /&gt;
+サーバーサイドで処理する場合は、Pythonのシンタックスハイライター「Pygments」を使う。クライアントサイドで処理させる場合は、highligh&amp;rdquo;.js などのJavaScriptライブラリを使う。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.yucchiy.com/2015/04/29/hugo-shortcode/&#34;&gt;Hugoのshortcodesを用いてサイトにスライドなどを埋め込む | Yucchiy&amp;rsquo;s blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;hugo-x-wercher-x-github-page-で自動デプロイ:8beb8cb9d8552633930bb72ac411a21c&#34;&gt;Hugo x Wercher x github-page で自動デプロイ&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://gohugo.io/tutorials/automated-deployments&#34;&gt;Automated deployments with Wercker | Wercker公式&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://motomizuki.github.io/blog/2015/02/28/hugodeploy/&#34;&gt;◎Hugoのインストールから自動デプロイまで · motomizuki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/yoheimuta/items/8a619cac356bed89a4c9&#34;&gt;◎Hugo + Github Pages + Wercker CI、分析・収益化 - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.negimic.com/post/wercker-success/&#34;&gt;werckerでhugoビルド→githubにデプロイ · negimic blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/syui/items/d0a58dcf74ede4376062&#34;&gt;HugoをWerckerでビルドし、GitHub Pagesで公開するまでの手順 - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://m0t0k1ch1st0ry.com/blog/2015/05/16/hugo/&#34;&gt;Hugo ＋ wercker ＋ GitHub Pages でブログ管理 · m0t0k1ch1st0ry&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/m0t0k1ch1/m0t0k1ch1st0ry&#34;&gt;ソース(wercker.yml参照)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/30631446/command-timed-out-after-no-response-trying-to-deploy-hugo-blog-to-github-page-wi&#34;&gt;Command timed out after no response trying to deploy hugo blog to github page with wercker - Stack Overflow&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;werckerとは:8beb8cb9d8552633930bb72ac411a21c&#34;&gt;Werckerとは&lt;/h4&gt;
+
+&lt;p&gt;Wercker(Github無料/bitbucketにpush → ビルド(=デプロイ、テスト)を自動化してくれるCI(継続的インテグレーション))。Github pagesにpushするとそのままWeb公開できる&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://wercker.com/&#34;&gt;Wercker公式 - automation driven development&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://gohugo.io/tutorials/automated-deployments&#34;&gt;Automated deployments with Wercker&lt;/a&gt;&lt;br /&gt;
+GitHubへのコードのPushをフックしてアプリケーションのテスト，ビルド，デプロイを自動化。S3でも可能&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://deeeet.com/writing/2014/10/16/wercker/&#34;&gt;Werckerの仕組み，独自のboxとstepのつくりかた | SOTA&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://memo.laughk.org/2015/04/05/blog-build-ci-by-wercker.html&#34;&gt;ブログのデプロイにWerckerを使って楽に投稿できる環境にした - 続・ラフなラボ&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Markdown記法のサンプル(表示確認用)</title>
+      <link>http://localhost:1313/post/first/</link>
+      <pubDate>Thu, 09 Jul 2015 17:56:56 +0900</pubDate>
+      <author>taky1973@gmail.com (Taku Nagai)</author>
+      <guid>http://localhost:1313/post/first/</guid>
+      <description>
+
+&lt;h2 id=&#34;ヘッダー-h2:9c545e6d33bedefbb23fa2a43cbddf94&#34;&gt;ヘッダー(h2)&lt;/h2&gt;
+
+&lt;h3 id=&#34;ヘッダー-h3:9c545e6d33bedefbb23fa2a43cbddf94&#34;&gt;ヘッダー(h3)&lt;/h3&gt;
+
+&lt;h3 id=&#34;ヘッダー-h4:9c545e6d33bedefbb23fa2a43cbddf94&#34;&gt;ヘッダー(h4)&lt;/h3&gt;
+
+&lt;h3 id=&#34;ヘッダー-h5:9c545e6d33bedefbb23fa2a43cbddf94&#34;&gt;ヘッダー(h5)&lt;/h3&gt;
+
+&lt;h3 id=&#34;ヘッダー-h6:9c545e6d33bedefbb23fa2a43cbddf94&#34;&gt;ヘッダー(h6)&lt;/h3&gt;
+
+&lt;h2 id=&#34;ヘッダー-h2-1:9c545e6d33bedefbb23fa2a43cbddf94&#34;&gt;ヘッダー(h2)&lt;/h2&gt;
+
+&lt;p&gt;ダミーです私は同年同時にこういう理解通りというはずの末になるだでし。ついに生涯が経過院は同時にこういう理解通りとすこぶるそんな安住なますまで&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;リスト1&lt;/li&gt;
+&lt;li&gt;リスト2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ダミーです私は同年同時にこういう理解通りというはずの末になるだでし。ついに生涯が経過院は同時にこういう理解通りとすこぶるそんな安住なますまで&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;引用です。ダミーです私は同年同時にこういう理解通りというはずの末になるだでし。ついに生涯が経過院は同時にこういう理解通りとすこぶるそんな安&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;引用レベル2です。ダミーです私は同年同時にこういう理解通りというはずの末になるだでし。ついに生涯が経過院は同時にこういう理解通りとすこぶ&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;ダミーです私は同年同時にこういう理解通りというはずの末になるだでし。ついに生涯が経過院は同時にこういう理解通りとすこぶるそんな安住なますまで&lt;/p&gt;
+
+&lt;h3 id=&#34;ヘッダー-h3-1:9c545e6d33bedefbb23fa2a43cbddf94&#34;&gt;ヘッダー(h3)&lt;/h3&gt;
+
+&lt;p&gt;ダミーです私は同年同時にこういう理解通りというはずの末になるだでし。ついに生涯が経過院は同時にこういう理解通りとすこぶるそんな安住なますまで&lt;/p&gt;
+
+&lt;h3 id=&#34;ヘッダー-h4-1:9c545e6d33bedefbb23fa2a43cbddf94&#34;&gt;ヘッダー(h4)&lt;/h3&gt;
+
+&lt;p&gt;ダミーです私は同年同時にこういう理解通りというはずの末になるだでし。ついに生涯が経過院は同時にこういう理解通りとすこぶるそんな安住なますまで&lt;/p&gt;
+
+&lt;h3 id=&#34;ヘッダー-h5-1:9c545e6d33bedefbb23fa2a43cbddf94&#34;&gt;ヘッダー(h5)&lt;/h3&gt;
+
+&lt;p&gt;ダミーです私は同年同時にこういう理解通りというはずの末になるだでし。ついに生涯が経過院は同時にこういう理解通りとすこぶるそんな安住なますまで&lt;/p&gt;
+
+&lt;h3 id=&#34;ヘッダー-h6-1:9c545e6d33bedefbb23fa2a43cbddf94&#34;&gt;ヘッダー(h6)&lt;/h3&gt;
+
+&lt;p&gt;ダミーです私は同年同時にこういう理解通りというはずの末になるだでし。ついに生涯が経過院は同時にこういう理解通りとすこぶるそんな安住なますまで&lt;/p&gt;
+
+&lt;h2 id=&#34;ヘッダー-h2-2:9c545e6d33bedefbb23fa2a43cbddf94&#34;&gt;ヘッダー(h2)&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;ヘッダー-h3-2:9c545e6d33bedefbb23fa2a43cbddf94&#34;&gt;ヘッダー(h3)&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;ヘッダー-h4-2:9c545e6d33bedefbb23fa2a43cbddf94&#34;&gt;ヘッダー(h4)&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;ヘッダー-h5-2:9c545e6d33bedefbb23fa2a43cbddf94&#34;&gt;ヘッダー(h5)&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;ヘッダー-h6-2:9c545e6d33bedefbb23fa2a43cbddf94&#34;&gt;ヘッダー(h6)&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;あああ&lt;/li&gt;
+&lt;li&gt;いいい&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;文字修飾-強調-太字-打ち消し:9c545e6d33bedefbb23fa2a43cbddf94&#34;&gt;文字修飾(強調、太字、打ち消し)&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;emphasis(em)&lt;/em&gt; ※GitHub Flavored Markdown では無視される&lt;br /&gt;
+&lt;strong&gt;strong(strong)&lt;/strong&gt;&lt;br /&gt;
+&lt;del&gt;Mistaken text.&lt;/del&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;リンク:9c545e6d33bedefbb23fa2a43cbddf94&#34;&gt;リンク&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://news.yahoo.co.jp/list/&#34;&gt;Link Text&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://news.yahoo.co.jp/list/&#34;&gt;http://news.yahoo.co.jp/list/&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://news.yahoo.co.jp/list/&#34;&gt;http://news.yahoo.co.jp/list/&lt;/a&gt; ※GitHub Flavored Markdown では &amp;lt;&amp;gt; 無しでリンクになる&lt;/p&gt;
+
+&lt;h2 id=&#34;引用:9c545e6d33bedefbb23fa2a43cbddf94&#34;&gt;引用&lt;/h2&gt;
+
+&lt;p&gt;引用レベルを上げる場合、引用の &amp;gt; を残しつつ行間を開ける&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;引用文です。ダミーです私は同年同時にこういう理解通りというはずの末になるだでし。ついに生涯が経過院は同時にこういう理解通りとすこぶる&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;レベル2引用文です。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;リスト:9c545e6d33bedefbb23fa2a43cbddf94&#34;&gt;リスト&lt;/h2&gt;
+
+&lt;p&gt;Hugoではリストを連続させると変なpタグが入るのでNG。間に他の要素を入れること&lt;/p&gt;
+
+&lt;h3 id=&#34;通常リスト:9c545e6d33bedefbb23fa2a43cbddf94&#34;&gt;通常リスト&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;first
+
+&lt;ul&gt;
+&lt;li&gt;first-A&lt;/li&gt;
+&lt;li&gt;first-B&lt;/li&gt;
+&lt;li&gt;first-C&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;second&lt;/li&gt;
+&lt;li&gt;third&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;番号リスト:9c545e6d33bedefbb23fa2a43cbddf94&#34;&gt;番号リスト&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;first
+
+&lt;ul&gt;
+&lt;li&gt;first-A&lt;/li&gt;
+&lt;li&gt;first-B&lt;/li&gt;
+&lt;li&gt;first-C&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;second&lt;/li&gt;
+&lt;li&gt;third&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;画像:9c545e6d33bedefbb23fa2a43cbddf94&#34;&gt;画像&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dummyimage.com/600x300/CCC/fff.png&amp;amp;text=image&#34; alt=&#34;alt-text&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;リンク付き:9c545e6d33bedefbb23fa2a43cbddf94&#34;&gt;リンク付き&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://news.yahoo.co.jp/list/&#34;&gt;&lt;img src=&#34;http://dummyimage.com/600x300/CCC/fff.png&amp;amp;text=image&#34; alt=&#34;alt-text&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;テーブル:9c545e6d33bedefbb23fa2a43cbddf94&#34;&gt;テーブル&lt;/h2&gt;
+
+&lt;p&gt;文字揃え(:の位置で指定)は th,td タグ全てに align=&amp;ldquo;left|center|right&amp;rdquo; が付く&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Header&lt;/th&gt;
+&lt;th align=&#34;right&#34;&gt;right aligned&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Content Cell&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Content Cell&lt;/td&gt;
+&lt;td align=&#34;right&#34;&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;コード:9c545e6d33bedefbb23fa2a43cbddf94&#34;&gt;コード&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;inline code&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;table class=&amp;quot;equal-row-width&amp;quot;&amp;gt;
+  &amp;lt;tr&amp;gt;
+    &amp;lt;th&amp;gt;SS&amp;lt;/th&amp;gt;
+    &amp;lt;td&amp;gt;¥3,500&amp;lt;/td&amp;gt;
+  &amp;lt;/tr&amp;gt;
+  &amp;lt;tr&amp;gt;
+    &amp;lt;th&amp;gt;S&amp;lt;/th&amp;gt;
+    &amp;lt;td&amp;gt;¥4,000&amp;lt;/td&amp;gt;
+  &amp;lt;/tr&amp;gt;
+&amp;lt;/table&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;水平線-hr:9c545e6d33bedefbb23fa2a43cbddf94&#34;&gt;水平線 hr&lt;/h2&gt;
+
+&lt;hr /&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>WordPress から Hugo に乗り換えた</title>
+      <link>http://localhost:1313/post/wordpress_to_hugo/</link>
+      <pubDate>Thu, 09 Jul 2015 17:56:56 +0900</pubDate>
+      <author>taky1973@gmail.com (Taku Nagai)</author>
+      <guid>http://localhost:1313/post/wordpress_to_hugo/</guid>
+      <description>
+
+&lt;h2 id=&#34;hugo-の-メリット:e802d7bc3c0c3d0ca992f6cb9f6e62d6&#34;&gt;Hugo の メリット&lt;/h2&gt;
+
+&lt;h3 id=&#34;記事はmarkdownファイルを直に編集:e802d7bc3c0c3d0ca992f6cb9f6e62d6&#34;&gt;記事はMarkdownファイルを直に編集&lt;/h3&gt;
+
+&lt;p&gt;最高のMarkdownエディタ「Mou」でサクサク編集できる
+WordPressも記事をMarkdownで書けるプラグインがあるが、WordPressのダッシュボードから行う必要がある&lt;/p&gt;
+
+&lt;h3 id=&#34;シンプル:e802d7bc3c0c3d0ca992f6cb9f6e62d6&#34;&gt;シンプル&lt;/h3&gt;
+
+&lt;p&gt;良くも悪くもシンプル。&lt;/p&gt;
+
+&lt;h2 id=&#34;hugo-の-wordpress-より:e802d7bc3c0c3d0ca992f6cb9f6e62d6&#34;&gt;Hugo の WordPress より&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>jQuery 1.11.x を Compat 3.0(alpha) に差替えた時に発生したエラー まとめ</title>
+      <link>http://localhost:1313/post/javascript/errors_jQuery-compat-3/</link>
+      <pubDate>Thu, 09 Jul 2015 17:56:56 +0900</pubDate>
+      <author>taky1973@gmail.com (Taku Nagai)</author>
+      <guid>http://localhost:1313/post/javascript/errors_jQuery-compat-3/</guid>
+      <description>
+
+&lt;h2 id=&#34;error-syntax-error-unrecognized-expression-a-href:8dcfd3a029cea5e293ea657f3b37f024&#34;&gt;Error: Syntax error, unrecognized expression: a[href^=#]&amp;hellip;&lt;/h2&gt;
+
+&lt;p&gt;CSSセレクタの擬似要素の値にはクォーテーションが必要&lt;/p&gt;
+
+&lt;p&gt;修正前(エラー)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$(&#39;a[href^=#]&#39;).on(&#39;click&#39;, function(e) { 処理 }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;修正後&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$(&#39;a[href^=&amp;quot;#&amp;quot;]&#39;).on(&#39;click&#39;, function(e) { 処理 }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;typeerror-undefined-is-not-a-function-evaluating-headers-size:8dcfd3a029cea5e293ea657f3b37f024&#34;&gt;TypeError: undefined is not a function (evaluating &amp;lsquo;headers.size()&amp;rsquo;)&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;.size()&lt;/code&gt;はjQuery1.3ですでに非推奨。代わりに&lt;code&gt;.length()&lt;/code&gt;を使う&lt;/p&gt;
+
+&lt;p&gt;修正前(エラー)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;if(headers.size() &amp;gt;= 2) { 処理 }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;修正後&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;if(headers.length() &amp;gt;= 2) { 処理 }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;各ブラウザでの検証が必要:8dcfd3a029cea5e293ea657f3b37f024&#34;&gt;各ブラウザでの検証が必要&lt;/h2&gt;
+
+&lt;p&gt;確認したのは現時点の Safari 最新版(8.0.7)のみ。他の各ブラウザで問題が出ないか確認する必要がある&lt;/p&gt;
+
+&lt;h2 id=&#34;参考記事:8dcfd3a029cea5e293ea657f3b37f024&#34;&gt;参考記事&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://mgzl.jp/2011/05/31/jquery-error-syntax-error-unrecognized-expression/&#34;&gt;jQueryエラー：Syntax error, unrecognized expression | jQuery | mgzl.jp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/5818555/uncaught-exception-syntax-error-unrecognized-expression-href-example-html&#34;&gt;javascript - uncaught exception: Syntax error, unrecognized expression: [href=example.html] - Stack Overflow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.koikikukan.com/archives/2014/08/08-005555.php&#34;&gt;jQueryで要素数を取得する方法のまとめ: 小粋空間&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://myjquery.blog.fc2.com/blog-entry-15.html&#34;&gt;jQuery Migrate plugin の使い方と警告文の自分なりのまとめ | 私的なjQuery&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://codezine.jp/article/detail/8846&#34;&gt;「jQuery 3.0」と「jQuery Compat 3.0」の最初のアルファ版がリリース：CodeZine（コードジン）&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>JavaScript / jQuery 自分の使い方</title>
-      <link>http://takunagai.github.io/post/javascript/base_javascript_jquery/</link>
+      <link>http://localhost:1313/post/javascript/base_javascript_jquery/</link>
       <pubDate>Sat, 21 Feb 2015 17:56:56 +0900</pubDate>
       <author>taky1973@gmail.com (Taku Nagai)</author>
-      <guid>http://takunagai.github.io/post/javascript/base_javascript_jquery/</guid>
+      <guid>http://localhost:1313/post/javascript/base_javascript_jquery/</guid>
       <description>
 
 &lt;h2 id=&#34;jquery-基本:2763c954d56445700fdcab66b8eafc7c&#34;&gt;jQuery 基本&lt;/h2&gt;
@@ -694,10 +1128,10 @@ _.debounce(function, 500);
     
     <item>
       <title>レスポンシブな前後の記事リンクのスタイリング</title>
-      <link>http://takunagai.github.io/post/wordpress/css-styling_immediate-article-links/</link>
+      <link>http://localhost:1313/post/wordpress/css-styling_immediate-article-links/</link>
       <pubDate>Fri, 17 Oct 2014 00:00:00 +0900</pubDate>
       <author>taky1973@gmail.com (Taku Nagai)</author>
-      <guid>http://takunagai.github.io/post/wordpress/css-styling_immediate-article-links/</guid>
+      <guid>http://localhost:1313/post/wordpress/css-styling_immediate-article-links/</guid>
       <description>
 
 &lt;h3 id=&#34;レイアウト:74c0d7f6cf949ac4bd8efcecad170fbc&#34;&gt;レイアウト&lt;/h3&gt;
@@ -783,10 +1217,10 @@ _.debounce(function, 500);
     
     <item>
       <title>dist と dest の意味・違い</title>
-      <link>http://takunagai.github.io/post/comparison_dist_dest/</link>
+      <link>http://localhost:1313/post/comparison_dist_dest/</link>
       <pubDate>Wed, 15 Oct 2014 00:00:00 +0900</pubDate>
       <author>taky1973@gmail.com (Taku Nagai)</author>
-      <guid>http://takunagai.github.io/post/comparison_dist_dest/</guid>
+      <guid>http://localhost:1313/post/comparison_dist_dest/</guid>
       <description>
 
 &lt;h2 id=&#34;dist:7cc95ff082595fdb0f731d09430bbdaa&#34;&gt;dist&lt;/h2&gt;
@@ -827,11 +1261,73 @@ gulpなどのビルドシステムの生成先なら、意味的には後者か�
     </item>
     
     <item>
-      <title>ローカルサーバーどれ使う？ MAMP(Xampp) と Vagrant の違い・使い分け</title>
-      <link>http://takunagai.github.io/post/comparison_mamp_vagrant/</link>
+      <title>【Mac】マウスの速度/加速度をカスタマイズする無料アプリ</title>
+      <link>http://localhost:1313/post/customize_mouse_movement/</link>
       <pubDate>Wed, 15 Oct 2014 00:00:00 +0900</pubDate>
       <author>taky1973@gmail.com (Taku Nagai)</author>
-      <guid>http://takunagai.github.io/post/comparison_mamp_vagrant/</guid>
+      <guid>http://localhost:1313/post/customize_mouse_movement/</guid>
+      <description>
+
+&lt;h2 id=&#34;遅延解消-加速度調整は-smoothmouse:81bde0832bbc93c3c08cf902def2aa05&#34;&gt;遅延解消、加速度調整は「SmoothMouse」&lt;/h2&gt;
+
+&lt;p&gt;確認した環境は、Mac OSX 10.9 (Marvericks)、10.10 (Yosemite)&lt;br /&gt;
+以下2つの機能を追加してくれる&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Mac OS X に存在する32ミリ秒のマウスカーソル遅延を解消&lt;/li&gt;
+&lt;li&gt;加速パターンを &amp;ldquo;Windows&amp;rdquo;,&amp;ldquo;Mac OSX&amp;rdquo;,&amp;ldquo;なし&amp;rdquo; から選べる。加速度も設定可&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ダウンロードは公式サイトから&lt;br /&gt;
+&lt;a href=&#34;http://smoothmouse.com/&#34;&gt;SmoothMouse for OS X&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ダウンロードしてインストールすると、システム環境設定のパネルに SmoothMouseが追加される。&lt;/p&gt;
+
+&lt;p&gt;Macに慣れた人は&amp;rdquo;Mac&amp;rdquo;、Windowsに慣れた人は&amp;rdquo;Windows&amp;rdquo;でいいんじゃないかな&lt;br /&gt;
+設定にある &amp;ldquo;Enable for mice(複数マウスに対応？)&amp;rdquo; はわからん&lt;br /&gt;
+自分は次の画像の設定にした&lt;/p&gt;
+
+&lt;p&gt;[画像]&lt;/p&gt;
+
+&lt;p&gt;アンインストールも設定パネルから簡単にできるので、興味あれば気軽に試せます&lt;/p&gt;
+
+&lt;h2 id=&#34;マウスの速度を変更する-mousezoom:81bde0832bbc93c3c08cf902def2aa05&#34;&gt;マウスの速度を変更する「MouseZoom」&lt;/h2&gt;
+
+&lt;p&gt;「マウスの動きを早くしたい」という人向けの機能拡張&lt;br /&gt;
+自分は加速感がしっくりこず、逆にストレスが溜まったので外した&lt;/p&gt;
+
+&lt;p&gt;ダウンロードは公式サイトから&lt;br /&gt;
+&lt;a href=&#34;http://benh57.com/mousezoom.html&#34;&gt;Ben Net - MouseZoom OS X Official Site&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[画像]&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://kumotori.net/wpd/wp-content/themes/kumotori/img/common/no-image.png&#34; alt=&#34;画像が見つかりません&#34; /&gt;&lt;br /&gt;
+設定画面&lt;/p&gt;
+
+&lt;h3 id=&#34;インストール方法:81bde0832bbc93c3c08cf902def2aa05&#34;&gt;インストール方法&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;ダウンロードして解凍&lt;/li&gt;
+&lt;li&gt;Intel Macs (64 bit/10.6)フォルダ内の MouseZoom.prefPaneを&lt;br /&gt;
+ユーザー名 &amp;gt; ライブラリ &amp;gt; PreferencePanes 内にコピー&lt;/li&gt;
+&lt;li&gt;システム環境設定パネルに「MouseZoom」が表示されるようになるので設定&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;参考記事:81bde0832bbc93c3c08cf902def2aa05&#34;&gt;参考記事&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://applech2.com/archives/30495560.html&#34;&gt;Mac OS Xに存在する32ミリ秒のマウスカーソル遅延を解消するアプリ SmoothMouse&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.teradas.net/archives/11823/&#34;&gt;マウス遅延対策アプリ「SmoothMouse」でMac OS Xの32ミリ秒遅延が改善 - TeraDas&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ローカルサーバーどれ使う？ MAMP(Xampp) と Vagrant の違い・使い分け</title>
+      <link>http://localhost:1313/post/comparison_mamp_vagrant/</link>
+      <pubDate>Wed, 15 Oct 2014 00:00:00 +0900</pubDate>
+      <author>taky1973@gmail.com (Taku Nagai)</author>
+      <guid>http://localhost:1313/post/comparison_mamp_vagrant/</guid>
       <description>
 
 &lt;h2 id=&#34;mamp-xampp:51dec08c134701154a7d3216b4ccb92f&#34;&gt;MAMP(Xampp)&lt;/h2&gt;

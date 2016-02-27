@@ -2,22 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Wordpress on My Blog</title>
-    <link>http://takunagai.github.io/tags/wordpress/</link>
+    <link>http://localhost:1313/tags/wordpress/</link>
     <description>Recent content in Wordpress on My Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <managingEditor>taky1973@gmail.com (Taku Nagai)</managingEditor>
     <webMaster>taky1973@gmail.com (Taku Nagai)</webMaster>
     <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
-    <lastBuildDate>Fri, 17 Oct 2014 00:00:00 +0900</lastBuildDate>
-    <atom:link href="http://takunagai.github.io/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Jul 2015 17:56:56 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>WordPress から Hugo に乗り換えた</title>
+      <link>http://localhost:1313/post/wordpress_to_hugo/</link>
+      <pubDate>Thu, 09 Jul 2015 17:56:56 +0900</pubDate>
+      <author>taky1973@gmail.com (Taku Nagai)</author>
+      <guid>http://localhost:1313/post/wordpress_to_hugo/</guid>
+      <description>
+
+&lt;h2 id=&#34;hugo-の-メリット:e802d7bc3c0c3d0ca992f6cb9f6e62d6&#34;&gt;Hugo の メリット&lt;/h2&gt;
+
+&lt;h3 id=&#34;記事はmarkdownファイルを直に編集:e802d7bc3c0c3d0ca992f6cb9f6e62d6&#34;&gt;記事はMarkdownファイルを直に編集&lt;/h3&gt;
+
+&lt;p&gt;最高のMarkdownエディタ「Mou」でサクサク編集できる
+WordPressも記事をMarkdownで書けるプラグインがあるが、WordPressのダッシュボードから行う必要がある&lt;/p&gt;
+
+&lt;h3 id=&#34;シンプル:e802d7bc3c0c3d0ca992f6cb9f6e62d6&#34;&gt;シンプル&lt;/h3&gt;
+
+&lt;p&gt;良くも悪くもシンプル。&lt;/p&gt;
+
+&lt;h2 id=&#34;hugo-の-wordpress-より:e802d7bc3c0c3d0ca992f6cb9f6e62d6&#34;&gt;Hugo の WordPress より&lt;/h2&gt;
+</description>
+    </item>
     
     <item>
       <title>レスポンシブな前後の記事リンクのスタイリング</title>
-      <link>http://takunagai.github.io/post/wordpress/css-styling_immediate-article-links/</link>
+      <link>http://localhost:1313/post/wordpress/css-styling_immediate-article-links/</link>
       <pubDate>Fri, 17 Oct 2014 00:00:00 +0900</pubDate>
       <author>taky1973@gmail.com (Taku Nagai)</author>
-      <guid>http://takunagai.github.io/post/wordpress/css-styling_immediate-article-links/</guid>
+      <guid>http://localhost:1313/post/wordpress/css-styling_immediate-article-links/</guid>
       <description>
 
 &lt;h3 id=&#34;レイアウト:74c0d7f6cf949ac4bd8efcecad170fbc&#34;&gt;レイアウト&lt;/h3&gt;
